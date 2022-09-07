@@ -7,6 +7,8 @@
 
 本站点用于展示作品、作业，欢迎同学们共同参与~
 
+## [综合练习题](./ComprehensiveExerciseQuestions/README.md)
+
 ## 许可证
 
 本项目使用 GPL-v3.0 协议开源，请遵守开源协议。
