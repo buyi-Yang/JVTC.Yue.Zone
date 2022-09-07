@@ -1,4 +1,4 @@
-package zone.yue.jvtc.ComprehensiveExerciseQuestions;
+package zone.yue.jvtc.solution.ceq;
 
 import org.junit.jupiter.api.Test;
 

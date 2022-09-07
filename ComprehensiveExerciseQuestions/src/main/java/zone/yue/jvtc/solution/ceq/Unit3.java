@@ -1,9 +1,9 @@
-package zone.yue.jvtc.ComprehensiveExerciseQuestions;
+package zone.yue.jvtc.solution.ceq;
 
 import java.util.Arrays;
 
 /**
- * 单元三 基本循环（要求用while语句设计）
+ * 单元三 基本循环（要求用 while 语句设计）
  *
  * @author Yue_plus
  */
@@ -106,9 +106,9 @@ public class Unit3 {
 
         int i = 0;
         while (i < list.length) {
-            if (list[i].equals("王同学")) {
+            if ("王同学".equals(list[i])) {
                 wang++;
-            } else if (list[i].equals("张同学")) {
+            } else if ("张同学".equals(list[i])) {
                 zhang++;
             } else {
                 invalid++;
@@ -133,14 +133,16 @@ public class Unit3 {
      * @return 字符串，描述歌手最后得分。
      */
     public static String juryScoring(double[] list) {
+        // 评委人数
+        final int judges = 10;
         // 截断数组，只取前十。
-        list = Arrays.copyOf(list, 10);
+        list = Arrays.copyOf(list, judges);
 
         // 总分
         double total = 0;
 
         byte i = 0;
-        while (i < 10) {
+        while (i < judges) {
             if (list[i] > 0) {
                 total += list[i];
             }
@@ -170,7 +172,8 @@ public class Unit3 {
         byte count = 0;
 
         byte i = 0;
-        while (i <= 100) {
+        final byte iMax = 100;
+        while (i <= iMax) {
             if (i % 3 == 0) {
                 count++;
             }
@@ -187,11 +190,6 @@ public class Unit3 {
      */
     public static String leapYear() {
         /*
-        能够被 4 整除但不被 100 整除的是闰年；
-        能够被 100 整除但不被 400 整除的是平年；
-        能够被 400 整除但不被 3200 整除的是闰年；
-        [闰年（历法中的名词）_百度百科](https://baike.baidu.com/item/%E9%97%B0%E5%B9%B4/27098#6)
-
         打表！都可以打表！（麻了
         return """
                 2000~3000 年有 243 个闰年：
@@ -212,8 +210,16 @@ public class Unit3 {
         short count = 0;
 
         short y = 2000;
-        while (y <= 3000) {
-            if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0) {
+        final short yMax = 3000;
+        while (y <= yMax) {
+            /*
+            能够被 4 整除但不被 100 整除的是闰年；
+            能够被 100 整除但不被 400 整除的是平年；
+            能够被 400 整除但不被 3200 整除的是闰年；
+            [闰年（历法中的名词）_百度百科](https://baike.baidu.com/item/%E9%97%B0%E5%B9%B4/27098#6)
+            */
+            boolean isLeapYear = (y % 4 == 0 && y % 100 != 0) || y % 400 == 0;
+            if (isLeapYear) {
                 count++;
             }
             y++;
@@ -222,5 +228,5 @@ public class Unit3 {
         return String.format("2000~3000 年有 %d 个闰年", count);
     }
 
-    // 想念 for 循环的第 225 行
+    // 想念 for 循环的第 231 行
 }
