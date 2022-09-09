@@ -25,6 +25,11 @@ class Unit4Test {
         System.out.println("U4Q2 - 1! + 2! + 3! + ... + 20! = " + Unit4.factorialSum(20));
     }
 
+    @Test
+    void testU4Q3() {
+        System.out.println("U4Q3 - 1 - 1/2 + 1/3 - 1/4 + ... + 1/19 - 1/20 =" + Unit4.q3(20));
+    }
+
     @AfterAll
     static void testU4AfterAll() {
         System.out.println("===== 单元四 循环累和 测试结束 =====\n");
