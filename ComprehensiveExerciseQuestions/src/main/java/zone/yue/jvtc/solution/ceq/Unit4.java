@@ -64,11 +64,10 @@ public class Unit4 {
      * @return 1 - 1/2 + 1/3 - 1/4 + ... + 1/(n-1) - 1/n 的结果
      */
     public static double q3(int n) {
-        /*
-        Q3 - 计算：1 - 1/2 + 1/3 - 1/4 + 1/5 - 1/6 + 1/7 - 1/8 + 1/9 - 1/10
-          + 1/11 - 1/12 + 1/13 - 1/14 + 1/15 - 1/16 + 1/17 - 1/18 + 1/19 - 1/20
-        return 0.6687714031754279;
-        */
+        // Q3 - 计算：
+        // 1 - 1/2 + 1/3 - 1/4 + 1/5 - 1/6 + 1/7 - 1/8 + 1/9 - 1/10
+        // + 1/11 - 1/12 + 1/13 - 1/14 + 1/15 - 1/16 + 1/17 - 1/18 + 1/19 - 1/20
+        // return 0.6687714031754279;
 
         boolean isPlus = true;
         double result = 0;
@@ -107,6 +106,36 @@ public class Unit4 {
             }
 
             isPlus = !isPlus;
+        }
+
+        return result;
+    }
+
+    /**
+     * Q5 - 有一分数序列：2/1, 3/2, 5/3, 8/5, 13/8, 21/13, ...
+     *
+     * @param n 数列长度
+     * @return 数列前 n 项之和
+     */
+    public static double q5(int n) {
+        // Q5 - 有一分数序列：
+        // 2/1 + 3/2 + 5/3 + 8/5 + 13/8 + 21/13 + 34/21 + 55/34 + 89/55 + 144/89 + 233/144 + 377/233 + 610/377
+        // + 987/610 + 1597/987 + 2584/1597 + 4181/2584 + 6765/4181 + 10946/6765 + 17711/10946
+        // 求出这个数列的前 20 项之和。
+        //
+        // return 32.6602607986416;
+
+        // 分子
+        int molecular = 2;
+        // 分母
+        int denominator = 1;
+        double result = 0;
+
+        for (int i = 0; i < n; i++) {
+            int nextMolecular = molecular + denominator;
+            result += (double) molecular / denominator;
+            denominator = molecular;
+            molecular = nextMolecular;
         }
 
         return result;

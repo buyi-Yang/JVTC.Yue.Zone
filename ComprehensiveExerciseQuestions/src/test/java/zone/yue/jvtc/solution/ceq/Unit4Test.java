@@ -35,6 +35,11 @@ class Unit4Test {
         System.out.println("U4Q4 - 12 - 22 + 32 - 42 + ... + 192 - 202 = " + Unit4.q4(20));
     }
 
+    @Test
+    void testU4Q5() {
+        System.out.println("U4Q5 - 分数序列：2/1, 3/2, 5/3, 8/5, 13/8, 21/13, ... 的前 20 项之和为：" + Unit4.q5(20));
+    }
+
     @AfterAll
     static void testU4AfterAll() {
         System.out.println("===== 单元四 循环累和 测试结束 =====\n");
