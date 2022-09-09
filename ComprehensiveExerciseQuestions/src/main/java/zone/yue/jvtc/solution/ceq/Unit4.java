@@ -58,7 +58,7 @@ public class Unit4 {
     }
 
     /**
-     * 计算 1 - 1/2 + 1/3 - 1/4 + ... + 1/(n-1) - 1/n 。
+     * Q3 - 计算：1 - 1/2 + 1/3 - 1/4 + ... + 1/(n-1) - 1/n
      *
      * @param n 最大分母
      * @return 1 - 1/2 + 1/3 - 1/4 + ... + 1/(n-1) - 1/n 的结果
@@ -78,6 +78,32 @@ public class Unit4 {
                 result += 1.0 / i;
             } else {
                 result -= 1.0 / i;
+            }
+
+            isPlus = !isPlus;
+        }
+
+        return result;
+    }
+
+    /**
+     * Q4 - 计算：12 - 22 + 32 - 42 + ... + (n*10+2) - (n*10+2)
+     *
+     * @param n ((n-2)/10)
+     * @return 12 - 22 + 32 - 42 + ... + (n*10+2) - (n*10+2) 的结果
+     */
+    public static long q4(int n) {
+        // Q4 - 计算：12-22+32-42+52-62+72-82+92-102+112-122+132-142+152-162+172-182+192-202
+        // return -100;
+
+        boolean isPlus = true;
+        long result = 0;
+
+        for (int i = 1; i <= Math.abs(n); i++) {
+            if (isPlus) {
+                result += i * 10L + 2L;
+            } else {
+                result -= i * 10L + 2L;
             }
 
             isPlus = !isPlus;
