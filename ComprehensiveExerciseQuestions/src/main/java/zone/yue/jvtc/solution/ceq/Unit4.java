@@ -140,4 +140,34 @@ public class Unit4 {
 
         return result;
     }
+
+    /**
+     * Q6 - 分式累和
+     *
+     * <p>当输入 `n` 为偶数时求：1/2 + 1/4 + 1/6 + ... + 1/n ；
+     * <p>当输入 `n` 为偶数时求：1/2 + 1/4 + 1/6 + ... + 1/n ；
+     *
+     * @param n 最大分母
+     * @return 分式累和结果
+     */
+    public static double q6(int n) {
+        // 每个 奇数/偶数 之间间隔始终为 2
+        final int interval = 2;
+        // n 是否为奇数
+        final boolean isOddNumber = n % interval != 0;
+
+        double result = 0;
+
+        if (isOddNumber) {
+            for (int i = 1; i <= Math.abs(n); i += interval) {
+                result += (double) 1 / i;
+            }
+        } else {
+            for (int i = 2; i <= Math.abs(n); i += interval) {
+                result += (double) 1 / i;
+            }
+        }
+
+        return result;
+    }
 }
