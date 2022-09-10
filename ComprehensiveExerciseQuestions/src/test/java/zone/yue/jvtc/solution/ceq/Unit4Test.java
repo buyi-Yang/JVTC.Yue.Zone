@@ -46,6 +46,14 @@ class Unit4Test {
         System.out.println("U4Q6 - 当 n=6 时：" + Unit4.q6(6));
     }
 
+    @Test
+    void testU4Q7() {
+        short year = 2022;
+        short month = 9;
+        short day = 10;
+        System.out.printf("U4Q7 - %d 年 %d 月 %d 日是该年的第 %d 天%n", year, month, day, Unit4.q7(year, month, day));
+    }
+
     @AfterAll
     static void testU4AfterAll() {
         System.out.println("===== 单元四 循环累和 测试结束 =====\n");

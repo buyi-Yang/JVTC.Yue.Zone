@@ -1,7 +1,7 @@
 package zone.yue.jvtc.solution.ceq;
 
 import java.math.BigInteger;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * 单元四 循环累和
@@ -169,5 +169,24 @@ public class Unit4 {
         }
 
         return result;
+    }
+
+    /**
+     * Q7 - 输入某年某月某日，判断这一天是这一年的第几天？
+     *
+     * @param year 年
+     * @param month 月，整数 1~12
+     * @param day 日，整数 1~31
+     * @return 这一天是这一年的第几天
+     */
+    public static short q7(short year, short month, short day) {
+        // Calendar 月份从 0 开始算
+        month--;
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.clear();
+        calendar.set(year, month, day);
+
+        return (short) calendar.get(Calendar.DAY_OF_YEAR);
     }
 }
