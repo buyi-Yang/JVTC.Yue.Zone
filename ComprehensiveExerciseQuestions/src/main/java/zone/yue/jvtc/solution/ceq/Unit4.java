@@ -9,13 +9,26 @@ import java.util.*;
  * @author Yue_plus
  */
 public class Unit4 {
-    public static void main(String[] args) {
-        Unit4.cyclicAddition();
-    }
-
     public static void cyclicAddition() {
         Scanner in = new Scanner(System.in);
-        System.out.println(in.nextInt());
+
+        System.out.println("请设置 a (int)：");
+        long a = in.nextInt();
+        System.out.println("已设置 a=" + a);
+
+        System.out.println("请设置累和次数 (int)：");
+        long times = in.nextInt();
+        System.out.println("已设置累和次数为：" + times + " 次");
+
+        long temp = 0;
+        long result = 0;
+        for (int i = 0; i < Math.abs(times); i++) {
+            temp = temp * 10L + a;
+            System.out.print(temp == a ? a : " + " + temp);
+            result += temp;
+        }
+
+        System.out.println(" = " + result);
     }
 
     /**

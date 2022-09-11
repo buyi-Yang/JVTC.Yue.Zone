@@ -13,11 +13,14 @@ class Unit4Test {
 
     @Test
     void testU4Q1CyclicAddition() {
-        System.out.println("U4Q1 - ");
-        Unit4.cyclicAddition();
+        int a = 2;
+        int times = 5;
 
-        // 模拟键盘输入
-        System.setIn(new ByteArrayInputStream("123".getBytes()));
+        // 重新分配输入流
+        System.setIn(new ByteArrayInputStream(String.format("%d %d", a, times).getBytes()));
+
+        System.out.println("U4Q1 - 求 s = a + aa + aaa + aaaa + ... 的值：");
+        Unit4.cyclicAddition();
     }
 
     @Test
