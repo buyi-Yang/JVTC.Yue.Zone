@@ -9,6 +9,10 @@ import java.util.*;
  * @author Yue_plus
  */
 public class Unit4 {
+    /**
+     * Q1 - 求 s = a + aa + aaa + aaaa + ... 的值。
+     * （由键盘输入控制）
+     */
     public static void cyclicAddition() {
         Scanner in = new Scanner(System.in);
 
