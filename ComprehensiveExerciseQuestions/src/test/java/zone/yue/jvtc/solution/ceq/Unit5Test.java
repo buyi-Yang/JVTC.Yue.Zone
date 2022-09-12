@@ -15,6 +15,17 @@ public class Unit5Test {
         Unit5.q1();
     }
 
+//    @Test
+//    void testU5Q2() {
+//        System.out.println("U5Q2 - 二十个月中每个月的兔子总数为" + Unit5.q2(20));
+//    }
+
+    @Test
+    void testU5Q5() {
+        System.out.println("U5Q5 - ");
+        Unit5.q5(100, 10);
+    }
+
     @AfterAll
     static void testU5AfterAll() {
         System.out.println("===== 单元五 循环累和 测试结束 =====\n");
