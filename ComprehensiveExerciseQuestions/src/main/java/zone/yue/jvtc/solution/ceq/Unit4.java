@@ -17,19 +17,19 @@ public class Unit4 {
         Scanner in = new Scanner(System.in);
 
         System.out.println("请设置 a (int)：");
-        long a = in.nextInt();
+        int a = in.nextInt();
         System.out.println("已设置 a=" + a);
 
         System.out.println("请设置累和次数 (int)：");
-        long times = in.nextInt();
+        int times = in.nextInt();
         System.out.println("已设置累和次数为：" + times + " 次");
 
-        long temp = 0;
-        long result = 0;
+        BigInteger temp = BigInteger.ZERO;
+        BigInteger result = BigInteger.ZERO;
         for (int i = 0; i < Math.abs(times); i++) {
-            temp = temp * 10L + a;
-            System.out.print(temp == a ? a : " + " + temp);
-            result += temp;
+            temp = temp.multiply(BigInteger.valueOf(10)).add(BigInteger.valueOf(a));
+            System.out.print(temp.equals(BigInteger.valueOf(a)) ? a : " + " + temp);
+            result = result.add(temp);
         }
 
         System.out.println(" = " + result);
