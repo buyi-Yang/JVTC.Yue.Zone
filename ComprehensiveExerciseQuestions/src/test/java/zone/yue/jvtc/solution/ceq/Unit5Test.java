@@ -21,6 +21,11 @@ public class Unit5Test {
 //    }
 
     @Test
+    void testU5Q3() {
+        Unit5.q3();
+    }
+
+    @Test
     void testU5Q5() {
         System.out.println("U5Q5 - ");
         Unit5.q5(100, 10);
