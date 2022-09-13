@@ -14,21 +14,22 @@ public class Unit4 {
      * （由键盘输入控制）
      */
     public static void cyclicAddition() {
-        Scanner in = new Scanner(System.in);
+        final Scanner in = new Scanner(System.in);
 
         System.out.println("请设置 a (int)：");
-        int a = in.nextInt();
+        final int a = in.nextInt();
         System.out.println("已设置 a=" + a);
 
         System.out.println("请设置累和次数 (int)：");
-        int times = in.nextInt();
-        System.out.println("已设置累和次数为：" + times + " 次");
+        final int times = in.nextInt();
+        System.out.println("已设置累和次数为：" + Math.abs(times) + " 次");
 
-        BigInteger temp = BigInteger.ZERO;
-        BigInteger result = BigInteger.ZERO;
+        System.out.print(a);
+        BigInteger temp = BigInteger.valueOf(a);
+        BigInteger result = BigInteger.valueOf(a);
         for (int i = 0; i < Math.abs(times); i++) {
-            temp = temp.multiply(BigInteger.valueOf(10)).add(BigInteger.valueOf(a));
-            System.out.print(temp.equals(BigInteger.valueOf(a)) ? a : " + " + temp);
+            temp = new BigInteger(temp + String.valueOf(Math.abs(a)));
+            System.out.print(" + " + temp);
             result = result.add(temp);
         }
 
