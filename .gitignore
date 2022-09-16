@@ -3,3 +3,5 @@
 /.vs/
 /ComprehensiveExerciseQuestions/.gradle/
 /ComprehensiveExerciseQuestions/build/
+
+*.log
