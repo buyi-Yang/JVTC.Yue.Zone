@@ -7,6 +7,8 @@
 
 本站点用于展示作品、作业，欢迎同学们共同参与~
 
+## [每周任务](./WeeklyWork.md)
+
 ## [综合练习题](./ComprehensiveExerciseQuestions/README.md)
 
 ## 许可证
