@@ -1,4 +1,4 @@
-package zone.yue.jvtc.solution.ceq;
+package zone.yue.jvtc.solution.ComprehensiveExerciseQuestions;
 
 /**
  * 单元一 公式计算

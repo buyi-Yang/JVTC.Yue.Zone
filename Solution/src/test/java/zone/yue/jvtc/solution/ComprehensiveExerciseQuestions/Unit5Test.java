@@ -1,4 +1,4 @@
-package zone.yue.jvtc.solution.ceq;
+package zone.yue.jvtc.solution.ComprehensiveExerciseQuestions;
 
 import org.junit.jupiter.api.*;
 
@@ -12,7 +12,7 @@ public class Unit5Test {
     @Test
     void testU5Q1() {
         System.out.println("U5Q1 - ");
-        Unit5.q1();
+        Unit5.q1(10);
     }
 
 //    @Test
@@ -28,7 +28,7 @@ public class Unit5Test {
     @Test
     void testU5Q5() {
         System.out.println("U5Q5 - ");
-        Unit5.q5(100, 10);
+        Unit5.q5(100, -10);
     }
 
     @AfterAll
