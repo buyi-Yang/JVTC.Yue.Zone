@@ -7,6 +7,9 @@
 
 本站点用于展示作品、作业，欢迎同学们共同参与~
 
+本项目使用最新版的 [OpenJDK](https://openjdk.org/) 与 [Gradle](https://gradle.org/) 构建。
+开发 IDE 推荐使用 [IDEA](https://www.jetbrains.com.cn/idea/)。
+
 ## [综合练习题](./ComprehensiveExerciseQuestions.md)
 ## [每周任务](./WeeklyWork.md)
 
