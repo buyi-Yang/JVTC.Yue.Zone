@@ -26,3 +26,15 @@
 > 参考 [1.0 十大经典排序算法 | 菜鸟教程](https://www.runoob.com/w3cnote/ten-sorting-algorithm.html)
 
 #### [解决方案](./Solution/src/main/java/zone/yue/jvtc/solution/WeeklyWork/Y22W38.java)
+
+## 2022 年 9 月第 39 周
+
+### 学习排序算法时间复杂度和空间复杂度计算方法
+
+> 参考：
+> - [算法的时间与空间复杂度（一看就懂） - 知乎](https://zhuanlan.zhihu.com/p/50479555)
+> - [一文弄懂算法的时间和空间复杂度分析 - 掘金](https://juejin.cn/post/6844904167824162823)
+
+### 学习十大排序算法之堆排序
+
+> 参考 [1.7 堆排序 | 菜鸟教程](https://www.runoob.com/w3cnote/heap-sort.html)
