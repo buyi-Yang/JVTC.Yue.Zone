@@ -12,6 +12,7 @@
 
 ## [综合练习题](./ComprehensiveExerciseQuestions.md)
 ## [每周任务](./WeeklyWork.md)
+## [《九江职业技术学院生存指南》](./HowToSurviveInJVTC/README.md)
 
 ## 许可证
 
