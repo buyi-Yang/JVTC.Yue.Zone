@@ -38,3 +38,5 @@
 ### 学习十大排序算法之堆排序
 
 > 参考 [1.7 堆排序 | 菜鸟教程](https://www.runoob.com/w3cnote/heap-sort.html)
+
+#### [解决方案](./Solution/src/main/java/zone/yue/jvtc/solution/WeeklyWork/Y22W39.java)
