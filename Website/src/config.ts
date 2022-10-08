@@ -1,7 +1,7 @@
 export const SITE = {
-	title: 'Documentation',
-	description: 'Your website description.',
-	defaultLanguage: 'en_US',
+	title: 'JVTC.Yue.Zone',
+	description: '悦域九职',
+	defaultLanguage: 'zh',
 };
 
 export const OPEN_GRAPH = {
@@ -26,13 +26,15 @@ export type Frontmatter = {
 };
 
 export const KNOWN_LANGUAGES = {
-	English: 'en',
+	简体中文: 'zh',
+	// English: 'en',
 } as const;
+
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
-export const GITHUB_EDIT_URL = `https://github.com/withastro/astro/tree/main/examples/docs`;
+export const GITHUB_EDIT_URL = `https://github.com/Yue-plus/JVTC.Yue.Zone/tree/main/Website`;
 
-export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
+// export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
@@ -45,13 +47,11 @@ export type Sidebar = Record<
 	typeof KNOWN_LANGUAGE_CODES[number],
 	Record<string, { text: string; link: string }[]>
 >;
+
 export const SIDEBAR: Sidebar = {
-	en: {
-		'Section Header': [
-			{ text: 'Introduction', link: 'en/introduction' },
-			{ text: 'Page 2', link: 'en/page-2' },
-			{ text: 'Page 3', link: 'en/page-3' },
+	zh: {
+		'竞赛': [
+			{ text: '蓝桥杯', link: '/zh/LanQiao/' },
 		],
-		'Another Section': [{ text: 'Page 4', link: 'en/page-4' }],
 	},
 };
