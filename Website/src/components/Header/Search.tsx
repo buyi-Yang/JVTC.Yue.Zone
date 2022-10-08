@@ -56,14 +56,14 @@ export default function Search() {
 					/>
 				</svg>
 
-				<span>Search</span>
+				<span>搜索</span>
 
 				<span className="search-hint">
-					<span className="sr-only">Press </span>
+					<span className="sr-only">按下</span>
 
 					<kbd>/</kbd>
 
-					<span className="sr-only"> to search</span>
+					<span className="sr-only">进行搜索</span>
 				</span>
 			</button>
 
