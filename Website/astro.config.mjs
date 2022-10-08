@@ -10,5 +10,6 @@ export default defineConfig({
 		// Enable React for the Algolia search component.
 		react(),
 	],
-	site: `http://astro.build`,
+	site: 'http://jvtc.yue.zone',
+	outDir: '../docs',
 });
