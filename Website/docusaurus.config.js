@@ -53,6 +53,7 @@ const config = {
             {type: 'doc', label: '金砖赛', docId: '竞赛/金砖赛'},
           ]
         },
+        {type: 'doc', docId: '生存指南/前言', position: 'left', label: '《生存指南》'},
         {to: '/blog', label: '博客', position: 'left'},
         {href: 'https://github.com/Yue-plus/JVTC.Yue.Zone', label: 'GitHub', position: 'right'},
       ],
