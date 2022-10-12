@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
+import ContributorsList from '@site/src/components/ContributorsList'
 // import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
@@ -22,16 +23,17 @@ function HomepageHeader() {
   );
 }
 
-export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+export default function Home(): JSX.Element {
+  const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        {/*<HomepageFeatures />*/}
-      </main>
-    </Layout>
+      <Layout
+          title={`首页`}
+          description="悦域九职 - JVTC.Yue.Zone">
+        <HomepageHeader />
+        <main>
+          <ContributorsList />
+          {/*<HomepageFeatures />*/}
+        </main>
+      </Layout>
   );
 }
