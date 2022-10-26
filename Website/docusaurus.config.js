@@ -66,6 +66,16 @@ const config = {
             {type: 'doc', label: '金砖赛', docId: '竞赛/金砖赛'},
           ]
         },
+        {
+          type: 'dropdown',
+          label: '作业',
+          position: 'left',
+          items: [
+            {type: 'doc', label: '综合练习题', docId: '作业/综合练习题'},
+            {type: 'doc', label: '每周任务', docId: '作业/每周任务'},
+            {type: 'doc', label: '网页设计', docId: '作业/网页设计'},
+          ]
+        },
         {type: 'doc', docId: '生存指南/前言', position: 'left', label: '《生存指南》'},
         {to: '/blog', label: '博客', position: 'left'},
         {href: 'https://github.com/Yue-plus/JVTC.Yue.Zone', label: 'GitHub', position: 'right'},
