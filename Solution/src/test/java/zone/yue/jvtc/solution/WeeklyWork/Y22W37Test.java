@@ -1,9 +1,6 @@
 package zone.yue.jvtc.solution.WeeklyWork;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 public class Y22W37Test {
