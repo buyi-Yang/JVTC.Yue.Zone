@@ -64,6 +64,7 @@ const config = {
           items: [
             {type: 'doc', label: '蓝桥杯', docId: '竞赛/蓝桥杯'},
             {type: 'doc', label: '金砖赛', docId: '竞赛/金砖赛'},
+            {type: 'doc', label: '信息素养', docId: '竞赛/信息素养'},
           ]
         },
         {
