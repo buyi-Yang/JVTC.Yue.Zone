@@ -10,8 +10,13 @@
 
 本网站使用 [Docusaurus](https://docusaurus.io/zh-CN/docs) 构建。
 
-本项目中的 **Solution** 使用最新版的 [OpenJDK](https://openjdk.org/) 与 [Gradle](https://gradle.org/) 构建。
-开发 IDE 推荐使用 [IDEA](https://www.jetbrains.com.cn/idea/)。
+## 关联项目
+
+- 解决方案（目前主要用来存 Java 作业）：
+  [Solution.JVTC.Yue.Zone](https://github.com/Yue-plus/Solution.JVTC.Yue.Zone)
+- 校园网拨号器：
+  [JvtcCampusNetworkDialer](https://github.com/Yue-plus/JvtcCampusNetworkDialer)
+  
 
 ## 许可证
 
