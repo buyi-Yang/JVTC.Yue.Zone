@@ -54,9 +54,9 @@ const config = {
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */ ({
     navbar: {
       title: '悦域九职',
-      logo: {alt: 'My Site Logo', src: 'img/logo.svg'},
+      logo: {alt: '软件2201班班徽', src: 'img/班徽.svg'},
       items: [
-        {type: 'doc', docId: '欢迎', position: 'left', label: '欢迎'},
+        {type: 'doc', docId: '首页/欢迎', position: 'left', label: '欢迎'},
         {
           type: 'dropdown',
           label: '竞赛',
