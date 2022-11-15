@@ -75,6 +75,7 @@ const config = {
             {type: 'doc', label: '综合练习题', docId: '作业/综合练习题'},
             {type: 'doc', label: '每周任务', docId: '作业/每周任务'},
             {type: 'doc', label: '网页设计', docId: '作业/网页设计'},
+            {type: 'doc', label: '程序设计基础C', docId: '作业/程序设计基础C'},
           ]
         },
         {type: 'doc', docId: '生存指南/前言', position: 'left', label: '《生存指南》'},
