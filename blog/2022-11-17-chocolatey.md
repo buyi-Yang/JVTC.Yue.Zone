@@ -332,3 +332,105 @@ choco uninstall $packagename
 # 升级包
 choco upgrade $packagename
 ```
+
+### 常用软件
+
+#### 浏览器
+
+  [Google Chrome](https://community.chocolatey.org/packages/GoogleChrome)
+| [FireFox](https://community.chocolatey.org/packages/Firefox)
+
+```powershell
+choco install googlechrome firefox -y
+```
+
+#### 腾讯
+
+  [QQ](https://community.chocolatey.org/packages/tencentqq)
+| [TIM](https://community.chocolatey.org/packages/tim)
+| [微信](https://community.chocolatey.org/packages/wechat)
+| [腾讯会议](https://community.chocolatey.org/packages/tencentmeeting)
+| [腾讯文档](https://community.chocolatey.org/packages/tencentdocs)
+
+```powershell
+choco install tencentqq tim wechat tencentmeeting tencentdocs -y
+```
+
+#### 网易
+
+[网易云音乐](https://community.chocolatey.org/packages/netease-cloudmusic)
+
+```powershell
+choco install netease-cloudmusic -y
+```
+
+#### Office/WPS
+
+  [Office Tool Plus](https://community.chocolatey.org/packages/office-tool)
+| [WPS Office Free](https://community.chocolatey.org/packages/wps-office-free)
+
+```powershell
+choco install office-tool wps-office-free -y
+```
+
+#### JetBrains
+
+[Toolbox App](https://community.chocolatey.org/packages/jetbrainstoolbox)
+
+```powershell
+choco install jetbrainstoolbox -y
+```
+
+##### IDEA
+
+  [IDEA 旗舰版](https://community.chocolatey.org/packages/intellijidea-ultimate)
+| [IDEA 社区版](https://community.chocolatey.org/packages/intellijidea-community)
+
+```powershell
+choco install intellijidea-ultimate intellijidea-community -y
+```
+
+##### Pycharm
+
+  [Pycharm 专业版](https://community.chocolatey.org/packages/Pycharm)
+| [Pycharm 社区版](https://community.chocolatey.org/packages/PyCharm-community)
+
+```powershell
+choco install pycharm pycharm-community -y
+```
+
+##### [Android Studio](https://community.chocolatey.org/packages/AndroidStudio)
+
+```powershell
+choco install androidstudio
+```
+
+#### 开发环境
+
+  [Visual Studio Code](https://community.chocolatey.org/packages/vscode)
+| [Notepad++](https://community.chocolatey.org/packages/notepadplusplus)
+| [Postman](https://community.chocolatey.org/packages/postman)
+| [Git](https://community.chocolatey.org/packages/git)
+| [Python](https://community.chocolatey.org/packages/python)
+| [NodeJS](https://community.chocolatey.org/packages/nodejs)
+| [Yarn](https://community.chocolatey.org/packages/yarn)
+| [pnpm](https://community.chocolatey.org/packages/pnpm)
+| [OpenJDK](https://community.chocolatey.org/packages/openjdk)
+
+```powershell
+choco install vscode notepadplusplus postman git python nodejs yarn pnpm openjdk -y
+```
+
+#### 实用工具
+
+  [7-zip](https://community.chocolatey.org/packages/7zip)
+| [UltraISO（王涛码无法激活）](https://community.chocolatey.org/packages/ultraiso)
+| [DiskGenius](https://community.chocolatey.org/packages/diskgenius)
+| [CPU-Z](https://community.chocolatey.org/packages/cpu-z)
+| [GPU-Z](https://community.chocolatey.org/packages/gpu-z)
+| [AS SSD Benchmark](https://community.chocolatey.org/packages/as-ssd)
+| [CrystalDiskInfo](https://community.chocolatey.org/packages/crystaldiskinfo)
+
+```powershell
+choco install 7zip ultraiso diskgenius cpu-z gpu-z as-ssd crystaldiskinfo -y
+```
