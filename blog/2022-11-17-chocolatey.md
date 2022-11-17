@@ -356,12 +356,13 @@ choco install googlechrome firefox -y
 choco install tencentqq tim wechat tencentmeeting tencentdocs -y
 ```
 
-#### 网易
+#### 影视音乐
 
-[网易云音乐](https://community.chocolatey.org/packages/netease-cloudmusic)
+  [网易云音乐](https://community.chocolatey.org/packages/netease-cloudmusic)
+| [PotPlayer](https://community.chocolatey.org/packages/potplayer)
 
 ```powershell
-choco install netease-cloudmusic -y
+choco install potplayer netease-cloudmusic -y
 ```
 
 #### Office/WPS
@@ -407,23 +408,28 @@ choco install androidstudio
 
 #### 开发环境
 
-  [Visual Studio Code](https://community.chocolatey.org/packages/vscode)
+  [Windows Terminal](https://community.chocolatey.org/packages/microsoft-windows-terminal)
+| [Visual Studio Code](https://community.chocolatey.org/packages/vscode)
 | [Notepad++](https://community.chocolatey.org/packages/notepadplusplus)
 | [Postman](https://community.chocolatey.org/packages/postman)
+| [WinSCP](https://community.chocolatey.org/packages/winscp)
 | [Git](https://community.chocolatey.org/packages/git)
 | [Python](https://community.chocolatey.org/packages/python)
 | [NodeJS](https://community.chocolatey.org/packages/nodejs)
 | [Yarn](https://community.chocolatey.org/packages/yarn)
 | [pnpm](https://community.chocolatey.org/packages/pnpm)
 | [OpenJDK](https://community.chocolatey.org/packages/openjdk)
+| [Gradle](https://community.chocolatey.org/packages/gradle)
+| [Maven](https://community.chocolatey.org/packages/maven)
 
 ```powershell
-choco install vscode notepadplusplus postman git python nodejs yarn pnpm openjdk -y
+choco install microsoft-windows-terminal vscode notepadplusplus postman git python nodejs yarn pnpm openjdk gradle maven -y
 ```
 
 #### 实用工具
 
   [7-zip](https://community.chocolatey.org/packages/7zip)
+| [BitComet](https://community.chocolatey.org/packages/bitcomet)
 | [UltraISO（王涛码无法激活）](https://community.chocolatey.org/packages/ultraiso)
 | [DiskGenius](https://community.chocolatey.org/packages/diskgenius)
 | [CPU-Z](https://community.chocolatey.org/packages/cpu-z)
@@ -432,5 +438,5 @@ choco install vscode notepadplusplus postman git python nodejs yarn pnpm openjdk
 | [CrystalDiskInfo](https://community.chocolatey.org/packages/crystaldiskinfo)
 
 ```powershell
-choco install 7zip ultraiso diskgenius cpu-z gpu-z as-ssd crystaldiskinfo -y
+choco install 7zip bitcomet ultraiso diskgenius cpu-z gpu-z as-ssd crystaldiskinfo -y
 ```
