@@ -59,6 +59,15 @@ const config = {
         {type: 'doc', docId: '首页/欢迎', position: 'left', label: '欢迎'},
         {
           type: 'dropdown',
+          label: '编程',
+          position: 'left',
+          items: [
+            {type: 'doc', label: 'Java', docId: '编程/Java/入门'},
+            {type: 'doc', label: 'Python', docId: '编程/Python/入门'},
+          ]
+        },
+        {
+          type: 'dropdown',
           label: '竞赛',
           position: 'left',
           items: [
@@ -78,7 +87,7 @@ const config = {
             {type: 'doc', label: '程序设计基础C', docId: '作业/程序设计基础C'},
           ]
         },
-        {type: 'doc', docId: '生存指南/前言', position: 'left', label: '《生存指南》'},
+        // {type: 'doc', docId: '生存指南/前言', position: 'left', label: '《生存指南》'},
         {to: '/blog', label: '博客', position: 'left'},
         {href: 'https://github.com/Yue-plus/JVTC.Yue.Zone', label: 'GitHub', position: 'right'},
       ],
