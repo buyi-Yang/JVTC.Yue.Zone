@@ -413,7 +413,6 @@ choco install androidstudio
 | [Notepad++](https://community.chocolatey.org/packages/notepadplusplus)
 | [Postman](https://community.chocolatey.org/packages/postman)
 | [WinSCP](https://community.chocolatey.org/packages/winscp)
-| [Git](https://community.chocolatey.org/packages/git)
 | [Python](https://community.chocolatey.org/packages/python)
 | [NodeJS](https://community.chocolatey.org/packages/nodejs)
 | [Yarn](https://community.chocolatey.org/packages/yarn)
@@ -424,6 +423,17 @@ choco install androidstudio
 
 ```powershell
 choco install microsoft-windows-terminal vscode notepadplusplus postman git python nodejs yarn pnpm openjdk gradle maven -y
+```
+
+##### 安装 Git
+
+  [Git](https://community.chocolatey.org/packages/git)
+| [所有安装参数](https://github.com/chocolatey-community/chocolatey-packages/blob/master/automatic/git.install/ARGUMENTS.md)
+
+
+```shell
+# 安装 Git 并配置：添加到 WindowsTerminal；使用 Notepad++ 文本编辑器；不添加 Git Gui Here 右键菜单； 
+choco install git -y -params "'/WindowsTerminal /WindowsTerminalProfile /Editor:Notepad++ /NoGuiHereIntegration'"
 ```
 
 #### 实用工具
