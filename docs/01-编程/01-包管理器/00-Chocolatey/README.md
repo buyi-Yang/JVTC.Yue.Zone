@@ -1,7 +1,16 @@
-# Chocolatey - Windows 现代软件自动化的包管理器
+# Chocolatey
 
-  [官网](https://chocolatey.org/)
+:::info
+Windows 现代软件自动化的包管理器
+
+| [官网](https://chocolatey.org/)
 | [查找包](https://community.chocolatey.org/packages)
+|
+:::
+
+## 安装
+
+参考 [官网安装指引](https://chocolatey.org/install) 。
 
 ## 使用
 
@@ -408,7 +417,7 @@ choco install androidstudio
 
 #### 开发环境
 
-  [Windows Terminal](https://community.chocolatey.org/packages/microsoft-windows-terminal)
+  [Windows Terminal（无法安装）](https://community.chocolatey.org/packages/microsoft-windows-terminal)
 | [Visual Studio Code](https://community.chocolatey.org/packages/vscode)
 | [Notepad++](https://community.chocolatey.org/packages/notepadplusplus)
 | [Postman](https://community.chocolatey.org/packages/postman)

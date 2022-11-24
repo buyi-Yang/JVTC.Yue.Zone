@@ -52,20 +52,13 @@ const config = {
 
   themeConfig:
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */ ({
+    tableOfContents: {minHeadingLevel: 2, maxHeadingLevel: 6},
     navbar: {
       title: '悦域九职',
       logo: {alt: '软件2201班班徽', src: 'img/班徽.svg'},
       items: [
         {type: 'doc', docId: '首页/欢迎', position: 'left', label: '欢迎'},
-        {
-          type: 'dropdown',
-          label: '编程',
-          position: 'left',
-          items: [
-            {type: 'doc', label: 'Java', docId: '编程/Java/入门'},
-            {type: 'doc', label: 'Python', docId: '编程/Python/入门'},
-          ]
-        },
+        {type: 'doc', docId: '编程/README', position: 'left', label: '编程'},
         {
           type: 'dropdown',
           label: '竞赛',
@@ -89,6 +82,7 @@ const config = {
         },
         // {type: 'doc', docId: '生存指南/前言', position: 'left', label: '《生存指南》'},
         {to: '/blog', label: '博客', position: 'left'},
+        {href: 'https://note.yueplus.ink/', label: 'NetNote', position: 'right'},
         {href: 'https://github.com/Yue-plus/JVTC.Yue.Zone', label: 'GitHub', position: 'right'},
       ],
     },
