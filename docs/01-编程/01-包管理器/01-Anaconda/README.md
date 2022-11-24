@@ -112,7 +112,10 @@ conda info -e
 conda update conda
 
 # 创建新的虚拟环境
-conda create -n $ENV_NAME python=x.x
+conda create --name $ENV_NAME python=x.x
+
+# 删除虚拟环境
+conda env remove --name $ENV_NAME
 
 # 切换环境
 conda active $ENV_NAME
