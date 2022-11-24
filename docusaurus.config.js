@@ -30,11 +30,11 @@ const config = {
           remarkPlugins: [math],
           rehypePlugins: [katex],
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/Yue-plus/JVTC.Yue.Zone/tree/main/docs/',
+          editUrl: 'https://github.com/Yue-plus/JVTC.Yue.Zone/tree/main/',
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/Yue-plus/JVTC.Yue.Zone/tree/main/blog/',
+          editUrl: 'https://github.com/Yue-plus/JVTC.Yue.Zone/tree/main/',
         },
         theme: {customCss: require.resolve('./src/css/custom.css')},
       }),
