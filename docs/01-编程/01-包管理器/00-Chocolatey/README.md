@@ -442,13 +442,14 @@ choco install microsoft-windows-terminal vscode notepadplusplus postman git pyth
 
 ```shell
 # 安装 Git 并配置：添加到 WindowsTerminal；使用 Notepad++ 文本编辑器；不添加 Git Gui Here 右键菜单； 
-choco install git -y -params "'/WindowsTerminal /WindowsTerminalProfile /Editor:Notepad++ /NoGuiHereIntegration'"
+choco install git -y -params "'/WindowsTerminalProfile /Editor:Notepad++ /NoGuiHereIntegration'"
 ```
 
 #### 实用工具
 
   [7-zip](https://community.chocolatey.org/packages/7zip)
 | [BitComet](https://community.chocolatey.org/packages/bitcomet)
+| [PicoTorrent](https://community.chocolatey.org/packages/picotorrent)
 | [UltraISO（王涛码无法激活）](https://community.chocolatey.org/packages/ultraiso)
 | [DiskGenius](https://community.chocolatey.org/packages/diskgenius)
 | [CPU-Z](https://community.chocolatey.org/packages/cpu-z)
@@ -457,5 +458,5 @@ choco install git -y -params "'/WindowsTerminal /WindowsTerminalProfile /Editor:
 | [CrystalDiskInfo](https://community.chocolatey.org/packages/crystaldiskinfo)
 
 ```powershell
-choco install 7zip bitcomet ultraiso diskgenius cpu-z gpu-z as-ssd crystaldiskinfo -y
+choco install 7zip bitcomet picotorrent ultraiso diskgenius cpu-z gpu-z as-ssd crystaldiskinfo -y
 ```
