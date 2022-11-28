@@ -344,6 +344,10 @@ choco upgrade $packagename
 
 ### 常用软件
 
+:::warning
+请选择自己需要的安装！
+:::
+
 #### 浏览器
 
   [Google Chrome](https://community.chocolatey.org/packages/GoogleChrome)
@@ -429,9 +433,11 @@ choco install androidstudio
 | [OpenJDK](https://community.chocolatey.org/packages/openjdk)
 | [Gradle](https://community.chocolatey.org/packages/gradle)
 | [Maven](https://community.chocolatey.org/packages/maven)
+| [Eclipse](https://community.chocolatey.org/packages/eclipse)
+| [SpringToolsSuite](https://community.chocolatey.org/packages/SpringToolSuite)
 
 ```powershell
-choco install microsoft-windows-terminal vscode notepadplusplus postman git python nodejs yarn pnpm openjdk gradle maven -y
+choco install microsoft-windows-terminal vscode notepadplusplus postman git python nodejs yarn pnpm openjdk gradle maven eclipse springtoolsuite -y
 ```
 
 ##### 安装 Git
@@ -456,7 +462,8 @@ choco install git -y -params "'/WindowsTerminalProfile /Editor:Notepad++ /NoGuiH
 | [GPU-Z](https://community.chocolatey.org/packages/gpu-z)
 | [AS SSD Benchmark](https://community.chocolatey.org/packages/as-ssd)
 | [CrystalDiskInfo](https://community.chocolatey.org/packages/crystaldiskinfo)
+| [SpaceSniffer](https://community.chocolatey.org/packages/spacesniffer)
 
 ```powershell
-choco install 7zip bitcomet picotorrent ultraiso diskgenius cpu-z gpu-z as-ssd crystaldiskinfo -y
+choco install 7zip bitcomet picotorrent ultraiso diskgenius cpu-z gpu-z as-ssd crystaldiskinfo spacesniffer -y
 ```
