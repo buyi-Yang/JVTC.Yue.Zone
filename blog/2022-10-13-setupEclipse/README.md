@@ -46,7 +46,11 @@ choco install springtoolsuite -y
 
 ![](./img/QQ%E6%88%AA%E5%9B%BE20221129003637.png)
 
-## 启用代码提示
+## 个性化
+
+- [【Eclipse】将Tab替换为空格 - 伊凡Ivan - 博客园](https://www.cnblogs.com/conquerorren/p/8520579.html)
+
+### 启用代码提示
 
 **菜单栏 → 窗口 → 首选项 → Java → 内容辅助 → 自动激活** 中修改设置：
 
@@ -57,7 +61,7 @@ choco install springtoolsuite -y
 
 > 参考：[eclipse代码自动提示设置 - dodo-yufan - 博客园](https://www.cnblogs.com/zgqys1980/p/5067337.html)
 
-## 设置编辑器字体
+### 设置编辑器字体
 
 ![](./img/%E8%AE%BE%E7%BD%AE%E5%AD%97%E4%BD%93.png)
 
