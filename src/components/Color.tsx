@@ -1,11 +1,11 @@
 import React from "react";
 
 interface ColorProps {
-  color: string,
+  value: string,
   name: string | null | undefined,
 }
 
-export default function Color({color, name}: ColorProps) {
+export default function Color({value, name}: ColorProps) {
   return (
     <div style={{
       width: 120,
@@ -13,9 +13,9 @@ export default function Color({color, name}: ColorProps) {
       lineHeight: "120px",
       textAlign: "center",
       display: "inline-block",
-      backgroundColor: color,
+      backgroundColor: value,
     }}>
-      <span style={{backgroundColor: "RGBA(128, 128, 128, .8)"}}>{name ?? color.toUpperCase()}</span>
+      <span style={{backgroundColor: "RGBA(128, 128, 128, .8)"}}>{name ?? value.toUpperCase()}</span>
     </div>
   )
 }
