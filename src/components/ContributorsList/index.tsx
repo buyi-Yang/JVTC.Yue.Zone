@@ -17,7 +17,7 @@ export default function ContributorsList() {
       <h1>贡献者</h1>
       <div className="row">
         <div>
-          <Contributor name="Yue_plus" href="https://github.com/Yue-plus" imgSrc="https://github.com/Yue-plus.png" />
+          <Contributor name="Yue_plus" href="https://github.com/Yue-plus" imgSrc="/contributors/Yue-plus.png" />
         </div>
       </div>
     </div>
