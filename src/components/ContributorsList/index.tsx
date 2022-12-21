@@ -10,7 +10,7 @@ interface ContributorProps {
 function Contributor({name, href, avatar}: ContributorProps) {
   return (
     <a className={style.headLink} target="_blank" href={href}>
-      <img className={style.headImg} src={avatar ?? "/contributors/${name}.png"} alt={name} />
+      <img className={style.headImg} src={avatar ?? `/contributors/${name}.png`} alt={name} />
       <br/>
       {name}
     </a>
