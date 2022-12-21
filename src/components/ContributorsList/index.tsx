@@ -1,12 +1,18 @@
 import React from "react";
 import style from './style.module.css';
 
-function Contributor(props) {
+interface ContributorProps {
+  name: string,
+  href: string,
+  avatar?: string,
+}
+
+function Contributor({name, href, avatar}: ContributorProps) {
   return (
-    <a className={style.headLink} target="_blank" href={props.href}>
-      <img className={style.headImg} src={props.imgSrc} alt={props.name} />
+    <a className={style.headLink} target="_blank" href={href}>
+      <img className={style.headImg} src={avatar ?? "/contributors/${name}.png"} alt={name} />
       <br/>
-      {props.name}
+      {name}
     </a>
   )
 }
@@ -17,7 +23,7 @@ export default function ContributorsList() {
       <h1>贡献者</h1>
       <div className="row">
         <div>
-          <Contributor name="Yue_plus" href="https://github.com/Yue-plus" imgSrc="/contributors/Yue-plus.png" />
+          <Contributor name="Yue_plus" href="https://github.com/Yue-plus" />
         </div>
       </div>
     </div>
