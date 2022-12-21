@@ -59,27 +59,8 @@ const config = {
       items: [
         {type: 'doc', docId: '首页/欢迎', position: 'left', label: '欢迎'},
         {type: 'doc', docId: '编程/README', position: 'left', label: '编程'},
-        {
-          type: 'dropdown',
-          label: '竞赛',
-          position: 'left',
-          items: [
-            {type: 'doc', label: '蓝桥杯', docId: '竞赛/蓝桥杯'},
-            {type: 'doc', label: '金砖赛', docId: '竞赛/金砖赛'},
-            {type: 'doc', label: '信息素养', docId: '竞赛/信息素养'},
-          ]
-        },
-        {
-          type: 'dropdown',
-          label: '作业',
-          position: 'left',
-          items: [
-            {type: 'doc', label: '综合练习题', docId: '作业/综合练习题'},
-            {type: 'doc', label: '每周任务', docId: '作业/每周任务'},
-            {type: 'doc', label: '网页设计', docId: '作业/网页设计'},
-            {type: 'doc', label: '程序设计基础C', docId: '作业/程序设计基础C'},
-          ]
-        },
+        {type: 'doc', docId: '竞赛/蓝桥杯', position: 'left', label: '竞赛'},
+        {type: 'doc', docId: '作业/综合练习题', position: 'left', label: '作业'},
         // {type: 'doc', docId: '生存指南/前言', position: 'left', label: '《生存指南》'},
         {type: 'doc', docId: '英语/词汇配对', position: 'left', label: '英语'},
         {to: '/blog', label: '博客', position: 'left'},
