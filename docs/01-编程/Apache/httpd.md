@@ -101,3 +101,38 @@ Usage: /usr/sbin/a2query -q -m [MODULE] -s [SITE] -c [CONF] -a -v -M -d -h
 ## 配置：一台主机多个站点
 
 ## 配置：SSL 证书（HTTPS）
+
+参考：
+
+- [在Apache服务器上安装SSL证书 - 阿里云帮助中心](https://help.aliyun.com/document_detail/98727.html)
+- [在Ubuntu系统Apache 2部署SSL证书 - 阿里云帮助中心](https://help.aliyun.com/document_detail/102450.html?spm=a2c4g.11186623.0.0.2bd26079VlvY73)
+
+启用 SSL 模块：
+
+```shell
+sudo a2enmod ssl
+```
+
+编辑 `/etc/apache2/sites-available/default-ssl.conf` 文件，第 33、34、43 行，修改为证书保存位置：
+
+```diff
+  28                 #   A self-signed (snakeoil) certificate can be created by installing
+  29                 #   the ssl-cert package. See
+  30                 #   /usr/share/doc/apache2/README.Debian.gz for more info.
+  31                 #   If both key and certificate are stored in the same file, only the
+  32                 #   SSLCertificateFile directive is needed.
++ 33                 SSLCertificateFile      /etc/apache2/ssl/public.crt
++ 34                 SSLCertificateKeyFile /etc/apache2/ssl/private.key
+  35
+  36                 #   Server Certificate Chain:
+  37                 #   Point SSLCertificateChainFile at a file containing the
+  38                 #   concatenation of PEM encoded CA certificates which form the
+  39                 #   certificate chain for the server certificate. Alternatively
+  40                 #   the referenced file can be the same as SSLCertificateFile
+  41                 #   when the CA certificates are directly appended to the server
+  42                 #   certificate for convinience.
++ 43                 SSLCertificateChainFile /etc/apache2/ssl/ca.crt
+```
+
+
+
