@@ -59,7 +59,7 @@ const config = {
       items: [
         {type: 'doc', docId: '首页/欢迎', position: 'left', label: '欢迎'},
         {type: 'doc', docId: '编程/README', position: 'left', label: '编程'},
-        {type: 'doc', docId: '竞赛/蓝桥杯', position: 'left', label: '竞赛'},
+        {type: 'doc', docId: '竞赛/蓝桥杯/README', position: 'left', label: '竞赛'},
         {type: 'doc', docId: '作业/综合练习题', position: 'left', label: '作业'},
         // {type: 'doc', docId: '生存指南/前言', position: 'left', label: '《生存指南》'},
         {type: 'doc', docId: '英语/词汇配对', position: 'left', label: '英语'},
