@@ -44,6 +44,10 @@
 这是 Java10 的新特性。
 可参考：[Java 10 新特性之局部变量类型推断 - 知乎](https://zhuanlan.zhihu.com/p/34911982)
 
+### 不支持 `record`
+
+可参考：[无涯教程- Java 14 – Record类型介绍 - 知乎](https://zhuanlan.zhihu.com/p/372678867)
+
 ### 不支持一些 `String` 方法
 
 Java11 增加了一系列的字符串处理方法：
