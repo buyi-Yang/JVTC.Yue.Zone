@@ -122,7 +122,7 @@ sudo a2enmod ssl
   31                 #   If both key and certificate are stored in the same file, only the
   32                 #   SSLCertificateFile directive is needed.
 + 33                 SSLCertificateFile      /etc/apache2/ssl/public.crt
-+ 34                 SSLCertificateKeyFile /etc/apache2/ssl/private.key
++ 34                 SSLCertificateKeyFile   /etc/apache2/ssl/private.key
   35
   36                 #   Server Certificate Chain:
   37                 #   Point SSLCertificateChainFile at a file containing the
