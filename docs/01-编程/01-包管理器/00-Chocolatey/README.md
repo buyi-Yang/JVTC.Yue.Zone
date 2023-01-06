@@ -447,8 +447,8 @@ choco install microsoft-windows-terminal vscode notepadplusplus postman git pyth
 
 
 ```shell
-# 安装 Git 并配置：添加到 WindowsTerminal；使用 Notepad++ 文本编辑器；不添加 Git Gui Here 右键菜单； 
-choco install git -y -params "'/WindowsTerminalProfile /Editor:Notepad++ /NoGuiHereIntegration'"
+# 安装 Git 并配置：添加到 WindowsTerminal；使用 VisualStudioCode 文本编辑器；不添加 Git Gui Here 右键菜单； 
+choco install git -y -params "'/WindowsTerminalProfile /Editor:VisualStudioCode /NoGuiHereIntegration'"
 ```
 
 #### 实用工具
