@@ -340,6 +340,9 @@ choco uninstall $packagename
 
 # 升级包
 choco upgrade $packagename
+
+# 升级所有包
+choco upgrade --yes all
 ```
 
 ### 常用软件
