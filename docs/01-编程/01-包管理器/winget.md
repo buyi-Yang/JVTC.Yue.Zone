@@ -5,4 +5,5 @@
 此工具是 Windows 程序包管理器服务的客户端接口。
 
 * [使用 winget 工具安装和管理应用程序 | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/package-manager/winget/)
+* [winstall - GUI for Windows Package Manager](https://winstall.app/)
 :::
