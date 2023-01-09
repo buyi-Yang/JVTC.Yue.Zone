@@ -4,13 +4,28 @@
 Windows 现代软件自动化的包管理器
 
 | [官网](https://chocolatey.org/)
+| [文档](https://docs.chocolatey.org/en-us/)
 | [查找包](https://community.chocolatey.org/packages)
 |
 :::
 
 ## 安装
 
-参考 [官网安装指引](https://chocolatey.org/install) 。
+> 参考 [官网安装指引](https://chocolatey.org/install) 。
+
+使用管理员身份在 PowerShell 中运行（适用于个人桌面使用）：
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+
+### 安装 GUI
+
+> 参考 [Chocolatey GUI](https://docs.chocolatey.org/en-us/chocolatey-gui/setup/installation)
+
+```shell
+choco install chocolateygui -y
+```
 
 ## 使用
 
@@ -323,7 +338,7 @@ Chocolatey v1.2.0
 
 
 
-### 常用指令
+## 常用指令
 
 ```powershell
 # 查看本地安装的软件
@@ -345,24 +360,25 @@ choco upgrade $packagename
 choco upgrade --yes all
 ```
 
-### 常用软件
+## 常用软件
 
 :::warning
 请选择自己需要的安装！
 :::
 
-#### 浏览器
+### 浏览器
 
   [Google Chrome](https://community.chocolatey.org/packages/GoogleChrome)
 | [FireFox](https://community.chocolatey.org/packages/Firefox)
+| [Firefox Developer Edition](https://community.chocolatey.org/packages/firefox-dev)
 
 ```powershell
-choco install googlechrome firefox -y
+choco install googlechrome firefox firefox-dev -y
 ```
 
-#### 腾讯
+### 腾讯
 
-  [QQ](https://community.chocolatey.org/packages/tencentqq)
+  [QQ（版本低）](https://community.chocolatey.org/packages/tencentqq)
 | [TIM](https://community.chocolatey.org/packages/tim)
 | [微信](https://community.chocolatey.org/packages/wechat)
 | [腾讯会议](https://community.chocolatey.org/packages/tencentmeeting)
@@ -372,7 +388,7 @@ choco install googlechrome firefox -y
 choco install tencentqq tim wechat tencentmeeting tencentdocs -y
 ```
 
-#### 影视音乐
+### 影视音乐
 
   [网易云音乐](https://community.chocolatey.org/packages/netease-cloudmusic)
 | [PotPlayer](https://community.chocolatey.org/packages/potplayer)
@@ -381,7 +397,7 @@ choco install tencentqq tim wechat tencentmeeting tencentdocs -y
 choco install potplayer netease-cloudmusic -y
 ```
 
-#### Office/WPS
+### Office/WPS
 
   [Office Tool Plus](https://community.chocolatey.org/packages/office-tool)
 | [WPS Office Free](https://community.chocolatey.org/packages/wps-office-free)
@@ -390,7 +406,7 @@ choco install potplayer netease-cloudmusic -y
 choco install office-tool wps-office-free -y
 ```
 
-#### JetBrains
+### JetBrains
 
 [Toolbox App](https://community.chocolatey.org/packages/jetbrainstoolbox)
 
@@ -398,7 +414,7 @@ choco install office-tool wps-office-free -y
 choco install jetbrainstoolbox -y
 ```
 
-##### IDEA
+#### IDEA
 
   [IDEA 旗舰版](https://community.chocolatey.org/packages/intellijidea-ultimate)
 | [IDEA 社区版](https://community.chocolatey.org/packages/intellijidea-community)
@@ -407,7 +423,7 @@ choco install jetbrainstoolbox -y
 choco install intellijidea-ultimate intellijidea-community -y
 ```
 
-##### Pycharm
+#### Pycharm
 
   [Pycharm 专业版](https://community.chocolatey.org/packages/Pycharm)
 | [Pycharm 社区版](https://community.chocolatey.org/packages/PyCharm-community)
@@ -416,17 +432,16 @@ choco install intellijidea-ultimate intellijidea-community -y
 choco install pycharm pycharm-community -y
 ```
 
-##### [Android Studio](https://community.chocolatey.org/packages/AndroidStudio)
+#### [Android Studio](https://community.chocolatey.org/packages/AndroidStudio)
 
 ```powershell
 choco install androidstudio
 ```
 
-#### 开发环境
+### 开发环境
 
   [Windows Terminal（无法安装）](https://community.chocolatey.org/packages/microsoft-windows-terminal)
 | [Visual Studio Code](https://community.chocolatey.org/packages/vscode)
-| [Notepad++](https://community.chocolatey.org/packages/notepadplusplus)
 | [Postman](https://community.chocolatey.org/packages/postman)
 | [WinSCP](https://community.chocolatey.org/packages/winscp)
 | [Python](https://community.chocolatey.org/packages/python)
@@ -440,10 +455,10 @@ choco install androidstudio
 | [SpringToolsSuite](https://community.chocolatey.org/packages/SpringToolSuite)
 
 ```powershell
-choco install microsoft-windows-terminal vscode notepadplusplus postman git python nodejs yarn pnpm openjdk gradle maven eclipse springtoolsuite -y
+choco install microsoft-windows-terminal vscode postman winscp git python nodejs yarn pnpm openjdk gradle maven eclipse springtoolsuite -y
 ```
 
-##### 安装 Git
+#### 安装 Git
 
   [Git](https://community.chocolatey.org/packages/git)
 | [所有安装参数](https://github.com/chocolatey-community/chocolatey-packages/blob/master/automatic/git.install/ARGUMENTS.md)
@@ -454,9 +469,11 @@ choco install microsoft-windows-terminal vscode notepadplusplus postman git pyth
 choco install git -y -params "'/WindowsTerminalProfile /Editor:VisualStudioCode /NoGuiHereIntegration'"
 ```
 
-#### 实用工具
+### 实用工具
 
   [7-zip](https://community.chocolatey.org/packages/7zip)
+| [Rufus](https://community.chocolatey.org/packages/rufus)
+| [Free Download Manager](https://community.chocolatey.org/packages/FreeDownloadManager)
 | [BitComet](https://community.chocolatey.org/packages/bitcomet)
 | [PicoTorrent](https://community.chocolatey.org/packages/picotorrent)
 | [UltraISO（王涛码无法激活）](https://community.chocolatey.org/packages/ultraiso)
@@ -468,5 +485,30 @@ choco install git -y -params "'/WindowsTerminalProfile /Editor:VisualStudioCode 
 | [SpaceSniffer](https://community.chocolatey.org/packages/spacesniffer)
 
 ```powershell
-choco install 7zip bitcomet picotorrent ultraiso diskgenius cpu-z gpu-z as-ssd crystaldiskinfo spacesniffer -y
+choco install 7zip rufus freedownloadmanager bitcomet picotorrent ultraiso diskgenius cpu-z gpu-z as-ssd crystaldiskinfo spacesniffer -y
+```
+
+## 安装位置
+
+软件通常会安装到：
+
+* `C:\Program Files`
+* `C:\Program Files (x86)`
+* `C:\ProgramData`
+* `C:\ProgramData\chocolatey\lib`
+* `C:\tools`
+
+## Yue_plus 的系统环境
+
+开启网络代理，然后以管理员身份运行：
+
+```powershell
+choco install chocolateygui `
+office-tool jetbrainstoolbox vscode `
+git -params "'/WindowsTerminalProfile /Editor:VisualStudioCode /NoGuiHereIntegration'" `
+postman googlechrome firefox-dev --pre `
+wechat netease-cloudmusic steam `
+potplayer freedownloadmanager 7zip rufus winscp `
+openjdk gradle nodejs yarn pnpm flutter anaconda3 `
+-y
 ```
