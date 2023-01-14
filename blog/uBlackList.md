@@ -4,6 +4,8 @@ authors: Yue_plus
 
 # uBlackList
 
+<!--truncate-->
+
 | [uBlacklist - Chrome 应用商店](https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe?hl=zh-CN)
 | [uBlacklist – 下载 🦊 Firefox 扩展（zh-CN）](https://addons.mozilla.org/zh-CN/firefox/addon/ublacklist/)
 | [GitHub](https://github.com/iorate/ublacklist)
@@ -18,6 +20,7 @@ authors: Yue_plus
 *://bbs.csdn.net/*
 *://www.csdn.net/*
 *://www.csdndocs.com/*
+*://ask.csdn.net/*
 *://www.43food.com/*
 *://dev4living.com/*
 *://yinongnet.com/*
