@@ -2,6 +2,7 @@
 
 * [官方网站](https://dasai.lanqiao.cn/)
 * [刷题](https://github.com/Yue-plus/Solution.JVTC.Yue.Zone/tree/main/src/main/java/zone/yue/jvtc/solution/LanQiao)
+* [蓝桥杯试题集 - morning-start - 博客园](https://www.cnblogs.com/morning-start/p/16021283.html)
 
 ## 比赛环境
 

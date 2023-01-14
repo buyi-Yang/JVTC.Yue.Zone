@@ -500,7 +500,7 @@ choco install 7zip rufus freedownloadmanager bitcomet picotorrent ultraiso diskg
 
 ## Yue_plus 的系统环境
 
-开启网络代理，然后以管理员身份运行：
+开启网络代理，然后以管理员身份在 PowerShell 中运行：
 
 ```powershell
 choco install chocolateygui `
