@@ -44,3 +44,7 @@ Bundler 能够跟踪并安装所需的特定版本的 gem，以此来为 Ruby �
 | [官网](https://bundler.io/)
 | [Bundler: 管理 Ruby 项目中 gem 依赖的最好工具](https://www.bundler.cn/)
 |
+
+## [rbenv](https://github.com/rbenv/rbenv#readme)
+
+### [ruby-build](https://github.com/rbenv/ruby-build#readme)

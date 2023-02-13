@@ -64,7 +64,7 @@ const config = {
         // {type: 'doc', docId: '生存指南/前言', position: 'left', label: '《生存指南》'},
         {type: 'doc', docId: '英语/词汇配对', position: 'left', label: '英语'},
         {to: '/blog', label: '博客', position: 'left'},
-        {href: 'https://note.yueplus.ink/', label: 'NetNote', position: 'right'},
+        {href: 'https://net.note.yue.zone/', label: 'NetNote', position: 'right'},
         {href: 'https://github.com/Yue-plus/JVTC.Yue.Zone', label: 'GitHub', position: 'right'},
       ],
     },
