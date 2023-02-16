@@ -6,6 +6,7 @@ export default function HideText({ text }) {
 
   return <span
       style={{color: show ? "white" : "black", backgroundColor: "black", padding: "0 8px"}}
-      onClick={() =>setShow(!show)}
+      onMouseEnter={() => setShow(true)}
+      onMouseLeave={() => setShow(false)}
   >{text}</span>
 }
