@@ -4,7 +4,8 @@
 Anaconda 提供了在一台机器上执行 Python/R 数据科学和机器学习的最简单方法。
 
 | [官网](https://www.anaconda.com/)
-| [文档](https://docs.conda.io/)
+| [Anaconda 文档](https://docs.anaconda.com/)
+| [conda 文档](https://docs.conda.io/)
 |
 :::
 
@@ -26,11 +27,23 @@ Anaconda 提供了在一台机器上执行 Python/R 数据科学和机器学习�
 
 以 **管理员身份运行** Anaconda Powershell Prompt 并执行以下指令：
 
-```text
+```ps
 conda init powershell
 ```
 
 ![](./img/conda-init-powershell.png)
+
+启动 PowerShell 时不要默认启动 Anaconda：
+
+```ps
+conda config --set auto_activate_base False
+```
+
+需要时可手动启动：
+
+```ps
+conda activate base
+```
 
 ### 配置镜像源
 
@@ -97,6 +110,24 @@ conda commands available from other packages:
 ```
 
 </details>
+
+### 依赖包管理文件
+
+> 参考 [Managing environments — conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#sharing-an-environment)
+
+conda 通常使用 `environment.yml` 文件记录依赖包。
+
+#### 导出当前环境的依赖
+
+```ps
+conda env export --from-history > environment.yaml
+```
+
+#### 从文件创建新环境
+
+```ps
+conda env create --file environment.yml
+```
 
 ### 常用命令
 
