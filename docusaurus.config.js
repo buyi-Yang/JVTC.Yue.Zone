@@ -62,7 +62,15 @@ const config = {
         {type: 'doc', docId: '竞赛/蓝桥杯/README', position: 'left', label: '竞赛'},
         {type: 'doc', docId: '作业/综合练习题', position: 'left', label: '作业'},
         // {type: 'doc', docId: '生存指南/前言', position: 'left', label: '《生存指南》'},
-        {type: 'doc', docId: '英语/词汇配对', position: 'left', label: '英语'},
+        {
+          type: 'dropdown',
+          label: '英语',
+          position: 'left',
+          items: [
+            { type: 'doc', docId: '英语/词汇配对', label: '期末考试' },
+            { type: 'doc', docId: '作业/实用英语轻松GET/第一章测试', label: '实用英语轻松GET'},
+          ],
+        },
         {href: 'https://math.note.yue.zone/docs/高等数学/函数及其模型/集合与函数/', label: '高等数学', position: 'left'},
         {to: '/blog', label: '博客', position: 'left'},
         {href: 'https://net.note.yue.zone/', label: 'NetNote', position: 'right'},
