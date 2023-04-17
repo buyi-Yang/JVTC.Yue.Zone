@@ -149,5 +149,9 @@ conda create --name $ENV_NAME python=x.x
 conda env remove --name $ENV_NAME
 
 # 切换环境
-conda active $ENV_NAME
+conda activate $ENV_NAME
 ```
+
+## Miniconda
+
+- [Miniconda — conda documentation](https://docs.conda.io/en/latest/miniconda.html)
