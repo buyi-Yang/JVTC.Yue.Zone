@@ -67,7 +67,7 @@ const config = {
           label: '英语',
           position: 'left',
           items: [
-            { type: 'doc', docId: '英语/词汇配对', label: '期末考试' },
+            { type: 'doc', docId: '英语/通用英语B2题库/词汇配对', label: '通用英语题库' },
             { type: 'doc', docId: '作业/实用英语轻松GET/第一章测试', label: '实用英语轻松GET'},
           ],
         },
