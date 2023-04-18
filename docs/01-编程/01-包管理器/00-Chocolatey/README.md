@@ -400,6 +400,7 @@ choco install potplayer netease-cloudmusic -y
 ### Office/WPS
 
   [Office Tool Plus](https://community.chocolatey.org/packages/office-tool)
+| [Writage](https://community.chocolatey.org/packages/writage)
 | [WPS Office Free](https://community.chocolatey.org/packages/wps-office-free)
 
 ```powershell
@@ -504,7 +505,7 @@ choco install 7zip rufus freedownloadmanager bitcomet picotorrent ultraiso diskg
 
 ```powershell
 choco install chocolateygui `
-office-tool jetbrainstoolbox vscode `
+office-tool writage jetbrainstoolbox vscode `
 git -params "'/WindowsTerminalProfile /Editor:VisualStudioCode /NoGuiHereIntegration'" `
 postman googlechrome firefox-dev --pre `
 wechat netease-cloudmusic steam `
