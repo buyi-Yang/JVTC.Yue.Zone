@@ -366,6 +366,15 @@ choco upgrade --yes all
 请选择自己需要的安装！
 :::
 
+### 系统环境
+
+  [.Net 6.0 Desktop Runtime](https://community.chocolatey.org/packages/dotnet-6.0-desktopruntime)
+| [GeForce Experience](https://community.chocolatey.org/packages/geforce-experience)
+
+```powershell
+choco install dotnet-6.0-desktopruntime geforce-experience
+```
+
 ### 浏览器
 
   [Google Chrome](https://community.chocolatey.org/packages/GoogleChrome)
@@ -442,6 +451,7 @@ choco install androidstudio
 ### 开发环境
 
   [Windows Terminal（无法安装）](https://community.chocolatey.org/packages/microsoft-windows-terminal)
+| [PowerShell Core](https://community.chocolatey.org/packages/powershell-core)
 | [Visual Studio Code](https://community.chocolatey.org/packages/vscode)
 | [Postman](https://community.chocolatey.org/packages/postman)
 | [WinSCP](https://community.chocolatey.org/packages/winscp)
@@ -454,9 +464,10 @@ choco install androidstudio
 | [Maven](https://community.chocolatey.org/packages/maven)
 | [Eclipse](https://community.chocolatey.org/packages/eclipse)
 | [SpringToolsSuite](https://community.chocolatey.org/packages/SpringToolSuite)
+| [VMware Workstation Pro](https://community.chocolatey.org/packages/vmwareworkstation)
 
 ```powershell
-choco install microsoft-windows-terminal vscode postman winscp git python nodejs yarn pnpm openjdk gradle maven eclipse springtoolsuite -y
+choco install microsoft-windows-terminal powershell-core vscode postman winscp git python nodejs yarn pnpm openjdk gradle maven eclipse springtoolsuite vmwareworkstation -y
 ```
 
 #### 安装 Git
@@ -504,8 +515,8 @@ choco install 7zip rufus freedownloadmanager bitcomet picotorrent ultraiso diskg
 开启网络代理，然后以管理员身份在 PowerShell 中运行：
 
 ```powershell
-choco install chocolateygui `
-office-tool writage jetbrainstoolbox vscode `
+choco install chocolateygui geforce-experience powershell-core `
+dotnet-6.0-desktopruntime office-tool writage jetbrainstoolbox vscode `
 git -params "'/WindowsTerminalProfile /Editor:VisualStudioCode /NoGuiHereIntegration'" `
 postman googlechrome firefox-dev --pre `
 wechat netease-cloudmusic steam `
