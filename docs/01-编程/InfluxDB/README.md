@@ -6,6 +6,9 @@
 
   [OSS 文档](https://docs.influxdata.com/influxdb/v2.7/)
 | [中文文档](https://jasper-zhang1.gitbooks.io/influxdb/content/)
+| [下载安装 InfluxDB](https://docs.influxdata.com/influxdb/v2.7/install/)
+| [下载安装 influx CLI](https://docs.influxdata.com/influxdb/cloud/tools/influx-cli/)
+| [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
 :::
 
 ## Influx CLI
