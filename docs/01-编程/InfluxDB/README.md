@@ -13,7 +13,11 @@
 
 ## Influx CLI
 
-### 配置组织
+### 管理组织
+
+参考：[Manage organizations](https://docs.influxdata.com/influxdb/v2.7/organizations/)
+
+#### 本地添加组织
 
 ```bash
 influx config create --config-name <config-name> \
@@ -21,6 +25,22 @@ influx config create --config-name <config-name> \
   --org <your-org> \
   --token <your-auth-token> \
   --active
+```
+
+### 管理用户
+
+参考：[Manage users](https://docs.influxdata.com/influxdb/v2.7/users/)
+
+#### 添加用户
+
+```bash
+influx user create -n <username> -p <password> -o <org-name>
+```
+
+#### 修改用户密码
+
+```bash
+influx user password -n <username> -t <token>
 ```
 
 ## 示例代码
