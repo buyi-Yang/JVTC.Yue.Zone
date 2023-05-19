@@ -1,6 +1,7 @@
-# ICPC 江西省大学生程序设计竞赛（The 2023 ICPC Jiangxi Provincial Programming Contest）
+# ICPC 江西省大学生程序设计竞赛
 
 :::info
+（The 2023 ICPC Jiangxi Provincial Programming Contest）
 
 <https://icpc.global/>
 
