@@ -1,5 +1,18 @@
 # 使用 RaspberryPi Pico W
 
+<!--truncate-->
+
+## 教程
+
+[【微雪课堂】PICO系列教程](https://www.bilibili.com/video/BV1nK4y1U79B/)
+
+## 配置 Thonny 开发环境
+
+1. 下载并安装 [Thonny](https://thonny.org/)
+<!-- 2. 安装 [thonny-pico](https://github.com/philouvb/thonny-pico/tags) 插件 -->
+
+> 安装暗色主题（可选）[thonny-onedark](https://pypi.org/project/thonny-onedark/)
+
 ## 配置 PyCharm 开发环境
 
 下载安装 [MicroPython](https://plugins.jetbrains.com/plugin/9777-micropython) 插件。
