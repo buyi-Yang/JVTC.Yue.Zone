@@ -25,6 +25,7 @@ export default function ContributorsList() {
         <div>
           <Contributor name="Yue_plus" href="https://github.com/Yue-plus" />
           <Contributor name="buyi-Yang" href="https://github.com/buyi-Yang" />
+          <Contributor name="kejue-sususu" href="https://github.com/kejue-sususu" />
         </div>
       </div>
     </div>
