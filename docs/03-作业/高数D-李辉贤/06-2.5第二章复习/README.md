@@ -171,7 +171,7 @@ $$
 ## 三、计算题（共7题，37.6分）
 
 13. $\Large\lim\limits_{x\rightarrow 0^+}\frac{\ln(1+x^3)·(1-cos\sqrt{x})}{\arcsin·(\sqrt{1-x^3}-1)}$
-    <details> 
+    <details>  -->
     <summary>题解</summary>
     
     在该极限中明显 X 趋于 0（无穷小），可直接根据无穷小转化公式 
@@ -193,15 +193,30 @@ $$
  
     </details>
 
-1.  $\Large\lim\limits_{x\rightarrow 0}\frac{e^{sin2x}-e^{sinx}}{x}$
+14. $\Large\lim\limits_{x\rightarrow 0}\frac{e^{sin2x}-e^{sinx}}{x}$
+    
+    答案：![](./img/14T.png)
 
-2.  $\Large\lim\limits_{x \rightarrow 0}\frac{1-cos2x}{xsinx}$
-3.  $\Large\lim\limits_{x \rightarrow 1}\frac{x^2+2x-3}{\sqrt{x+3}-2}$
+15.  $\Large\lim\limits_{x \rightarrow 0}\frac{1-cos2x}{xsinx}$  
+    
+    <details>
+    <summary>题解</summary>
 
-4.  $\Large\lim\limits_{x \to \infty }{(\frac{3+x}{6+x})}^\frac{x-1}{2}$
+    $$
+    \begin{align*}
+        & \lim\limits_{x \rightarrow 0}\frac{1-cos2x}{xsinx} \\
+        & = \lim\limits_{x \rightarrow 0}\frac{2sin^2x}{xsinx} \\
+        & = 2 \lim\limits_{x \rightarrow 0}\frac{sinx}{x}=2 \\
+    \end{align*}
+    $$
 
-5.  $\Large\lim\limits_{x \to 1 }\frac{x^2-2x+1}{x^2-1}$
+    </details>
 
-6.  $\Large\lim\limits_{x \to +\infty}\frac{1+\sqrt{x}}{1-\sqrt{x}}$
+16.  $\Large\lim\limits_{x \rightarrow 1}\frac{x^2+2x-3}{\sqrt{x+3}-2}$
 
-$\sqrt[n]{1+x}-1$
+17. $\Large\lim\limits_{x \to \infty }{(\frac{3+x}{6+x})}^\frac{x-1}{2}$
+
+18. $\Large\lim\limits_{x \to 1 }\frac{x^2-2x+1}{x^2-1}$
+
+19. $\Large\lim\limits_{x \to +\infty}\frac{1+\sqrt{x}}{1-\sqrt{x}}$
+
