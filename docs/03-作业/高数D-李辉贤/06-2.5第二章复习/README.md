@@ -170,16 +170,49 @@ $$
 
 ## 三、计算题（共7题，37.6分）
 
-13.   $\Large\lim\limits_{x\rightarrow 0_+}\frac{\ln(1+x^3)·(1-cos\sqrt{x})}{\arcsin·(\sqrt{1-x^3}-1)}$
-   <details> <summary>
-   解答：在该极限中明显 X 趋于 0（无穷小），可直接根据无穷小转化公式ln(1+x) ~x , 1-cosx ~ (1/2)x^2 ,arcsinx ~ x ,$\sqrt[n]{1+x}$
-   </summary>
- </details>
+13. $\Large\lim\limits_{x\rightarrow 0^+}\frac{\ln(1+x^3)·(1-cos\sqrt{x})}{\arcsin·(\sqrt{1-x^3}-1)}$
+    <details>  -->
+    <summary>题解</summary>
+    
+    在该极限中明显 X 趋于 0（无穷小），可直接根据无穷小转化公式 
+
+    [ $\ln(1+x) ~ x$ ,
+    $1 - \cos x \to ( \frac{1}{2} ) x^2, \arcsin x \to x$,
+   
+    $$
+    \sqrt[n]{1+x^a}-1 \to \frac{1}{n}x^a
+    $$
+    ]
+
+    转化后原式：
+
+    $$
+    \Large\lim\limits_{x \to 0^+}\frac{x^3·\frac{1}{2}(\sqrt{x})^2}{x·\frac{1}{2}(-x^3)}=-1
+
+    $$
+ 
+    </details>
 
 14. $\Large\lim\limits_{x\rightarrow 0}\frac{e^{sin2x}-e^{sinx}}{x}$
+    
+    答案：![](./img/14T.png)
 
-15. $\Large\lim\limits_{x \rightarrow 0}\frac{1-cos2x}{xsinx}$
-16. $\Large\lim\limits_{x \rightarrow 1}\frac{x^2+2x-3}{\sqrt{x+3}-2}$
+15.  $\Large\lim\limits_{x \rightarrow 0}\frac{1-cos2x}{xsinx}$  
+    
+    <details>
+    <summary>题解</summary>
+
+    $$
+    \begin{align*}
+        & \lim\limits_{x \rightarrow 0}\frac{1-cos2x}{xsinx} \\
+        & = \lim\limits_{x \rightarrow 0}\frac{2sin^2x}{xsinx} \\
+        & = 2 \lim\limits_{x \rightarrow 0}\frac{sinx}{x}=2 \\
+    \end{align*}
+    $$
+
+    </details>
+
+16.  $\Large\lim\limits_{x \rightarrow 1}\frac{x^2+2x-3}{\sqrt{x+3}-2}$
 
 17. $\Large\lim\limits_{x \to \infty }{(\frac{3+x}{6+x})}^\frac{x-1}{2}$
 
@@ -187,4 +220,3 @@ $$
 
 19. $\Large\lim\limits_{x \to +\infty}\frac{1+\sqrt{x}}{1-\sqrt{x}}$
 
-$\Large\sqrt{1+x}-1$
