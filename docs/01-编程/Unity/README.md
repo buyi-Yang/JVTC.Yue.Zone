@@ -12,6 +12,10 @@ Unity 是全球应用非常广泛的实时内容开发平台，
 
 ### [Unity Learn](https://unity.com/cn/learn)
 
+### 设置外部脚本编辑器
+
+![设置外部脚本编辑器](./img/设置外部脚本编辑器.png)
+
 ### 入门案例：《Play A Ball - 玩个球》
 
 [GitHub](https://github.com/Yue-plus/PlayABall)
