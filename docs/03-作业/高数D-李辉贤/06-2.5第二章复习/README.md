@@ -197,26 +197,54 @@ $$
     
     答案：![](./img/14T.png)
 
-15.  $\Large\lim\limits_{x \rightarrow 0}\frac{1-cos2x}{xsinx}$  
+15. $\Large\lim\limits_{x \rightarrow 0}\frac{1-cos2x}{xsinx}$  
     
     <details>
     <summary>题解</summary>
-
+   
     $$
     \begin{align*}
-        & \lim\limits_{x \rightarrow 0}\frac{1-cos2x}{xsinx} \\
-        & = \lim\limits_{x \rightarrow 0}\frac{2sin^2x}{xsinx} \\
-        & = 2 \lim\limits_{x \rightarrow 0}\frac{sinx}{x}=2 \\
+     &本题主要涉及第一重要极限：\lim\limits_{x \to 0}\frac{sinx}{x}=1 \\
+     &要利用第一重要极限主要影满足 ①\frac{0}{0}型；②\lim\limits\frac{sin()}{()}=1
+     \\ 
+        & \lim\limits_{x \rightarrow 0}\frac{1-cos2x}{xsinx} \\ 
+        & = \lim\limits_{x \rightarrow 0}\frac{2sin^2x}{xsinx} \\ 
+        & = 2 \lim\limits_{x \rightarrow 0}\frac{sinx}{x} \\
+        &=2
     \end{align*}
     $$
 
     </details>
 
-16.  $\Large\lim\limits_{x \rightarrow 1}\frac{x^2+2x-3}{\sqrt{x+3}-2}$
+16. $\Large\lim\limits_{x \rightarrow 1}\frac{x^2+2x-3}{\sqrt{x+3}-2}$
 
-17. $\Large\lim\limits_{x \to \infty }{(\frac{3+x}{6+x})}^\frac{x-1}{2}$
+    <details>
+    <summary>题解</summary>
+    看到（任意）这个极限可以先将 x = 1代入原式明显极限为 $\frac{0}{0}$ 型可用
+    约去零因子法（注：课本p44详例），而又原式分母有根号，采用分母有理化。
+    原式：
+    
+    $$
+    \Large
+    \begin{align*}
+        & \lim\limits_{x \rightarrow 1}\frac{x^2+2x-3}{\sqrt{x+3}-2}  \\
+        & = \lim\limits_{x \to 1}\frac{(x^2+2x-3)(\sqrt{x+3}+2)}{(\sqrt{x+3}-2)(\sqrt{x+3}+2)} \\
+        & = \lim\limits_{x \to 1}\frac{(x^2+2x-3)(\sqrt{x+3}+2)}{(x-1)} \\
+        & = 16
+    \end{align*}
+    $$
+    </details>
 
-18. $\Large\lim\limits_{x \to 1 }\frac{x^2-2x+1}{x^2-1}$
+17.  $\Large\lim\limits_{x \to \infty }{(\frac{3+x}{6+x})}^\frac{x-1}{2}$
 
-19. $\Large\lim\limits_{x \to +\infty}\frac{1+\sqrt{x}}{1-\sqrt{x}}$
+    <details>
+    <summary>题解</summary>
+
+    </details>
+
+
+
+18.  $\Large\lim\limits_{x \to 1 }\frac{x^2-2x+1}{x^2-1}$
+
+19.  $\Large\lim\limits_{x \to +\infty}\frac{1+\sqrt{x}}{1-\sqrt{x}}$
 
