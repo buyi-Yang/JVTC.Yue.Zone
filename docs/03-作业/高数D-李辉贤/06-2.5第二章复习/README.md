@@ -220,8 +220,8 @@ $$
 
     <details>
     <summary>题解</summary>
-    看到（任意）这个极限可以先将 x = 1代入原式明显极限为 $\frac{0}{0}$ 型可用
-    约去零因子法（注：课本p44详例），而又原式分母有根号，采用分母有理化。
+
+    看到（任意）这个极限可以先将 x = 1代入原式明显极限为 $\frac{0}{0}$ 型，可用约去零因子法（注：课本p44详例），而又原式分母有根号，采用分母有理化。
     原式：
     
     $$
@@ -237,14 +237,56 @@ $$
 
 17.  $\Large\lim\limits_{x \to \infty }{(\frac{3+x}{6+x})}^\frac{x-1}{2}$
 
-    <details>
-    <summary>题解</summary>
+     <details>
+     <summary>题解</summary>
 
-    </details>
+      这题主要考察第二重要极限的运用：  $\lim\limits_{x \to \infty}(1+\frac{1}{x})^x$ 
+
+      要利用第一重要极限主要影满足 ① $1^\infty$ 型；②$\lim\limits(1+【】)^\frac{1}{【】}=e$
 
 
+      答案：![](.img/../img/17T.png)
+    
+     </details>
 
 18.  $\Large\lim\limits_{x \to 1 }\frac{x^2-2x+1}{x^2-1}$
+     <details>
+     <summary>题解</summary>
+
+     看到（任意）这个极限可以先将 x = 1代入原式明显极限为 $\frac{0}{0}$ 型，可用约去零因子法
+
+     原式：
+     $$
+     \Large
+     \begin{align*}
+     &\lim\limits_{x \to 1 }\frac{x^2-2x+1}{x^2-1}\\
+     &=\lim\limits_{x \to 1 }\frac{(x-1)^2}{(x+1)(x-1)}\\
+     &=\lim\limits_{x \to 1 }\frac{x-1}{x+1}\\
+     &=\frac{0}{2}\\
+     &=0
+     
+     \end{align*}
+     $$
+
+     </details>
 
 19.  $\Large\lim\limits_{x \to +\infty}\frac{1+\sqrt{x}}{1-\sqrt{x}}$
 
+     <details>
+     <summary>题解</summary>
+
+     这个极限可以先将 x = 1代入原式明显极限为 $\frac{\infty}{\infty}$ 型,分子分母同时除以 x 的最高次幂
+
+     原式：
+     $$
+     \Large
+     \begin{align*}
+     &\lim\limits_{x \to +\infty}\frac{1+\sqrt{x}}{1-\sqrt{x}}\\
+     &=\lim\limits_{x \to +\infty}\frac{\frac{1}{\sqrt{x}}+1}{\frac{1}{\sqrt{x}}-1}  常数除以无穷等于0\\ 
+     &=\lim\limits_{x \to +\infty}\frac{0+1}{0-1}\\
+     &=-1
+     \end{align*}
+     $$
+
+
+     </details>
