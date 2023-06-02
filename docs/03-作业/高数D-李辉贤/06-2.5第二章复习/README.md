@@ -280,7 +280,7 @@ $$
     \Large
     \begin{align*}
     & \lim\limits_{x \to +\infty}\frac{1+\sqrt{x}}{1-\sqrt{x}}\\
-    & =\lim\limits_{x \to +\infty}\frac{\frac{1}{\sqrt{x}}+1}{\frac{1}{\sqrt{x}}-1} \text{常数除以无等于0} \\ 
+    & =\lim\limits_{x \to +\infty}\frac{\frac{1}{\sqrt{x}}+1}{\frac{1}{\sqrt{x}}-1} \text{常数除以无穷等于0} \\ 
     & =\lim\limits_{x \to +\infty}\frac{0+1}{0-1}\\
     & =-1
     \end{align*}
