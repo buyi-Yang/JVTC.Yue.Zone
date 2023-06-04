@@ -17,15 +17,16 @@ function Contributor({name, href, avatar}: ContributorProps) {
   )
 }
 
-export default function ContributorsList() {
+export default function ContributorsList(){
   return (
     <div className="container" style={{paddingTop: 16}}>
       <h1>贡献者</h1>
       <div className="row">
         <div>
           <Contributor name="Yue_plus" href="https://github.com/Yue-plus" />
-          <Contributor name="buyi-Yang" href="https://github.com/buyi-Yang" />
-          <Contributor name="kejue-sususu" href="https://github.com/kejue-sususu" />
+          <Contributor name="buyi-Yang" href="https://github.com/buyi-Yang"/>
+          <Contributor name="kejue-sususu" href="https://github.com/kejue-sususu"/>
+          <Contributor name="liao-666" href="https://github.com/liao-666"/>
         </div>
       </div>
     </div>
