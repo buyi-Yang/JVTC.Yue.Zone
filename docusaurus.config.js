@@ -28,7 +28,7 @@ const config = {
       ({
         docs: {
           remarkPlugins: [math],
-          rehypePlugins: [katex],
+          rehypePlugins: [katex, { strict: false }],
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/Yue-plus/JVTC.Yue.Zone/tree/main/',
         },
