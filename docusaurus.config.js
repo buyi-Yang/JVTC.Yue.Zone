@@ -71,7 +71,16 @@ const config = {
             { type: 'doc', docId: '作业/实用英语轻松GET/第一章测试', label: '实用英语轻松GET'},
           ],
         },
-        {href: 'https://math.note.yue.zone/docs/高等数学/函数及其模型/集合与函数/', label: '高等数学', position: 'left'},
+        {
+          type: 'dropdown',
+          label: '高等数学',
+          positionL: 'left',
+          items: [
+            { type: 'doc', docId: '作业/高数D-李辉贤/复习题2022-2023', label: '高数D - 作业' },
+            { href: 'https://math.note.yue.zone/docs/高等数学/函数及其模型/集合与函数/', label: 'MathNote - 高等数学' },
+            { href: 'https://www.bilibili.com/video/BV1qW411N7FU/', label: '3Blue1Brown - 微积分的本质' },
+          ],
+        },
         {to: '/blog', label: '博客', position: 'left'},
         {href: 'https://net.note.yue.zone/', label: 'NetNote', position: 'right'},
         {href: 'https://github.com/Yue-plus/JVTC.Yue.Zone', label: 'GitHub', position: 'right'},

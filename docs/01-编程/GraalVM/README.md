@@ -268,3 +268,7 @@ Available macro-options are:
 - 安装时选择 **使用 C++ 的桌面开发**，可选项里勾选 **Windows 10/11 SDK**
 - 添加环境变量（版本更新会导致路径改变）：
   `C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.35.32215\bin\Hostx64\x64`
+
+## 
+
+参考：[15. GraalVM Native Image Support | Spring Boot Reference Documentation](https://docs.spring.io/spring-boot/docs/3.0.0/reference/htmlsingle/#native-image)
