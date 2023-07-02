@@ -1,6 +1,6 @@
-# Matplotlib：Python 可视化
+# Matplotlib
 
-:::tips
+:::info
 Matplotlib 是一个全面的库，用于在Python中创建静态、动画和交互式可视化。
 Matplotlib 让简单的事情变得简单，让困难的事情变得可能。
 

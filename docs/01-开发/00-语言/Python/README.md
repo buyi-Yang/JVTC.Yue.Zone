@@ -1,4 +1,4 @@
-# Python 入门
+# Python
 
 ## 安装
 

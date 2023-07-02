@@ -1,4 +1,4 @@
-# Java 入门
+# Java
 
 前往 [NetNote](https://note.yueplus.ink/coding/Java/) 。
 
