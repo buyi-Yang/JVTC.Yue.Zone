@@ -3,7 +3,7 @@
 ## 安装
 
 - 直接安装参考 [NetNote](https://note.yueplus.ink/coding/Python/)
-- [通过 Anaconda 安装](/docs/开发/工具/包管理器/Anaconda/)
+- [通过 Anaconda 安装](/docs/开发/工具/Anaconda/)
 
 ## 配置软件源
 
