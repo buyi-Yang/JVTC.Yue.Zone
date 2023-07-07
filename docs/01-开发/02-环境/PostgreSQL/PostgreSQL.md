@@ -54,7 +54,7 @@ postgres=# \q
 
 参考 [PostgreSQL: Windows installers](https://www.postgresql.org/download/windows/) 获取下载链接：
 
-[exe 压缩包](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
+[exe 安装包](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 [zip 压缩包](https://www.enterprisedb.com/download-postgresql-binaries)
 
 ::: warning
