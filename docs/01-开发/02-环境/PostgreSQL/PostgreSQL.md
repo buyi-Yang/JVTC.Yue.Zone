@@ -64,6 +64,19 @@ postgres=# \q
 ![](./img/windows-install.png)
 :::
 
+### Docker
+
+参考：[postgres - Official Image | Docker Hub](https://hub.docker.com/_/postgres)
+
+```sh
+docker pull postgres
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+```
+
+```text
+jdbc:postgresql://localhost:5432/postgres
+```
+
 ## 配置
 
 ### 设置密码
