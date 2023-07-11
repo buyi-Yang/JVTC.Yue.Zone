@@ -1,0 +1,99 @@
+---
+title: Boot
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Spring Boot
+
+:::info
+Spring Boot 是由 Pivotal 团队提供的一套开源框架，可以简化 Spring 应用的创建及部署。
+它提供了丰富的 Spring 模块化支持，可以帮助开发者更轻松快捷地构建出企业级应用。
+Spring Boot 通过自动配置功能，降低了复杂性，同时支持基于 JVM 的多种开源框架，可以缩短开发时间，使开发更加简单和高效。
+
+[官方文档](https://docs.spring.io/spring-boot/docs/current/reference/html/)
+| [中文文档](https://springdoc.cn/spring-boot/)
+| [Spring initializr](https://start.spring.io/)
+:::
+
+## 核心特性
+
+### 4. 日志
+
+> 参考：[官方文档](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.logging)
+> | [中文文档](https://springdoc.cn/spring-boot/features.html#features.logging)
+
+Spring Boot 默认使用 Logback。
+适当的 Logback 路由也包括在内，以确保使用 Java Util Logging、Commons Logging、Log4J 或 SLF4J 的依赖库都能正确工作。
+
+#### 日志等级
+
+日志等级如下，越靠左提供的信息越多：
+
+`All` > `TRACE` > `DEBUG` > `INFO` > `WARN` > `ERROR` > `FATAL` > `OFF`
+
+Spring Boot 默认日志等级为 `INFO`，可以在配置文件中自定义各个包的日志等级：
+
+```yaml title="src/main/resources/application.yaml"
+logging:
+  level:
+    root: info
+    zone.yue.core: trace
+    org.springframework.web: debug
+    org.hibernate: error
+```
+
+#### slf4j 代码示例
+
+可以使用 SpringBoot 自带的日志框架 [slf4j](https://www.slf4j.org/manual.html)，以下是代码示例：
+
+<Tabs>
+  <TabItem value="kotlin" label="Kotlin">
+
+```kotlin
+package zone.yue.core
+
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
+
+@SpringBootApplication
+class Application {
+    private final val logger: Logger = LoggerFactory.getLogger(this.javaClass)
+
+    init {
+        logger.trace("TRACE")
+        logger.debug("DEBUG")
+        logger.info("INFO")
+        logger.warn("WARN")
+        logger.error("ERROR")
+        // Logback 中没有 FATAL 级别。它被映射到 ERROR。
+    }
+}
+
+fun main(args: Array<String>) {
+    runApplication<Application>(*args)
+}
+```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+```java
+// TODO: Java 示例
+```
+
+  </TabItem>
+</Tabs>
+
+控制台输出：
+
+```log
+2023-07-11T20:27:15.851+08:00 TRACE 9600 --- [  restartedMain] z.yue.core.Application$$SpringCGLIB$$0   : TRACE
+2023-07-11T20:27:15.851+08:00 DEBUG 9600 --- [  restartedMain] z.yue.core.Application$$SpringCGLIB$$0   : DEBUG
+2023-07-11T20:27:15.851+08:00  INFO 9600 --- [  restartedMain] z.yue.core.Application$$SpringCGLIB$$0   : INFO
+2023-07-11T20:27:15.851+08:00  WARN 9600 --- [  restartedMain] z.yue.core.Application$$SpringCGLIB$$0   : WARN
+2023-07-11T20:27:15.851+08:00 ERROR 9600 --- [  restartedMain] z.yue.core.Application$$SpringCGLIB$$0   : ERROR
+```
