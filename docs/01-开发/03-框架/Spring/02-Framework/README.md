@@ -2,6 +2,6 @@
 title: Framework
 ---
 
-# Spring Boot Framework
+# Spring Framework
 
 TODO:
