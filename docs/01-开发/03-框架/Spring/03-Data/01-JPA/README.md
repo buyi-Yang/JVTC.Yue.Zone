@@ -12,6 +12,10 @@ Spring Data JPA 为 Jakarta Persistence API (JPA) 提供了存储库支持。
 | [中文文档](https://springdoc.cn/spring-data-jpa/)
 :::
 
+## 教程
+
+- [Accessing JPA Data with REST - Spring Guides](https://spring.io/guides/gs/accessing-data-rest/)
+
 ## 配置文件
 
 ```yaml title="src/main/resources/application.yaml"
