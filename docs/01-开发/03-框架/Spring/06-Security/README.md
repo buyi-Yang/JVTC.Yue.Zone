@@ -55,6 +55,11 @@ class SecurityConfiguration {
 
 ### 配置基于内存的身份校验
 
+参考 [官方文档](https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/in-memory.html)
+| [中文文档](https://springdoc.cn/spring-security/servlet/authentication/passwords/in-memory.html)
+
+`User.withDefaultPasswordEncoder()` 已被标记弃用，不推荐在生产环境中使用！
+
 ```kotlin
 package zone.yue.core
 
@@ -88,6 +93,69 @@ class SecurityConfiguration {
             .build()
 
         return InMemoryUserDetailsManager(test, admin)
+    }
+}
+```
+
+### 配置基于数据库的身份校验
+
+参考 [官方文档](https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/user-details-service.html)
+| [中文文档](https://springdoc.cn/spring-security/servlet/authentication/passwords/user-details-service.html)
+
+只要实现 `UserDetailsManager` 接口即可：
+
+```kotlin
+package zone.yue.core
+
+import org.springframework.security.core.userdetails.User
+import org.springframework.security.core.userdetails.UserDetails
+import org.springframework.security.crypto.factory.PasswordEncoderFactories
+import org.springframework.security.crypto.password.PasswordEncoder
+import org.springframework.security.provisioning.UserDetailsManager
+import org.springframework.stereotype.Service
+import zone.yue.core.user.UserEntity
+import zone.yue.core.user.UserRepository
+import java.util.*
+
+@Service
+class AccountService(val userRepository: UserRepository) : UserDetailsManager {
+    val passwordEncoder: PasswordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder()
+
+    fun signup(username: String, password: String) {
+        if (userExists(username)) return
+
+        val user: UserDetails = User
+            .withUsername(username)
+            .password(passwordEncoder.encode(password))
+            .build()
+
+        createUser(user)
+    }
+
+    override fun loadUserByUsername(username: String): UserDetails {
+        val user = userRepository.findByUsername(username)
+        return User.withUsername(user.username).password(user.password).build()
+    }
+
+    override fun createUser(user: UserDetails) {
+        userRepository.save(UserEntity(UUID.randomUUID(), user.username, user.password))
+    }
+
+    override fun updateUser(user: UserDetails?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun deleteUser(username: String) {
+        val user = userRepository.findByUsername(username)
+        userRepository.delete(user)
+    }
+
+    override fun changePassword(oldPassword: String?, newPassword: String?) {
+        TODO("Not yet implemented")
+    }
+
+    override fun userExists(username: String): Boolean {
+        return userRepository.existsByUsername(username)
     }
 }
 ```
