@@ -171,24 +171,23 @@ $$
 ## 三、计算题（共7题，37.6分）
 
 13. $\Large\lim\limits_{x\rightarrow 0^+}\frac{\ln(1+x^3)·(1-cos\sqrt{x})}{\arcsin·(\sqrt{1-x^3}-1)}$
-    <details>  -->
+    
+    <details>
     <summary>题解</summary>
     
     在该极限中明显 X 趋于 0（无穷小），可直接根据无穷小转化公式 
 
-    [ $\ln(1+x) ~ x$ ,
+    $\ln(1+x) ~ x$ ,
     $1 - \cos x \to ( \frac{1}{2} ) x^2, \arcsin x \to x$,
    
     $$
     \sqrt[n]{1+x^a}-1 \to \frac{1}{n}x^a
     $$
-    ]
 
     转化后原式：
 
     $$
     \Large\lim\limits_{x \to 0^+}\frac{x^3·\frac{1}{2}(\sqrt{x})^2}{x·\frac{1}{2}(-x^3)}=-1
-
     $$
  
     </details>
@@ -201,16 +200,17 @@ $$
     
     <details>
     <summary>题解</summary>
-   
+
+    本题主要涉及第一重要极限：$\lim\limits_{x \to 0}\frac{sinx}{x}=1$
+    
+    要利用第一重要极限主要影满足 $\frac{0}{0}$ 型；② $\lim\limits\frac{sin()}{()}=1$
+
     $$
     \begin{align*}
-     & \text{本题主要涉及第一重要极限：} \lim\limits_{x \to 0}\frac{sinx}{x}=1 \\
-     & \text{要利用第一重要极限主要影满足} \frac{0}{0}型；②\lim\limits\frac{sin()}{()}=1
-     \\ 
         & \lim\limits_{x \rightarrow 0}\frac{1-cos2x}{xsinx} \\ 
         & = \lim\limits_{x \rightarrow 0}\frac{2sin^2x}{xsinx} \\ 
         & = 2 \lim\limits_{x \rightarrow 0}\frac{sinx}{x} \\
-        &=2
+        & = 2
     \end{align*}
     $$
 
