@@ -104,5 +104,25 @@ int APIENTRY wWinMain(_In_ HINSTANCE instance, _In_opt_ HINSTANCE prev,
   ::CoUninitialize();
   return EXIT_SUCCESS;
 }
+```
 
+## 发送网络数据 - `from-data` 
+
+先参考 [获取网络数据 - Flutter 中文文档 - Flutter 中文开发者网站 - Flutter](https://flutter.cn/docs/cookbook/networking/fetch-data#1-add-the-http-package)
+安装 [`http`](https://pub-web.flutter-io.cn/packages/http) 包。
+
+`body` 里写个 `Map<String, String>` 直接发就好：
+
+```dart
+() async {
+  final response = await http.post(
+    Uri.parse('http://localhost:8080/signup'),
+    body: {
+      'username': 'Yue_plus',
+      'password': 'Yue_password',
+    },
+  );
+
+  print(response.statusCode + response.body);
+}
 ```

@@ -69,8 +69,14 @@ postgres=# \q
 参考：[postgres - Official Image | Docker Hub](https://hub.docker.com/_/postgres)
 
 ```sh
+# 拉取镜像
 docker pull postgres
+
+# 运行镜像
 docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+
+# 随 Doker 自启动容器
+docker update --restart=always some-postgres
 ```
 
 ```text
