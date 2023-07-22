@@ -53,6 +53,38 @@ class SecurityConfiguration {
 }
 ```
 
+### 配置禁用 CSRF
+
+**仅用于方便开发测试，请勿在生产环境配置！**
+详细参考：[官方文档](https://docs.spring.io/spring-security/reference/servlet/exploits/csrf.html)
+| [中文文档](https://springdoc.cn/spring-security/servlet/exploits/csrf.html)
+
+```kotlin
+package zone.yue.core
+
+import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
+import org.springframework.security.config.annotation.web.builders.HttpSecurity
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
+import org.springframework.security.config.annotation.web.invoke
+import org.springframework.security.web.SecurityFilterChain
+
+@Configuration
+@EnableWebSecurity
+class SecurityConfiguration {
+    @Bean
+    fun filterChain(http: HttpSecurity): SecurityFilterChain {
+        http {
+            csrf{
+                disable()
+            }
+        }
+
+        return http.build()
+    }
+}
+```
+
 ### 配置基于内存的身份校验
 
 参考 [官方文档](https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/in-memory.html)
@@ -159,3 +191,7 @@ class AccountService(val userRepository: UserRepository) : UserDetailsManager {
     }
 }
 ```
+
+## 登入流程
+
+
