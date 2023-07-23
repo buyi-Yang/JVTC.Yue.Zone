@@ -16,6 +16,8 @@ Spring Security 是一个框架，提供认证（authentication）、授权（au
 - [Spring Security 教程 已完结（IDEA 2023最新版）4K蓝光画质 基于Spring6的全新重制版本 起立到起飞](https://www.bilibili.com/video/BV1fV411M7aS/)
 - [SpringSecurity框架教程-Spring Security+JWT实现项目级前端分离认证授权-B站最通俗易懂的Spring Security课程](https://www.bilibili.com/video/BV1mm4y1X7Hc/)
 
+- [RESTful API Authentication with Spring Security | Ji ZHANG's Blog](https://shzhangji.com/blog/2023/01/15/restful-api-authentication-with-spring-security/)
+
 ## 配置文件
 
 ```yaml title="src/main/resources/application.yaml"
@@ -31,6 +33,40 @@ Spring Security 是一个框架，提供认证（authentication）、授权（au
 - [Servlet 应用 Kotlin 配置 :: Spring Security Reference](https://springdoc.cn/spring-security/servlet/configuration/kotlin.html)
 
 ### 配置允许访问特定路径
+
+#### 通过 `HttpSecurity`
+
+```kotlin
+package zone.yue.core
+
+import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
+import org.springframework.security.config.annotation.web.builders.HttpSecurity
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
+// highlight-next-line
+import org.springframework.security.config.annotation.web.invoke
+import org.springframework.security.web.SecurityFilterChain
+
+@Configuration
+@EnableWebSecurity
+class SecurityConfiguration {
+    @Bean
+    fun filterChain(http: HttpSecurity): SecurityFilterChain {
+        http {
+            // csrf { disable() }
+            authorizeRequests {
+                authorize("/api/signup", permitAll)
+                authorize("/api/login", permitAll)
+                authorize(anyRequest, authenticated)
+            }
+        }
+
+        return http.build()
+    }
+}
+```
+
+#### 通过 `WebSecurity`
 
 ```kotlin
 package zone.yue.core
@@ -66,6 +102,7 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
+// highlight-next-line
 import org.springframework.security.config.annotation.web.invoke
 import org.springframework.security.web.SecurityFilterChain
 

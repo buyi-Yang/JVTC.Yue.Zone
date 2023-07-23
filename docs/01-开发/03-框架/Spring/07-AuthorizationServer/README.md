@@ -13,9 +13,9 @@ Spring 授权服务器是一个框架，提供
 | [中文文档](https://springdoc.cn/spring-authorization-server/)
 :::
 
-## How To
+## 教程
 
-包含 Spring Authorization Server 最佳实践。
-参考：
-[官方文档](https://docs.spring.io/spring-authorization-server/docs/current/reference/html/how-to.html)
-| [中文文档](https://springdoc.cn/spring-authorization-server/how-to.html)
+- How To 指南中包含 Spring Authorization Server 最佳实践！参考：
+  [官方文档](https://docs.spring.io/spring-authorization-server/docs/current/reference/html/how-to.html) |
+  [中文文档](https://springdoc.cn/spring-authorization-server/how-to.html)
+- [OAuth2.0 授权的工作原理和 OpenID Connect 的作用](https://www.bilibili.com/video/BV1kk4y1n7Ks/)
