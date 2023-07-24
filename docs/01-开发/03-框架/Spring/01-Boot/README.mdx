@@ -20,6 +20,26 @@ Spring Boot 通过自动配置功能，降低了复杂性，同时支持基于 J
 
 ## 核心特性
 
+### 1. SpringApplication
+
+#### 自定义 Banner
+
+> 参考：[官方文档](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.spring-application.banner)
+> | [中文文档](https://springdoc.cn/spring-boot/features.html#features.spring-application.banner)
+
+以下 Banner 来自 [Text to ASCII Art Generator (TAAG)](http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=Yue.Zone)，使用 **ANSI Shadow** 字体：
+
+```text title="src/main/resources/banner.txt"
+||====================================================================================================||
+||      ██╗██╗   ██╗████████╗ ██████╗██╗   ██╗██╗   ██╗███████╗   ███████╗ ██████╗ ███╗   ██╗███████╗ ||
+||      ██║██║   ██║╚══██╔══╝██╔════╝╚██╗ ██╔╝██║   ██║██╔════╝   ╚══███╔╝██╔═══██╗████╗  ██║██╔════╝ ||
+||      ██║██║   ██║   ██║   ██║      ╚████╔╝ ██║   ██║█████╗       ███╔╝ ██║   ██║██╔██╗ ██║█████╗   ||
+|| ██   ██║╚██╗ ██╔╝   ██║   ██║       ╚██╔╝  ██║   ██║██╔══╝      ███╔╝  ██║   ██║██║╚██╗██║██╔══╝   ||
+|| ╚█████╔╝ ╚████╔╝    ██║   ╚██████╗██╗██║   ╚██████╔╝███████╗██╗███████╗╚██████╔╝██║ ╚████║███████╗ ||
+||  ╚════╝   ╚═══╝     ╚═╝    ╚═════╝╚═╝╚═╝    ╚═════╝ ╚══════╝╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝ ||
+||========================================================================== JVTC.Yue.Zone v0.0.0 ====||
+```
+
 ### 4. 日志
 
 > 参考：[官方文档](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.logging)
