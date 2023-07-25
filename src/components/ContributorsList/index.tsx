@@ -27,6 +27,7 @@ export default function ContributorsList(){
           <Contributor name="buyi-Yang" href="https://github.com/buyi-Yang"/>
           <Contributor name="kejue-sususu" href="https://github.com/kejue-sususu"/>
           <Contributor name="liao-666" href="https://github.com/liao-666"/>
+          <Contributor name="查看全部" href="https://github.com/Yue-plus/JVTC.Yue.Zone/graphs/contributors"/>
         </div>
       </div>
     </div>
