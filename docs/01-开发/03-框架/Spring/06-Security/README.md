@@ -228,7 +228,3 @@ class AccountService(val userRepository: UserRepository) : UserDetailsManager {
     }
 }
 ```
-
-## 登入流程
-
-
