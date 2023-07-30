@@ -10,6 +10,7 @@ Spring Data JPA 为 Jakarta Persistence API (JPA) 提供了存储库支持。
 
 [官方文档](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
 | [中文文档](https://springdoc.cn/spring-data-jpa/)
+| [Hibernate](https://hibernate.org/)
 :::
 
 ## 教程
@@ -29,6 +30,57 @@ spring:
 ## 实体（Entity）
 
 - [Spring Data JPA @Entity详解 - 掘金](https://juejin.cn/post/7143048935739752484)
+
+```kotlin title="src/main/kotlin/zone/yue/core/user/UserLastLoginInfoEntity.kt"
+package zone.yue.core.user
+
+import jakarta.persistence.Entity
+import jakarta.persistence.Id
+import jakarta.persistence.Table
+import org.hibernate.proxy.HibernateProxy
+import java.net.InetAddress
+import java.time.LocalDateTime
+import java.util.*
+
+@Entity
+@Table(name = "user_last_login_info")
+data class UserLastLoginInfoEntity(
+    @Id val uuid: UUID,
+    private val lastLoginDateTime: LocalDateTime,
+    private val lastLoginIp: InetAddress,
+    private val lastLoginUserAgent: String,
+) {
+    constructor() : this(
+        UUID.fromString("00000000-0000-0000-0000-000000000000"),
+        LocalDateTime.MIN,
+        InetAddress.getLoopbackAddress(),
+        "",
+    )
+
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (other == null) return false
+
+        val oEffectiveClass =
+            if (other is HibernateProxy) other.hibernateLazyInitializer.persistentClass else other.javaClass
+        if (javaClass != oEffectiveClass) return false
+
+        other as UserLastLoginInfoEntity
+
+        return uuid == other.uuid
+    }
+
+    override fun hashCode(): Int = javaClass.hashCode()
+
+    override fun toString(): String {
+        return this::class.simpleName +
+                "(uuid = $uuid , " +
+                "lastLoginDateTime = $lastLoginDateTime , " +
+                "lastLoginIp = $lastLoginIp , " +
+                "lastLoginUserAgent = $lastLoginUserAgent )"
+    }
+}
+```
 
 ## 储存库（Repository）
 

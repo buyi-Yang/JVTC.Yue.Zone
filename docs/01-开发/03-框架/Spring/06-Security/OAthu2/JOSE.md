@@ -110,9 +110,7 @@ class SecurityConfiguration {
                 authorize(anyRequest, authenticated)
             }
 
-            httpBasic {
-                Customizer.withDefaults<HttpSecurity>()
-            }
+            httpBasic {  }
 
             oauth2ResourceServer {
                 jwt {  }
@@ -173,4 +171,17 @@ class AccountRestController(val accountService: AccountService, val jwtEncoder: 
         return jwtEncoder.encode(JwtEncoderParameters.from(claims)).tokenValue
     }
 }
+```
+
+### 获取令牌
+
+```sh
+curl -XPOST username:password@localhost:8080/api/token
+```
+
+### 使用令牌
+
+```http
+GET http://localhost:8080/api/info
+Authorization: Bearer {{token}}
 ```

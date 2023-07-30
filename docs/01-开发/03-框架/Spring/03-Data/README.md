@@ -21,3 +21,8 @@ spring:
     url: jdbc:postgresql://localhost:5432/postgres
     driver-class-name: org.postgresql.Driver
 ```
+
+## 对 Kotlin 的支持
+
+参考：[官方文档](https://docs.spring.io/spring-data/commons/docs/current/reference/html/#mapping.kotlin)
+| [中文文档](https://springdoc.cn/spring-data/#mapping.kotlin)
