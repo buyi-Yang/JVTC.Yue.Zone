@@ -6,6 +6,7 @@ JOSE 框架旨在提供一种方法，在各方之间安全地转移 claim。
 它是由一系列规范构建的。
 
 - **JWT**: JSON Web Token
+  + [<img src="http://jwt.io/img/logo-asset.svg" alt="JWT" style={{height: "48px", borderRadius: "24px"}} />](https://jwt.io/)
 - **JWS**: JSON Web Signature
 - **JWE**: JSON Web Encryption
 - **JWK**: JSON Web Key
@@ -20,8 +21,13 @@ JOSE 框架旨在提供一种方法，在各方之间安全地转移 claim。
 
 - [OAuth 2.0 资源服务器 JWT :: Spring Security Reference](https://springdoc.cn/spring-security/servlet/oauth2/resource-server/jwt.html)
 - [JWS + JWK in a Spring Security OAuth2 Application | Baeldung](https://www.baeldung.com/spring-security-oauth2-jws-jwk)
+- [JWT全面解读、详细使用步骤 - 简书](https://www.jianshu.com/p/d1644e281250)
 
-## JWT
+## `JwtClaimsSet`
+
+
+
+## JWT Login Sample
 
 [JWT Login Sample](https://github.com/spring-projects/spring-security-samples/tree/main/servlet/spring-boot/java/jwt/login)
 这个官方示例演示了如何在不使用单独的授权服务器的情况下接受 JWT。
@@ -156,14 +162,14 @@ class AccountRestController(val accountService: AccountService, val jwtEncoder: 
     @PostMapping("/token")
     fun token(authentication: Authentication): String {
         val now = Instant.now()
-        val expiry = 36000L
         val scope = authentication.authorities.stream()
             .map { obj: GrantedAuthority -> obj.authority }
             .collect(Collectors.joining(" "))
         val claims = JwtClaimsSet.builder()
             .issuer("self")
             .issuedAt(now)
-            .expiresAt(now.plusSeconds(expiry))
+            // .expiresAt(now.plusSeconds(36000L))    // 10 小时后过期
+            .expiresAt(now.plus(90, ChronoUnit.DAYS)) // 90 天后过期
             .subject(authentication.name)
             .claim("scope", scope)
             .build()

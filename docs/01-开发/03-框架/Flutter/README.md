@@ -15,7 +15,7 @@ Flutter 为软件开发行业带来了革新：只要一套代码库，即可构
 
 使用 **管理员身份运行** 以下命令：
 
-```powershell
+```sh
 choco install flutter -y
 git config --global --add safe.directory C:\tools\flutter\
 
@@ -23,6 +23,12 @@ git config --global --add safe.directory C:\tools\flutter\
 
 flutter doctor
 flutter upgrade
+```
+
+## 开启 Windows 系统开发人员模式
+
+```powershell
+start ms-settings:developers
 ```
 
 ## 配置静态分析
