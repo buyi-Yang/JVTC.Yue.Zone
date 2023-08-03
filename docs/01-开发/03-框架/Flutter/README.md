@@ -7,8 +7,7 @@ Flutter 为软件开发行业带来了革新：只要一套代码库，即可构
 | [中文文档](https://flutter.cn/docs/get-started/install)
 | [《Flutter实战·第二版》](https://book.flutterchina.club/)
 | [Flame Engine](https://flame-engine.org/)
-| [Dart 官方文档](https://dart.dev/guides)
-| [Dart 中文文档](https://dart.cn/guides)
+| [Dart 语言](/docs/开发/语言/Dart/)
 :::
 
 ## 使用 Chocolatey 安装
