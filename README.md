@@ -20,4 +20,6 @@
 
 ## 许可证
 
-本项目使用 GPL-v3.0 协议开源，请遵守开源协议。
+本项目使用 [GPL-v3.0](./LICENSE) 协议开源，请遵守开源协议。
+
+> [GPLv3 协议的非正式简体中文翻译](https://jxself.org/translations/gpl-3.zh.shtml)
