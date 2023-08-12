@@ -17,7 +17,41 @@ Rocket 旨在快速、简单和灵活，同时尽可能提供有保证的安全�
 | [中文文档](https://villezuo.gitee.io/rocketdoc/)
 :::
 
-## 响应 JSON
+## 响应
+
+参考：[Responder in rocket::response - Rust](https://api.rocket.rs/v0.5-rc/rocket/response/trait.Responder.html)
+
+```rust
+// `T` 必须实现 `Responder`。
+#[get("/")]
+fn index() -> T { /* ... */ }
+```
+
+### 状态码
+
+```rust title="src/main.rs"
+#[macro_use]
+extern crate rocket;
+
+use rocket::http::Status;
+use rocket::response::status::Custom;
+
+#[get("/")]
+fn index() -> Custom<&'static str> {
+    Custom(Status::Ok, "Hello Rocket!")
+}
+
+#[launch]
+fn rocket() -> _ {
+    rocket::build().mount("/", routes![index])
+}
+```
+
+### Header
+
+//TODO:
+
+### JSON
 
 参考：[rocket::serde::json - Rust](https://docs.rs/rocket/0.5.0-rc.1/rocket/serde/json/index.html)
 | [Serde](https://serde.rs/)
