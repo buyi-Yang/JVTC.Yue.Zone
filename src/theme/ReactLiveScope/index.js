@@ -3,6 +3,7 @@ import Color from '@site/src/components/Color';
 import HideText from '@site/src/components/HideText';
 import BorderCard from '@site/src/components/BorderCard';
 import { ContributorsList, Contributor } from '@site/src/components/ContributorsList';
+import IconCardButton from '@site/src/components/IconCradButton';
 
 // Add react-live imports you need here
 const ReactLiveScope = {
@@ -13,5 +14,6 @@ const ReactLiveScope = {
   BorderCard,
   ContributorsList,
   Contributor,
+  IconCardButton,
 };
 export default ReactLiveScope;
