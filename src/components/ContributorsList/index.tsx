@@ -7,7 +7,7 @@ interface ContributorProps {
   avatar?: string,
 }
 
-function Contributor({name, href, avatar}: ContributorProps) {
+export function Contributor({name, href, avatar}: ContributorProps) {
   return (
     <a className={style.headLink} target="_blank" href={href}>
       <img className={style.headImg} src={avatar ?? `/contributors/${name}.png`} alt={name} />
@@ -17,7 +17,7 @@ function Contributor({name, href, avatar}: ContributorProps) {
   )
 }
 
-export default function ContributorsList(){
+export function ContributorsList(){
   return (
     <div className="container" style={{paddingTop: 16}}>
       <h1>贡献者</h1>

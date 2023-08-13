@@ -195,7 +195,7 @@ const config = {
 
   markdown: { mermaid: true },
 
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: ['@docusaurus/theme-mermaid', '@docusaurus/theme-live-codeblock'],
 };
 
 module.exports = config;

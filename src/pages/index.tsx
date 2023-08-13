@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import ContributorsList from '@site/src/components/ContributorsList'
+import { ContributorsList } from '@site/src/components/ContributorsList'
 // import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
