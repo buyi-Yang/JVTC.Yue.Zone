@@ -28,11 +28,13 @@ const config = {
       ({
         docs: {
           remarkPlugins: [math],
-          rehypePlugins: [katex],
+          rehypePlugins: [katex, { strict: false }],
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl: 'https://github.com/Yue-plus/JVTC.Yue.Zone/tree/main/',
         },
         blog: {
+          remarkPlugins: [math],
+          rehypePlugins: [katex, { strict: false }],
           showReadingTime: true,
           editUrl: 'https://github.com/Yue-plus/JVTC.Yue.Zone/tree/main/',
         },
@@ -58,8 +60,8 @@ const config = {
       logo: {alt: '软件2201班班徽', src: 'img/班徽.svg'},
       items: [
         {type: 'doc', docId: '首页/欢迎', position: 'left', label: '欢迎'},
-        {type: 'doc', docId: '编程/Java/入门', position: 'left', label: '编程'},
-        {type: 'doc', docId: '竞赛/蓝桥杯/README', position: 'left', label: '竞赛'},
+        {type: 'doc', docId: '开发/README', position: 'left', label: '开发'},
+        {type: 'doc', docId: '竞赛/全国职业院校技能大赛/GZ031-应用软件系统开发赛项', position: 'left', label: '竞赛'},
         {type: 'doc', docId: '作业/高数D-李辉贤/复习题2022-2023', position: 'left', label: '作业'},
         // {type: 'doc', docId: '生存指南/前言', position: 'left', label: '《生存指南》'},
         {
@@ -71,11 +73,43 @@ const config = {
             { type: 'doc', docId: '作业/实用英语轻松GET/第一章测试', label: '实用英语轻松GET'},
           ],
         },
-        {href: 'https://math.note.yue.zone/docs/高等数学/函数及其模型/集合与函数/', label: '高等数学', position: 'left'},
+        {
+          type: 'dropdown',
+          label: '高等数学',
+          positionL: 'left',
+          items: [
+            { type: 'doc', docId: '作业/高数D-李辉贤/复习题2022-2023', label: '高数D - 作业' },
+            { href: 'https://math.note.yue.zone/docs/高等数学/导数与微分/函数的求导法则', label: 'MathNote - 高等数学' },
+            { href: 'https://www.bilibili.com/video/BV1qW411N7FU/', label: '3Blue1Brown - 微积分的本质' },
+          ],
+        },
         {to: '/blog', label: '博客', position: 'left'},
         {href: 'https://net.note.yue.zone/', label: 'NetNote', position: 'right'},
         {href: 'https://github.com/Yue-plus/JVTC.Yue.Zone', label: 'GitHub', position: 'right'},
       ],
+    },
+    algolia: {
+      appId: 'EAJM875Q4F',
+      apiKey: 'c39d0d2992b9e4c9363c4c3f28a4dbca',
+      indexName: 'jvtc-yue',
+      contextualSearch: true,
+
+      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      externalUrlRegex: 'external\\.com|domain\\.com',
+
+      // Optional: Replace parts of the item URLs from Algolia. Useful when using the same search index for multiple deployments using a different baseUrl. You can use regexp or string in the `from` param. For example: localhost:3000 vs myCompany.com/docs
+      // replaceSearchResultPathname: {
+      //   from: '/docs/', // or as RegExp: /\/docs\//
+      //   to: '/docs/',
+      // },
+
+      // Optional: Algolia search parameters
+      searchParameters: {},
+
+      // Optional: path for search page that enabled by default (`false` to disable it)
+      searchPagePath: 'search',
+
+      //... other Algolia params
     },
     footer: {
       style: 'dark',
@@ -127,7 +161,7 @@ const config = {
     prism: {
       theme: lightCodeTheme,
       darkTheme: darkCodeTheme,
-      additionalLanguages: ['powershell', 'java', 'bash', 'csharp'],
+      additionalLanguages: ['powershell', 'java', 'kotlin', 'dart', 'bash', 'csharp', 'rust', 'yaml', 'toml', 'log', 'regex', 'http'],
     },
   }),
 
@@ -158,6 +192,10 @@ const config = {
         ],
     }],
   ],
+
+  markdown: { mermaid: true },
+
+  themes: ['@docusaurus/theme-mermaid', '@docusaurus/theme-live-codeblock'],
 };
 
 module.exports = config;

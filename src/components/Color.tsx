@@ -13,7 +13,7 @@ export default function Color({value, name}: ColorProps) {
       lineHeight: "120px",
       textAlign: "center",
       display: "inline-block",
-      backgroundColor: value,
+      background: value,
     }}>
       <span style={{backgroundColor: "RGBA(128, 128, 128, .8)"}}>{name ?? value.toUpperCase()}</span>
     </div>
