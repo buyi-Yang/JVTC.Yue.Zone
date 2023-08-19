@@ -13,7 +13,7 @@ export default function IconCardButton({icon, title, text, href}) {
         alignItems: "center",
         userSelect: "none",
     }}>
-        <img src={`/编程语言图标/${icon}`} alt={title} style={{
+        <img src={`/icons/${icon}`} alt={title} style={{
             height: "90%",
             minHeight: 100,
             maxWidth: 100,
