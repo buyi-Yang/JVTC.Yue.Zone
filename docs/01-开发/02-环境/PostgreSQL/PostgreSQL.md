@@ -1,7 +1,7 @@
 # PostgreSQL
 
 :::info
-PostgreSQL：世界上最先进的开源关系数据库
+PostgreSQL：世界上最先进的开源关系型数据库
 
 [官方网站](https://www.postgresql.org/)
 | [官方文档](https://www.postgresql.org/docs/)

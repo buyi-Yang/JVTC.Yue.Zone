@@ -2,8 +2,15 @@
 title: 目录
 ---
 
-import IconCardButton from "@site/src/components/IconCradButton";
-import {DevelopLanguageIndex, DevelopToolIndex, DevelopFrameworkIndex} from "@site/src/components/DevelopIndex";
+import {
+    DevelopLanguageIndex,
+    DevelopToolIndex,
+    DevelopEnvironIndex,
+    DevelopFrameworkIndex,
+    DevelopSoftwareIndex,
+    DevelopHardwareIndex,
+    DevelopGameIndex,
+} from "@site/src/components/DevelopIndex";
 
 # 开发
 
@@ -17,16 +24,20 @@ import {DevelopLanguageIndex, DevelopToolIndex, DevelopFrameworkIndex} from "@si
 
 ## 环境
 
+<DevelopEnvironIndex />
+
 ## 框架
 
 <DevelopFrameworkIndex />
 
 ## 软件
 
-//TODO:
+<DevelopSoftwareIndex />
 
 ## 硬件
 
-<IconCardButton icon="cw32.png" title="CW32" text="武汉芯源半导体" href="/docs/开发/硬件/CW32/" />
+<DevelopHardwareIndex />
 
 ## 游戏
+
+<DevelopGameIndex />
