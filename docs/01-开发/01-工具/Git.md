@@ -17,10 +17,8 @@ Git 易于学习，占用空间很小，性能快如闪电。
 ### Windows
 
 [点击下载 Windows 最新版的 Git 安装包](https://git-scm.com/download/win)
-
-[也可以使用 Chocolatey 安装](/docs/开发/工具/Chocolatey/#安装-git)
-
-[也可以使用 winget 安装](https://winstall.app/apps/Git.Git)
+| [也可以使用 Chocolatey 安装](/docs/开发/工具/Chocolatey/#安装-git)
+| [也可以使用 winget 安装](https://winstall.app/apps/Git.Git)
 
 ## GitBash 配置代理
 
