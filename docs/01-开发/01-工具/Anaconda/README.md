@@ -50,6 +50,36 @@ conda activate base
 - [anaconda | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror](https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/)
 - [anaconda镜像_anaconda下载地址_anaconda安装教程-阿里巴巴开源镜像站](https://developer.aliyun.com/mirror/anaconda)
 
+修改用户目录下的 `.condarc` 文件，没有该文件可以使用 `conda config --set show_channel_urls yes` 生成。
+
+```yaml title="~/.condarc"
+channels:
+  - defaults
+show_channel_urls: true
+default_channels:
+  - http://mirrors.aliyun.com/anaconda/pkgs/main
+  - http://mirrors.aliyun.com/anaconda/pkgs/r
+  - http://mirrors.aliyun.com/anaconda/pkgs/msys2
+# - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+# - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+# - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: http://mirrors.aliyun.com/anaconda/cloud
+  msys2: http://mirrors.aliyun.com/anaconda/cloud
+  bioconda: http://mirrors.aliyun.com/anaconda/cloud
+  menpo: http://mirrors.aliyun.com/anaconda/cloud
+  pytorch: http://mirrors.aliyun.com/anaconda/cloud
+  simpleitk: http://mirrors.aliyun.com/anaconda/cloud
+# conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+# msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+# bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+# menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+# pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+# pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+# simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+# deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
+```
+
 ## 使用
 
 安装完成后可使用 `conda` 命令：

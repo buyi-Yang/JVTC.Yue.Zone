@@ -21,14 +21,8 @@
 
 ### 安装中文语言包
 
-```text
-(base) PS C:\Users\Yue_plus> pip install jupyterlab-language-pack-zh-CN
-Defaulting to user installation because normal site-packages is not writeable
-Collecting jupyterlab-language-pack-zh-CN
-  Downloading jupyterlab_language_pack_zh_CN-3.5.post2-py2.py3-none-any.whl (130 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.5/130.5 kB 1.1 MB/s eta 0:00:00
-Installing collected packages: jupyterlab-language-pack-zh-CN
-Successfully installed jupyterlab-language-pack-zh-CN-3.5.post2
+```sh
+pip install jupyterlab-language-pack-zh-CN
 ```
 
 重启 JupyterLab 然后点 **Settings** → **Language** 选简体中文就好了。

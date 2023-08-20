@@ -14,7 +14,8 @@ git clone https://github.com/ultralytics/yolov5.git
 cd yolov5
 conda create --name yolov5 python=3.11
 conda activate yolov5
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r ./requirements.txt
+pip install -i http://mirrors.aliyun.com/pypi/simple/ -r ./requirements.txt --trusted-host mirrors.aliyun.com
+# pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r ./requirements.txt
 ```
 
 ## 运行检测
@@ -55,7 +56,7 @@ Usage - formats:
 [查看自己的 GPU 是否支持 CUDA](https://developer.nvidia.com/cuda-gpus)。
 
 下载安装 [CUDA toolkit](https://developer.nvidia.com/cuda-downloads)。
-安装完成后可能需要配置环境变量（看看自己的安装位置）：`C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\bin`。
+安装完成后可能需要配置 `Path` 环境变量（看看自己的安装位置）：`C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\bin`。
 
 使用 `nvcc -V` 查看 CUDA 版本：
 
