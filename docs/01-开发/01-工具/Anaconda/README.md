@@ -80,6 +80,10 @@ custom_channels:
 # deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
 ```
 
+### PyChram 中选择 Conda 可执行文件路径
+
+选择 Anaconda 安装目录中的：`Anaconda3\Scripts\conda.exe` 文件即可。
+
 ## 使用
 
 安装完成后可使用 `conda` 命令：
@@ -181,10 +185,6 @@ conda env remove --name $ENV_NAME
 # 切换环境
 conda activate $ENV_NAME
 ```
-
-### PyChram 中选择 Conda 可执行文件路径
-
-选择 Anaconda 安装目录中的：`Anaconda3\Scripts\conda.exe` 文件即可。
 
 ## Miniconda
 

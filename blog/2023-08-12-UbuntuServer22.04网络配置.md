@@ -35,15 +35,9 @@ nameserver 114.114.114.114
 
 ### 长期有效
 
-```yaml title="/etc/netplan/01-network-manager-all.yaml"
-network:
-  version: 2
-  renderer: networkd
-  ethernets:
-    enp0s3:
-      dhcp4: no
-      addresses: [192.168.157.140/24]
-      gateway4: 192.168.157.140
-      nameservers:
-        addresses: [8.8.8.8,8.8.4.4]
+```toml title="/etc/systemd/resolved.conf"
+[Resolve]
+DNS=114.114.114.114 4.2.2.1
 ```
+
+修改后需要重启服务：`sudo systemctl restart systemd-resolved`

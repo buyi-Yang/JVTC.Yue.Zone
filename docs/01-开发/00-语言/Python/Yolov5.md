@@ -52,6 +52,8 @@ Usage - formats:
 
 ## 使用 GPU 训练自己的数据集
 
+### NVIDIA CUDA
+
 首先确保自己有一块支持 CUDA 的 GPU。
 [查看自己的 GPU 是否支持 CUDA](https://developer.nvidia.com/cuda-gpus)。
 
@@ -92,7 +94,7 @@ pip install chardet
 # pip install clearml comet_ml
 ```
 
-### Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized.
+#### Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized.
 
 ```text
 OMP: Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized.
@@ -102,3 +104,22 @@ OMP: Hint This means that multiple copies of the OpenMP runtime have been linked
 设置环境变量：
 
 `KMP_DUPLICATE_LIB_OK` : `TRUE`
+
+### AMD ROCm
+
+[官方网站](https://www.amd.com/zh-hans/graphics/servers-solutions-rocm-ml)
+| [官方文档](https://rocm.docs.amd.com/en/latest/)
+| [GPU 与系统兼容性（Linux）](https://rocm.docs.amd.com/en/latest/release/gpu_os_support.html)
+| [GPU 与系统支持（Windows）](https://rocm.docs.amd.com/en/latest/release/windows_support.html)
+| [GitHub](https://github.com/RadeonOpenCompute/ROCm)
+
+综上所述目前 PyTorch 2.x 并不支持在 Windows 上使用 ROCm。
+
+#### DirectML
+
+:::caution
+Torch-directml 软件包仅支持 PyTorch 1.13。
+:::
+
+参考：[在 Windows 上使用 DirectML 启用 PyTorch](https://learn.microsoft.com/en-us/windows/ai/directml/gpu-pytorch-windows)
+| [在 WSL 2 上通过 DirectML 启用 PyTorch](https://learn.microsoft.com/zh-cn/windows/ai/directml/gpu-pytorch-wsl)
