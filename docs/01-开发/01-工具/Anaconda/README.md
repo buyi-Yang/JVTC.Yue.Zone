@@ -182,6 +182,10 @@ conda env remove --name $ENV_NAME
 conda activate $ENV_NAME
 ```
 
+### PyChram 中选择 Conda 可执行文件路径
+
+选择 Anaconda 安装目录中的：`Anaconda3\Scripts\conda.exe` 文件即可。
+
 ## Miniconda
 
 - [Miniconda — conda documentation](https://docs.conda.io/en/latest/miniconda.html)
