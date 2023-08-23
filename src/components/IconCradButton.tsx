@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function IconCardButton({icon, title, text, href}) {
-    return <a target="_blank" href={href} style={{
+    return <a href={href} style={{
         width: text.length > 20 ? 608 : 300,
         height: 128,
         padding: 8,
