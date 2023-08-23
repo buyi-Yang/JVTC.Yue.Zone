@@ -111,6 +111,12 @@ const config = {
 
       //... other Algolia params
     },
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: true,
+      },
+    },
     footer: {
       style: 'dark',
       // links: [
