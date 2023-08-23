@@ -80,9 +80,16 @@ custom_channels:
 # deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
 ```
 
-### PyChram 中选择 Conda 可执行文件路径
+### PyChram 
+
+#### 选择 Conda 可执行文件路径
 
 选择 Anaconda 安装目录中的：`Anaconda3\Scripts\conda.exe` 文件即可。
+
+#### 终端无法激活 conda 环境
+
+建议使用 [Powershell 7](/docs/开发/工具/PowerShell)；
+安装后 Shell 路径设置为：`C:\Program Files\PowerShell\7\pwsh.exe`
 
 ## 使用
 

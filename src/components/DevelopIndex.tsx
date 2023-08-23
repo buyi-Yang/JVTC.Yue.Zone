@@ -46,6 +46,7 @@ export function DevelopToolIndex() {
         {icon: "graal-vm.svg", title: "GraalVM", text: "高性能！云原生！多语言！", href: "/docs/开发/工具/GraalVM/"},
         {icon: "apache.svg", title: "Maven", text: "Java软件项目管理及自动构建工具", href: "/docs/开发/工具/Maven/"},
         {icon: "git.svg", title: "Git", text: "免费的开源分布式版本控制系统", href: "/docs/开发/工具/Git"},
+        {icon: "PowerShell.svg", title: "PowerShell", text: "是一种跨平台的任务自动化解决方案", href: "/docs/开发/工具/PowerShell"},
         {icon: "OpenCV.png", title: "OpenCV", text: "跨平台的计算机视觉库", href: "/docs/开发/工具/OpenCV/"},
         {icon: "SSL.svg", title: "OpenSSL", text: "功能丰富且自包含的开源安全工具箱", href: "/docs/开发/工具/OpenSSL/"},
         {
