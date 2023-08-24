@@ -98,7 +98,8 @@ export function DevelopFrameworkIndex() {
             title: "Rocket",
             text: "使用 Rust 编写快、安全不牺牲灵活性、可用性或类型安全性的 Web 应用程序",
             href: "/docs/开发/框架/Rocket/",
-        }
+        },
+        {icon: "flask.png", title: "Flask", text: "轻量级 WSGI Web 应用程序框架", href: "/docs/开发/框架/Flask/"},
     ])
 }
 
