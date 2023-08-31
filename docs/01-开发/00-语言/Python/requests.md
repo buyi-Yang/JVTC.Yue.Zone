@@ -29,7 +29,7 @@ response = requests.post(POST_HOST, files={'image': ('image.jpg', jpg.tobytes())
 ```python
 import requests
 
-requests.get('https://api.github.com/events')
+response = requests.get('https://api.github.com/events')
 response.json().get('xxx')
 ```
 

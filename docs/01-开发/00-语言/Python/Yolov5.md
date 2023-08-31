@@ -50,6 +50,30 @@ Usage - formats:
 
 ```
 
+## 创建自己的数据集
+
+参考：[Train Custom Data - Ultralytics YOLOv8 Docs](https://docs.ultralytics.com/yolov5/tutorials/train_custom_data)
+| [Tips for Best Training Results - Ultralytics YOLOv8 Docs](https://docs.ultralytics.com/yolov5/tutorials/tips_for_best_training_results/)
+
+### 使用 Label Studio
+
+[LabelStudio](https://labelstud.io/)
+
+通过 Anaconda 安装：
+
+```shell
+conda create --name label-studio python=3.10
+conda activate label-studio
+pip install label-studio
+label-studio start
+```
+
+然后浏览器访问 <http://localhost:8080/>
+
+### 使用 LabelImg
+
+[LabelImg（旧版）](https://github.com/HumanSignal/labelImg)
+
 ## 使用 GPU 训练自己的数据集
 
 ### NVIDIA CUDA
