@@ -4,7 +4,7 @@
 Rocket 是使用 [Rust] 语言编写的 Web 框架。
 如果你愿意，你可以把 Rocket 想象成一个更灵活、更友好的
 [Rails](https://rubyonrails.org/)、
-[Flask](../../00-语言/Python/Flask.md)、
+[Flask](/docs/开发/框架/Flask/)、
 [Bottle](https://bottlepy.org/docs/dev/index.html) 和
 [Yesod](https://www.yesodweb.com/) 混合体。
 我们更愿意将 Rocket 视为新事物。

@@ -72,7 +72,7 @@ label-studio start
 
 ### 使用 LabelImg
 
-[LabelImg（旧版）](https://github.com/HumanSignal/labelImg)
+[LabelImg](https://github.com/HumanSignal/labelImg)
 
 ## 使用 GPU 训练自己的数据集
 

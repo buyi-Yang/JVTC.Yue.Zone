@@ -11,3 +11,14 @@ OpenCV 可用于开发实时的图像处理、计算机视觉以及模式识别�
 | <https://opencv.apachecn.org/>
 | <http://www.woshicver.com/>
 :::
+
+## `cv2.waitKey(delay: int)`
+
+参数 `delay` 为等待的毫秒数，为 0 时将会无限期地等待一个按键事件。
+
+```python
+delay = 100
+while True:
+  cv2.waitKey(delay)
+```
+
