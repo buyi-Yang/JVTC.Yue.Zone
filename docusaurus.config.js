@@ -61,6 +61,8 @@ const config = {
       items: [
         {type: 'doc', docId: '首页/欢迎', position: 'left', label: '欢迎'},
         {type: 'doc', docId: '开发/INDEX', position: 'left', label: '开发'},
+        {type: 'doc', docId: '运行维护/INDEX', position: 'left', label: '运行维护'},
+        {type: 'doc', docId: '信息安全/INDEX', position: 'left', label: '信息安全'},
         {type: 'doc', docId: '竞赛/全国职业院校技能大赛/GZ031-应用软件系统开发赛项', position: 'left', label: '竞赛'},
         {type: 'doc', docId: '作业/高数D-李辉贤/复习题2022-2023', position: 'left', label: '作业'},
         // {type: 'doc', docId: '生存指南/前言', position: 'left', label: '《生存指南》'},
