@@ -47,9 +47,49 @@ fn rocket() -> _ {
 }
 ```
 
-### Header
+### 自定义 Header
 
-//TODO:
+参考：[Custom Responders](https://rocket.rs/v0.5-rc/guide/responses/#custom-responders)
+
+```rust
+#[macro_use]
+extern crate rocket;
+
+mod structs;
+mod routes;
+
+use rocket::http::{ContentType, Header};
+use rocket::response::Responder;
+
+
+#[derive(Responder)]
+#[response(status = 202, content_type = "json")]
+struct IndexResponder {
+    inner: String,
+    headers: ContentType,
+    more: Header<'static>,
+}
+
+
+#[get("/")]
+fn index() -> IndexResponder {
+    IndexResponder {
+        inner: "abc".parse().unwrap(),
+        headers: ContentType::Text,
+        more: Header::new(
+            "X-Authlib-Injector-API-Location", 
+            // heighline
+            "https://skin.mc.yue.zone/api/yggdrasil",
+        ),
+    }
+}
+
+
+#[launch]
+fn rocket() -> _ {
+    rocket::build().mount("/", routes![index])
+}
+```
 
 ### JSON
 
