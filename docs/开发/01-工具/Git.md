@@ -20,6 +20,11 @@ Git 易于学习，占用空间很小，性能快如闪电。
 | [也可以使用 Chocolatey 安装](/docs/开发/工具/Chocolatey/#安装-git)
 | [也可以使用 winget 安装](https://winstall.app/apps/Git.Git)
 
+### TortoiseGit
+
+TortoiseGit 提供了显示文件状态的叠加图标、强大的 Git 上下文菜单以及更多！
+[官方网站](https://tortoisegit.org/)
+
 ## GitBash 配置代理
 
 ```sh
