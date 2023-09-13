@@ -51,7 +51,7 @@ fn rocket() -> _ {
 
 参考：[Custom Responders](https://rocket.rs/v0.5-rc/guide/responses/#custom-responders)
 
-```rust
+```rust title="src/main.rs"
 #[macro_use]
 extern crate rocket;
 

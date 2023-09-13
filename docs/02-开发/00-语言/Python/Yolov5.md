@@ -55,7 +55,9 @@ Usage - formats:
 参考：[Train Custom Data - Ultralytics YOLOv8 Docs](https://docs.ultralytics.com/yolov5/tutorials/train_custom_data)
 | [Tips for Best Training Results - Ultralytics YOLOv8 Docs](https://docs.ultralytics.com/yolov5/tutorials/tips_for_best_training_results/)
 
-### 使用 Label Studio
+### 数据标注
+
+#### 使用 Label Studio
 
 [LabelStudio](https://labelstud.io/)
 
@@ -70,7 +72,7 @@ label-studio start
 
 然后浏览器访问 <http://localhost:8080/>
 
-### 使用 LabelImg
+#### 使用 LabelImg
 
 [LabelImg](https://github.com/HumanSignal/labelImg)
 
