@@ -105,13 +105,20 @@ torch                     2.0.1                    pypi_0    pypi
 torchvision               0.15.2                   pypi_0    pypi
 ```
 
-按照 [本地部署](#本地部署) 安装的是使用 CPU 计算的 torch，现在需要卸载它，安装使用 CUDA 计算的 torch：
+按照 [本地部署](#本地部署) 安装的是使用 CPU 计算的 torch，现在需要卸载它：
 
-参考 [PyTorch 官网](https://pytorch.org/get-started/locally/) 下载安装 CUDA 版：
+```sh
+pip uninstall torch
+```
+
+参考 [PyTorch 官网](https://pytorch.org/get-started/locally/) 下载安装使用 CUDA 计算的 torch：
 
 ```ps
 # 文件很大，你忍一下（1.36G）
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+
+# 也可以使用 pip 安装（2.6G）
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
 # 不知道为啥少个包↓
 pip install chardet
