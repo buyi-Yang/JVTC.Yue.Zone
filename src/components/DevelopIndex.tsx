@@ -61,7 +61,6 @@ export function DevelopToolIndex() {
 /** 环境 */
 export function DevelopEnvironIndex() {
     return DevelopIndex([
-        {icon: "apache2.svg", title: "Apache2", text: "HTTP、Web 服务器", href: "/docs/开发/环境/Apache/httpd"},
         {
             icon: "Docker.svg",
             title: "Docker",
@@ -80,6 +79,14 @@ export function DevelopEnvironIndex() {
             text: "世界上最先进的开源关系型数据库",
             href: "/docs/开发/环境/PostgreSQL/"
         },
+        {
+            icon: "sqlite.svg",
+            title: "SQLite",
+            text: "自给自足的、无服务器的、零配置的、事务性的 SQL 数据库引擎",
+            href: "/docs/开发/环境/SQLite/"
+        },
+        {icon: "apache2.svg", title: "Apache2", text: "HTTP、Web 服务器", href: "/docs/开发/环境/Apache/httpd"},
+        {icon: "tomcat.svg", title: "Tomcat", text: "Servlet 容器；JSP", href: "/docs/开发/环境/Tomcat/"},
     ])
 }
 
