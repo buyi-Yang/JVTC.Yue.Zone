@@ -5,7 +5,7 @@ import IconCardButton from "@site/src/components/IconCradButton";
 type DevelopIndexItems = { icon: string, title: string, text: string, href: string }
 
 function DevelopIndex(items: Array<DevelopIndexItems>) {
-    return <div className="row">{
+    return <div className="row" style={{justifyContent: "center"}}>{
         items.map(item => <IconCardButton {...item} />)
     }</div>
 }

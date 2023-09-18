@@ -20,6 +20,14 @@ PowerShell 在 Windows、Linux 和 macOS 上运行。
 
 ## 常见问题
 
+### 读取环境变量
+
+参考 [关于环境变量 - PowerShell | Microsoft Learn](https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_environment_variables?view=powershell-7.3)
+
+```powershell
+echo $Env:Path
+```
+
 ### Windows PowerShell 无法加载文件，因为在此系统上禁止运行脚本。
 
 ```text
@@ -40,6 +48,6 @@ cnpm : 无法加载文件 C:\Users\Yue_plus\AppData\Roaming\npm\cnpm.ps1，因�
 
 以 **管理员身份** 在 PowerShell 中运行以下指令：
 
-```ps
+```pwershell
 set-ExecutionPolicy RemoteSigned
 ```
