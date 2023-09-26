@@ -28,3 +28,37 @@ choco install maven -y
 
 如果使用 IDEA 会自带一套 Maven，配置可以直接写在 `~/.m2/settings.xml` 里（没有就新建一个）。
 
+## 配置
+
+配置文件位于 Maven 安装目录中的 `conf/setting.xml` 文件中。
+
+
+> 可以使用以下命令查询 Maven 安装位置；
+> - PowerShell: `Get-Command mvn | Select-Object Source`
+> - Bash: `which git` 或 `where git`
+> - CMD:  `where mvn`
+
+以下是一个配置阿里云 Maven 镜像的配置：
+
+```xml title="setting.xml"
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd">
+  <mirrors>
+    <mirror>
+      <id>maven-default-http-blocker</id>
+      <mirrorOf>external:http:*</mirrorOf>
+      <name>Pseudo repository to mirror external repositories initially using HTTP.</name>
+      <url>http://0.0.0.0/</url>
+      <blocked>true</blocked>
+    </mirror>
+    <mirror>
+      <id>aliyunmaven</id>
+      <mirrorOf>*</mirrorOf>
+      <name>阿里云公共仓库</name>
+      <url>https://maven.aliyun.com/repository/public</url>
+    </mirror>
+  </mirrors>
+</settings>
+```
