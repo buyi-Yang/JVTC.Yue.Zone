@@ -4,9 +4,19 @@
 
 [官网](https://www.docker.com/)
 | [文档](https://docs.docker.com/)
+| [菜鸟教程](https://www.runoob.com/docker/docker-tutorial.html)
+| [编程宝库](http://www.codebaoku.com/docker/docker-index.html)
 | [Docker Hub](https://hub.docker.com/)
 
-## 配置容器随 Docker 启动
+## 镜像站
+
+- [Docker ToolBox镜像 - 阿里巴巴开源镜像站](https://developer.aliyun.com/mirror/docker-toolbox)
+- [Docker CE 镜像 - 阿里巴巴开源镜像站](https://developer.aliyun.com/mirror/docker-ce)
+- [Docker CE 软件仓库镜像使用帮助 | 清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/)
+
+## 容器（Containers）
+
+### 配置容器随 Docker 启动
 
 参考：[Start containers automatically | Docker Documentation](https://docs.docker.com/config/containers/start-containers-automatically/)
 
@@ -22,6 +32,30 @@ docker update --restart=always <containerName>
 | `always` | 容器一旦停止，一定会重新启动它。如果是手动停止，那么只有当 Docker 守护进程重启或容器本身手动重启时才会重启。 |
 | `unless-stopped` | 与 `always` 类似，除了当容器被停止（手动或其他方式）时，即使在 Docker 守护进程重新启动之后，它也不会重新启动。 |
 
-## 扩展（Extensions）访问容器
+## 开发环境（Dev Environments）
+
+- [Overview of Dev Environments | Docker Docs](https://docs.docker.com/desktop/dev-environments/)
+- [Docker Compose overview | Docker Docs](https://docs.docker.com/compose/)
+
+## 扩展（Extensions）
+
+### 访问容器
 
 使用 `host.docker.internal` 域名访问容器。
+
+## 常见问题
+
+### Docker Desktop 一直卡在 `String Docker Engine...`
+
+```text
+Starting the Docker Engine...
+Docker Engine is the underlying technology that runs containers
+```
+
+重启 Windows 系统仍然无法解决。
+
+#### 解决方法
+
+参考：[Docker永远在“docker desktop starting .”Settings 一直在转圈 - Popeye-lxw - 博客园](https://www.cnblogs.com/liuxw/p/17310264.html)
+
+实在不行卸掉 Docker 重装。
