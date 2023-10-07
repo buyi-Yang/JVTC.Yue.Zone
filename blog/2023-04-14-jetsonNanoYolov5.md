@@ -1,5 +1,7 @@
 # 在 Jetson Nano 上运行 Yolov5
 
+<!--truncate-->
+
 ## 链接
 
 - [Jetson Download Center | NVIDIA Developer](https://developer.nvidia.com/embedded/downloads#?tx=$product,jetson_nano)

@@ -4,6 +4,8 @@ authors: Yue_plus
 
 # JetBrains 免费教育许可证
 
+<!--truncate-->
+
 ## 学信网申请教育部学籍在线验证报告
 
 打开 <https://www.chsi.com.cn/>，登入后点击 **账号信息**，参考下图操作：
