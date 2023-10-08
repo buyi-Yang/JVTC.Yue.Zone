@@ -64,7 +64,7 @@ const config = {
         {type: 'doc', docId: '运行维护/INDEX', position: 'left', label: '运行维护'},
         {type: 'doc', docId: '信息安全/INDEX', position: 'left', label: '信息安全'},
         {type: 'doc', docId: '竞赛/全国职业院校技能大赛/GZ031-应用软件系统开发赛项', position: 'left', label: '竞赛'},
-        {type: 'doc', docId: '专业课/README',  position: 'left', label: '专业课'},
+        {type: 'doc', docId: '专业课/INDEX',  position: 'left', label: '专业课'},
         {type: 'doc', docId: '公共课/README',  position: 'left', label: '公共课'},
         // {type: 'doc', docId: '生存指南/前言', position: 'left', label: '《生存指南》'},
         {to: '/blog', label: '博客', position: 'left'},

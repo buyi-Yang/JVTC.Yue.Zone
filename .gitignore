@@ -20,9 +20,15 @@ yarn-debug.log*
 yarn-error.log*
 
 # IDE
-/.idea/
-/.vscode/
-/.vs/
+.idea/
+.vscode/
+.vs/
+
+# Java
+.mvn/
+.gradle/
+out/
+target/
 
 # File
 *.log
