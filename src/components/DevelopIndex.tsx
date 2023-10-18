@@ -17,6 +17,12 @@ export function DevelopLanguageIndex() {
         {icon: "java.svg", title: "Java", text: "跨平台、面向对象、泛型编程", href: "/docs/开发/语言/Java/"},
         {icon: "python.svg", title: "Python", text: "解释型、高级通用编程语言", href: "/docs/开发/语言/Python/"},
         {icon: "ruby.svg", title: "Ruby", text: "开源的动态编程语言，注重简洁和效率", href: "/docs/开发/语言/Ruby/"},
+        {
+            icon: "solidity.svg",
+            title: "Solidity",
+            text: "一门为实现智能合约而创建的面向对象的高级编程语言",
+            href: "/docs/开发/语言/Solidity/"
+        },
         {icon: "rust.svg", title: "Rust", text: "通用、编译型、安全、并发、实用", href: "/docs/开发/语言/Rust/"},
     ])
 }
@@ -46,7 +52,12 @@ export function DevelopToolIndex() {
         {icon: "graal-vm.svg", title: "GraalVM", text: "高性能！云原生！多语言！", href: "/docs/开发/工具/GraalVM/"},
         {icon: "apache.svg", title: "Maven", text: "Java 软件项目管理及自动构建工具", href: "/docs/开发/工具/Maven/"},
         {icon: "git.svg", title: "Git", text: "免费的开源分布式版本控制系统", href: "/docs/开发/工具/Git"},
-        {icon: "PowerShell.svg", title: "PowerShell", text: "是一种跨平台的任务自动化解决方案", href: "/docs/开发/工具/PowerShell"},
+        {
+            icon: "PowerShell.svg",
+            title: "PowerShell",
+            text: "是一种跨平台的任务自动化解决方案",
+            href: "/docs/开发/工具/PowerShell"
+        },
         {icon: "OpenCV.png", title: "OpenCV", text: "跨平台的计算机视觉库", href: "/docs/开发/工具/OpenCV/"},
         {icon: "SSL.svg", title: "OpenSSL", text: "功能丰富且自包含的开源安全工具箱", href: "/docs/开发/工具/OpenSSL/"},
         {
