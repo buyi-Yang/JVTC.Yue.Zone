@@ -78,6 +78,45 @@ label-studio start
 
 ## 使用 GPU 训练自己的数据集
 
+### 数据集结构
+
+参考 [`coco.yaml`](https://github.com/ultralytics/yolov5/blob/master/data/coco.yaml)
+
+```txt title="目录结构"
+ ├── yolov5
+ └── datasets
+     └── my-datasets
+         ├── images              # 图片
+         |   ├── 01.jpg
+         |   ├── 02.jpg
+         |   ├── 03.jpg
+         |   └── ...
+         ├── labels              # 标签
+         |   ├── classes.txt     # 标签列表
+         |   ├── 01.txt
+         |   ├── 02.txt
+         |   ├── 03.txt
+         |   └── ...
+         └── my-datasets.yaml    # 训练配置
+```
+
+```yaml title="my-datasets.yaml"
+# 数据集根目录
+path: ../datasets/my_datasets
+
+# 训练数据集目录
+train: # txt 文件或相对 path 的目录
+
+# 验证数据集目录
+val: # txt 文件或相对 path 的目录
+
+# 测试数据集目录
+test: # txt 文件或相对 path 的目录
+
+nc: # 标签总数
+names: # 标签数组
+```
+
 ### NVIDIA CUDA
 
 首先确保自己有一块支持 CUDA 的 GPU。
@@ -114,11 +153,11 @@ pip uninstall torch
 参考 [PyTorch 官网](https://pytorch.org/get-started/locally/) 下载安装使用 CUDA 计算的 torch：
 
 ```ps
-# 文件很大，你忍一下（1.36G）
-conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
+# 文件很大，你忍一下（2.49G）
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 
 # 也可以使用 pip 安装（2.6G）
-pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
 # 不知道为啥少个包↓
 pip install chardet
@@ -156,3 +195,13 @@ Torch-directml 软件包仅支持 PyTorch 1.13。
 
 参考：[在 Windows 上使用 DirectML 启用 PyTorch](https://learn.microsoft.com/en-us/windows/ai/directml/gpu-pytorch-windows)
 | [在 WSL 2 上通过 DirectML 启用 PyTorch](https://learn.microsoft.com/zh-cn/windows/ai/directml/gpu-pytorch-wsl)
+
+### 开始训练
+
+```ps
+python train.py --data coco.yaml --epochs 300 --weights '' --cfg yolov5n.yaml  --batch-size 128
+                                                                 yolov5s                    64
+                                                                 yolov5m                    40
+                                                                 yolov5l                    24
+                                                                 yolov5x                    16
+```
