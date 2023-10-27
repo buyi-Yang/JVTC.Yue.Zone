@@ -283,3 +283,5 @@ host    all       all   0.0.0.0/0  scram-sha-256
   \set [名称 [值数]]     设定内部变量，若无参数则列出全部变量
   \unset 名称            清空(删除)内部变量
 ```
+
+## [pgcli](https://www.pgcli.com/)

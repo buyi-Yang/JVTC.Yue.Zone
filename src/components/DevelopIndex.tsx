@@ -96,6 +96,7 @@ export function DevelopEnvironIndex() {
             text: "自给自足的、无服务器的、零配置的、事务性的 SQL 数据库引擎",
             href: "/docs/开发/环境/SQLite/"
         },
+        {icon: "database-fill.svg", title: "MariaDB & MySQL", text: "经典关系型数据库", href: "/docs/开发/环境/MariaDB&MySQL/"},
         {icon: "apache2.svg", title: "Apache2", text: "HTTP、Web 服务器", href: "/docs/开发/环境/Apache/httpd"},
         {icon: "tomcat.svg", title: "Tomcat", text: "Servlet 容器；JSP", href: "/docs/开发/环境/Tomcat/"},
     ])

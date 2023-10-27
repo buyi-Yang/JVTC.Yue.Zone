@@ -24,3 +24,5 @@ SQLite 直接访问其存储文件。
 ```sh
 choco install sqlite -y
 ```
+
+## [LiteCLI](https://litecli.com/)
