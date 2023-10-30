@@ -13,6 +13,22 @@
 - [Docker ToolBox镜像 - 阿里巴巴开源镜像站](https://developer.aliyun.com/mirror/docker-toolbox)
 - [Docker CE 镜像 - 阿里巴巴开源镜像站](https://developer.aliyun.com/mirror/docker-ce)
 - [Docker CE 软件仓库镜像使用帮助 | 清华大学开源软件镜像站](https://mirrors.tuna.tsinghua.edu.cn/help/docker-ce/)
+- [Docker Hub 镜像源 - 掘金](https://juejin.cn/post/7165806699461378085)
+
+修改 `daemon.json` 文件即可配置镜像仓库：
+
+```json title="daemon.json"
+{
+    "registry-mirrors": [
+        "https://dockerproxy.com",
+        "https://hub-mirror.c.163.com",
+        "https://mirror.baidubce.com",
+        "https://ccr.ccs.tencentyun.com"
+    ]
+}
+```
+
+UbuntuServer: `/etc/docker/daemon.json`
 
 ## 容器（Containers）
 
