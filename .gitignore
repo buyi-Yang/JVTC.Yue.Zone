@@ -7,6 +7,7 @@
 # Generated files
 .docusaurus
 .cache-loader
+i18n/
 
 # Misc
 .DS_Store
@@ -23,6 +24,7 @@ yarn-error.log*
 .idea/
 .vscode/
 .vs/
+JVTC.Yue.Zone.iml
 
 # Java
 .mvn/
