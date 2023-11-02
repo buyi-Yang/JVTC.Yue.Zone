@@ -196,6 +196,12 @@ Torch-directml 软件包仅支持 PyTorch 1.13。
 参考：[在 Windows 上使用 DirectML 启用 PyTorch](https://learn.microsoft.com/en-us/windows/ai/directml/gpu-pytorch-windows)
 | [在 WSL 2 上通过 DirectML 启用 PyTorch](https://learn.microsoft.com/zh-cn/windows/ai/directml/gpu-pytorch-wsl)
 
+### 选择模型
+
+![](https://github.com/ultralytics/yolov5/releases/download/v1.0/model_comparison.png)
+
+> [各种模型详细对比](https://github.com/ultralytics/yolov5#pretrained-checkpoints)
+
 ### 开始训练
 
 ```ps
