@@ -42,3 +42,64 @@ git config --global --unset http.proxy
 git config --global --unset https.proxy
 
 ```
+
+## 基本操作
+
+参考：[Git 基本操作 - 菜鸟教程](https://www.runoob.com/git/git-basic-operations.html)
+
+```sh 
+# 初始化仓库
+git init
+
+# 克隆项目
+git clone
+
+# 添加至暂存区
+git add
+
+# 查看仓库状态
+git status
+
+# 比较暂存区和工作区
+git diff
+
+# 提交暂存区到本地仓库
+git commit
+
+# 回退版本
+git reset
+
+# 删除文件
+git rm
+
+# 移动或重命名文件
+git mv
+
+# 分支切换
+git checkout
+
+# 更清晰地切换分支 git 2.23后
+git switch 
+
+# 恢复或撤销文件 git 2.23后
+git restore 
+
+# 查看历史提交记录
+git log
+
+# 列表形式查看指定文件修改记录
+git blame <文件路径>
+
+# 远程仓库操作
+git remote
+
+# 从远程获取代码库
+git fetch
+
+# 下载远程代码并合并
+git pull
+
+# 上传远程代码并合并
+git push
+```
+
