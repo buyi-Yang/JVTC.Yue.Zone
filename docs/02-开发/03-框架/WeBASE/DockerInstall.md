@@ -80,7 +80,7 @@ sudo docker pull webasepro/webase-web
 sudo docker run -it --name webase-mysql -p 23306:3306 -e MYSQL_ROOT_PASSWORD=123456 -d mysql:latest --restart=always
 ```
 
-## 一键部署
+### 一键部署
 
 ```sh
 # 部署并启动所有服务
@@ -93,7 +93,7 @@ python3 deploy.py stopDockerAll
 python3 deploy.py startDockerAll
 ```
 
-### 节点的启停
+#### 节点的启停
 
 ```sh
 # 启动所有 FISCO-BCOS 节点
@@ -103,7 +103,7 @@ python3 deploy.py startNode
 python3 deploy.py stopNode
 ```
 
-### WeBASE服务的启停
+#### WeBASE服务的启停
 
 ```sh
 # 启动所有 WeBASE 服务
@@ -112,3 +112,10 @@ python3 deploy.py dockerStart
 # 停止所有 WeBASE 服务
 python3 deploy.py dockerStop
 ```
+
+## 访问 WeBASE
+
+浏览器访问 <https://localhost:5000/>；
+默认账号：`admin`；
+默认密码：`Abcd1234`；
+首次登入强制修改密码；

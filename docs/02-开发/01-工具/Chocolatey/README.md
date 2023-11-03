@@ -515,12 +515,12 @@ choco install 7zip rufus freedownloadmanager bitcomet picotorrent ultraiso diskg
 开启网络代理，然后以管理员身份在 PowerShell 中运行：
 
 ```powershell
-choco install chocolateygui geforce-experience powershell-core `
-dotnet-6.0-desktopruntime office-tool writage jetbrainstoolbox vscode `
+choco install powershell-core dotnet-6.0-desktopruntime office-tool jetbrainstoolbox vscode `
 git -params "'/WindowsTerminalProfile /Editor:VisualStudioCode /NoGuiHereIntegration'" `
 postman googlechrome firefox-dev --pre `
-wechat netease-cloudmusic steam `
 potplayer freedownloadmanager 7zip rufus winscp `
-openjdk gradle nodejs yarn pnpm flutter anaconda3 `
+openjdk gradle nodejs  flutter anaconda3 `
 -y
+choco install wechat netease-cloudmusic steam -y
+choco install yarn pnpm -y
 ```
