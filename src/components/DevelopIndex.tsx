@@ -1,18 +1,9 @@
 import React from "react";
-import IconCardButton from "@site/src/components/IconCradButton";
-
-// 方便复制：{icon: "", title: "", text: "", href: ""},
-type DevelopIndexItems = { icon: string, title: string, text: string, href: string }
-
-function DevelopIndex(items: Array<DevelopIndexItems>) {
-    return <div className="row" style={{justifyContent: "center"}}>{
-        items.map(item => <IconCardButton {...item} />)
-    }</div>
-}
+import Index from "@site/src/components/Index";
 
 /** 语言 */
 export function DevelopLanguageIndex() {
-    return DevelopIndex([
+    return Index([
         {icon: "dart.svg", title: "Dart", text: "为全平台构建快速应用的客户端优化", href: "/docs/开发/语言/Dart/"},
         {icon: "java.svg", title: "Java", text: "跨平台、面向对象、泛型编程", href: "/docs/开发/语言/Java/"},
         {icon: "python.svg", title: "Python", text: "解释型、高级通用编程语言", href: "/docs/开发/语言/Python/"},
@@ -29,7 +20,7 @@ export function DevelopLanguageIndex() {
 
 /** 工具 */
 export function DevelopToolIndex() {
-    return DevelopIndex([
+    return Index([
         {
             icon: "anaconda.svg",
             title: "Anaconda",
@@ -71,7 +62,7 @@ export function DevelopToolIndex() {
 
 /** 环境 */
 export function DevelopEnvironIndex() {
-    return DevelopIndex([
+    return Index([
         {
             icon: "Docker.svg",
             title: "Docker",
@@ -104,7 +95,7 @@ export function DevelopEnvironIndex() {
 
 /** 框架 */
 export function DevelopFrameworkIndex() {
-    return DevelopIndex([
+    return Index([
         {icon: "spring.svg", title: "Spring", text: "互联网软件开发全家桶", href: "/docs/开发/框架/Spring/Boot/"},
         {
             icon: "flutter.svg",
@@ -124,21 +115,21 @@ export function DevelopFrameworkIndex() {
 
 /** 软件 */
 export function DevelopSoftwareIndex() {
-    return DevelopIndex([
+    return Index([
         //TODO:
     ])
 }
 
 /** 硬件 */
 export function DevelopHardwareIndex() {
-    return DevelopIndex([
+    return Index([
         {icon: "cw32.png", title: "CW32", text: "武汉芯源半导体", href: "/docs/开发/硬件/CW32/"}
     ])
 }
 
 /** 游戏 */
 export function DevelopGameIndex() {
-    return DevelopIndex([
+    return Index([
         {
             icon: "minecraft.webp",
             title: "Minecraft",
