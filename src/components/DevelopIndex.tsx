@@ -110,6 +110,7 @@ export function DevelopFrameworkIndex() {
             href: "/docs/开发/框架/Rocket/",
         },
         {icon: "flask.png", title: "Flask", text: "轻量级 WSGI Web 应用程序框架", href: "/docs/开发/框架/Flask/"},
+        {icon: "WeBank.png", title: "WeBASE", text: "微众银行区块链应用软件扩展", href: "/docs/开发/框架/WeBase/"},
     ])
 }
 

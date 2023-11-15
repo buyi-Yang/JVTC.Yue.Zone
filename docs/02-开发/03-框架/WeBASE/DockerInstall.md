@@ -13,7 +13,7 @@
 sudo apt install openssl curl wget git dos2unix zip openjdk-11-jre -y
 ```
 
-### 安装 Dockers
+### 安装 Docker
 
 ```sh
 sudo apt install docker docker-compose -y

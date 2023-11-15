@@ -30,7 +30,7 @@ sudo apt install isc-dhcp-server -y
 # A slightly different configuration for an internal subnet.
 subnet 192.168.33.0 netmask 255.255.255.0 {
    range 192.168.33.100 192.168.33.200;                       # 开放的地址池
-   #option domain-name-servers ns1.internal.example.org;      # NS域名服务器，如果没有就注释掉
+   option domain-name-servers 114.114.114.114, 8.8.8.8;       # DNS 服务器
    #option domain-name "internal.example.org";                # 域名
    option routers 192.168.33.1;                               # 网关地址
    option broadcast-address 192.168.33.255;                   # 广播地址

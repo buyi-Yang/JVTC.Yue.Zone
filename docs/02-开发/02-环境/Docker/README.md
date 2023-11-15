@@ -61,6 +61,22 @@ docker update --restart=always <containerName>
 
 ## 常见问题
 
+### 为当前用户添加 `docker` 命令权限（免 `sudo`）
+
+```shell
+# 创建docker用户组
+sudo groupadd docker
+
+# 将当前用户添加到docker用户组
+sudo usermod -aG docker $USER
+
+# 重启docker服务
+sudo systemctl restart docker
+
+# 切换或者退出当前账户，重新ssh登入
+exit
+```
+
 ### Docker Desktop 一直卡在 `String Docker Engine...`
 
 ```text
