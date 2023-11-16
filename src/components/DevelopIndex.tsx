@@ -7,14 +7,8 @@ export function DevelopLanguageIndex() {
         {icon: "dart.svg", title: "Dart", text: "为全平台构建快速应用的客户端优化", href: "/docs/开发/语言/Dart/"},
         {icon: "java.svg", title: "Java", text: "跨平台、面向对象、泛型编程", href: "/docs/开发/语言/Java/"},
         {icon: "python.svg", title: "Python", text: "解释型、高级通用编程语言", href: "/docs/开发/语言/Python/"},
-        {icon: "ruby.svg", title: "Ruby", text: "开源的动态编程语言，注重简洁和效率", href: "/docs/开发/语言/Ruby/"},
-        {
-            icon: "solidity.svg",
-            title: "Solidity",
-            text: "一门为实现智能合约而创建的面向对象的高级编程语言",
-            href: "/docs/开发/语言/Solidity/"
-        },
         {icon: "rust.svg", title: "Rust", text: "通用、编译型、安全、并发、实用", href: "/docs/开发/语言/Rust/"},
+        {icon: "ruby.svg", title: "Ruby", text: "开源的动态编程语言，注重简洁和效率", href: "/docs/开发/语言/Ruby/"},
     ])
 }
 
@@ -110,14 +104,20 @@ export function DevelopFrameworkIndex() {
             href: "/docs/开发/框架/Rocket/",
         },
         {icon: "flask.png", title: "Flask", text: "轻量级 WSGI Web 应用程序框架", href: "/docs/开发/框架/Flask/"},
-        {icon: "WeBank.png", title: "WeBASE", text: "微众银行区块链应用软件扩展", href: "/docs/开发/框架/WeBase/"},
     ])
 }
 
-/** 软件 */
-export function DevelopSoftwareIndex() {
+/** 软件 - 区块链 */
+export function DevelopSoftwareBlockChainsIndex() {
     return Index([
-        //TODO:
+        {
+            icon: "solidity.svg",
+            title: "Solidity",
+            text: "一门为实现智能合约而创建的面向对象的高级编程语言",
+            href: "/docs/开发/软件/区块链/Solidity/"
+        },
+        {icon: "WeBank.png", title: "WeBASE", text: "微众银行区块链应用软件扩展", href: "/docs/开发/软件/区块链/WeBASE/"},
+        {icon: "FISCO_BCOS.png", title: "FISCO BCOS", text: "稳定、高效、安全的区块链底层平台", href: "/docs/开发/软件/区块链/FiscoBcos/"},
     ])
 }
 
