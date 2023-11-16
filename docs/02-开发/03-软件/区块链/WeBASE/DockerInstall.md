@@ -1,7 +1,7 @@
 # 使用 Docker 一键部署
 
 参考：[一键 Docker 部署 - WeBASE 文档](https://webasedoc.readthedocs.io/zh-cn/latest/docs/WeBASE-Install/docker_install.html)
-| [Docker](../../02-环境/Docker/README.md)
+| [Docker](../../../02-环境/Docker/README.md)
 
 **本案例使用 Ubuntu 22.04 LTS**
 
