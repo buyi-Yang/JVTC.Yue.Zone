@@ -59,13 +59,13 @@ const config = {
       title: '悦域九职',
       logo: {alt: '软件2201班班徽', src: 'img/班徽.svg'},
       items: [
+        // 参考文档：https://docusaurus.io/zh-CN/docs/next/api/themes/configuration#navbar-items
         {type: 'doc', docId: '首页/欢迎', position: 'left', label: '欢迎'},
         {type: 'doc', docId: '开发/INDEX', position: 'left', label: '开发'},
         {type: 'doc', docId: '运行维护/INDEX', position: 'left', label: '运行维护'},
         {type: 'doc', docId: '信息安全/INDEX', position: 'left', label: '信息安全'},
         {type: 'doc', docId: '竞赛/全国职业院校技能大赛/GZ031-应用软件系统开发赛项', position: 'left', label: '竞赛'},
-        {type: 'doc', docId: '专业课/INDEX',  position: 'left', label: '专业课'},
-        {type: 'doc', docId: '公共课/README',  position: 'left', label: '公共课'},
+        {type: 'doc', docId: '课程/专业课/INDEX', position: 'left', label: '课程'},
         // {type: 'doc', docId: '生存指南/前言', position: 'left', label: '《生存指南》'},
         {to: '/blog', label: '博客', position: 'left'},
         {href: 'https://net.note.yue.zone/', label: 'NetNote', position: 'right'},
