@@ -1,13 +1,10 @@
-// @ts-nocheck
-// Note: type annotations allow type checking and IDEs autocompletion
+import {themes as prismThemes} from 'prism-react-renderer';
+import type {Config} from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
-const math = require('remark-math');
-const katex = require('rehype-katex');
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
-/** @type {import('@docusaurus/types').Config} */
-const config = {
+const config: Config = {
   title: '悦域九职',
   tagline: 'JTVC.Yue.Zone',
   url: 'https://JVTC.Yue.Zone/',
@@ -24,22 +21,21 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
-          remarkPlugins: [math],
-          rehypePlugins: [katex, { strict: false }],
-          sidebarPath: require.resolve('./sidebars.js'),
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex, { strict: false }],
+          sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/Yue-plus/JVTC.Yue.Zone/tree/main/',
         },
         blog: {
-          remarkPlugins: [math],
-          rehypePlugins: [katex, { strict: false }],
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex, { strict: false }],
           showReadingTime: true,
           editUrl: 'https://github.com/Yue-plus/JVTC.Yue.Zone/tree/main/',
         },
-        theme: {customCss: require.resolve('./src/css/custom.css')},
-      }),
+        theme: {customCss: "./src/css/custom.css"},
+      } satisfies Preset.Options,
     ],
   ],
 
@@ -52,8 +48,7 @@ const config = {
     },
   ],
 
-  themeConfig:
-  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */ ({
+  themeConfig: {
     tableOfContents: {minHeadingLevel: 2, maxHeadingLevel: 6},
     navbar: {
       title: '悦域九职',
@@ -149,38 +144,38 @@ const config = {
 <a target="_blank" href="https://docusaurus.io/zh-CN/">Docusaurus</a> 构建。`,
     },
     prism: {
-      theme: lightCodeTheme,
-      darkTheme: darkCodeTheme,
+      theme: prismThemes.github,
+      darkTheme: prismThemes.dracula,
       additionalLanguages: ['powershell', 'java', 'kotlin', 'dart', 'bash', 'csharp', 'rust', 'yaml', 'toml', 'log', 'regex', 'http'],
     },
-  }),
+  } satisfies Preset.ThemeConfig,
 
   plugins: [
-    ['@docusaurus/plugin-pwa', {
-      debug: true,
-        offlineModeActivationStrategies: [
-          'appInstalled',
-          'standalone',
-          'queryString',
-        ],
-        pwaHead: [
-          {
-            tagName: 'link',
-            rel: 'icon',
-            href: '/img/icons-512.png',
-          },
-          {
-            tagName: 'link',
-            rel: 'manifest',
-            href: '/manifest.json', // 你的 PWA Manifest
-          },
-          {
-            tagName: 'meta',
-            name: 'theme-color',
-            content: 'rgb(37, 194, 160)',
-          },
-        ],
-    }],
+   ['@docusaurus/plugin-pwa', {
+     debug: true,
+       offlineModeActivationStrategies: [
+         'appInstalled',
+         'standalone',
+         'queryString',
+       ],
+       pwaHead: [
+         {
+           tagName: 'link',
+           rel: 'icon',
+           href: '/img/icons-512.png',
+         },
+         {
+           tagName: 'link',
+           rel: 'manifest',
+           href: '/manifest.json',
+         },
+         {
+           tagName: 'meta',
+           name: 'theme-color',
+           content: 'rgb(37, 194, 160)',
+         },
+       ],
+   }],
   ],
 
   markdown: { mermaid: true },
@@ -188,4 +183,4 @@ const config = {
   themes: ['@docusaurus/theme-mermaid', '@docusaurus/theme-live-codeblock'],
 };
 
-module.exports = config;
+export default config;

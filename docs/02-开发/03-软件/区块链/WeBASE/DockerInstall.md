@@ -123,7 +123,7 @@ python3 deploy.py dockerStop
 
 ## 访问 WeBASE
 
-浏览器访问 <https://localhost:5000/>；
+浏览器访问 https://localhost:5000/ ；
 默认账号：`admin`；
 默认密码：`Abcd1234`；
 首次登入强制修改密码；

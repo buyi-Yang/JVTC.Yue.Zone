@@ -42,7 +42,7 @@ cnpm : 无法加载文件 C:\Users\Yue_plus\AppData\Roaming\npm\cnpm.ps1，因�
 
 ![](https://net.note.yue.zone/assets/PS_error-09638296.png)
 
-参阅 <https://go.microsoft.com/fwlink/?LinkID=135170>
+参阅 https://go.microsoft.com/fwlink/?LinkID=135170
 
 #### 解决方法
 

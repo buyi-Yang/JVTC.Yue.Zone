@@ -33,7 +33,7 @@ Using JVM:              "C:\Program Files\OpenJDK\jdk-20.0.2\bin\server\jvm.dll"
 docker run -it --rm -p 8888:8080 tomcat:9.0
 ```
 
-<http://localhost:8888/>
+http://localhost:8888/
 
 ### 压缩包
 
@@ -62,7 +62,7 @@ Tomcat 需要对应 Java 版本，参考：[Apache Tomcat® - Which Version Do I
 <user username="admin" password="123123" roles="manager-gui"/>
 ```
 
-访问管理页面：<http://localhost:8888/manager/html>
+访问管理页面：http://localhost:8888/manager/html
 
 ### 日志编码
 
@@ -75,4 +75,4 @@ Tomcat 需要对应 Java 版本，参考：[Apache Tomcat® - Which Version Do I
 %CATALINA_HOME%/bin/startup.bat
 ```
 
-<http://localhost:8888/>
+http://localhost:8888/

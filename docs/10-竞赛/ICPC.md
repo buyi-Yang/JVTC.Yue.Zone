@@ -3,7 +3,7 @@
 :::info
 （The 2023 ICPC Jiangxi Provincial Programming Contest）
 
-<https://icpc.global/>
+https://icpc.global/
 
 :::
 

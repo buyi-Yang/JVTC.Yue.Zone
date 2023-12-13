@@ -8,8 +8,8 @@ OpenCV 可用于开发实时的图像处理、计算机视觉以及模式识别�
 
   [官网](https://opencv.org/)
 | [官方文档](https://docs.opencv.org/)
-| <https://opencv.apachecn.org/>
-| <http://www.woshicver.com/>
+| https://opencv.apachecn.org/
+| http://www.woshicver.com/
 :::
 
 ## `cv2.waitKey(delay: int)`

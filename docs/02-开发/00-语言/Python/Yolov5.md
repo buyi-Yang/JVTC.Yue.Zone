@@ -70,7 +70,7 @@ pip install label-studio
 label-studio start
 ```
 
-然后浏览器访问 <http://localhost:8080/>
+然后浏览器访问 http://localhost:8080/
 
 #### 使用 LabelImg
 
