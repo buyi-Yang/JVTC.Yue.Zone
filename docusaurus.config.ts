@@ -24,13 +24,15 @@ const config: Config = {
       {
         docs: {
           remarkPlugins: [remarkMath],
-          rehypePlugins: [rehypeKatex, { strict: false }],
+          rehypePlugins: [rehypeKatex],
+          // rehypePlugins: [rehypeKatex, { strict: false }],
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/Yue-plus/JVTC.Yue.Zone/tree/main/',
         },
         blog: {
           remarkPlugins: [remarkMath],
-          rehypePlugins: [rehypeKatex, { strict: false }],
+          rehypePlugins: [rehypeKatex],
+          // rehypePlugins: [rehypeKatex, { strict: false }],
           showReadingTime: true,
           editUrl: 'https://github.com/Yue-plus/JVTC.Yue.Zone/tree/main/',
         },
