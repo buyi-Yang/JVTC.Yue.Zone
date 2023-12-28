@@ -30,8 +30,12 @@ libraries/
 logs/
 version/
 crash-reports/
+
+world/level.dat_old
+world/playerdata/*.dat_old
+world/structurize/structurize_linksession-*.dat.old
+
 *.log
-*.data_old
 *.lock
 ```
 
@@ -47,5 +51,5 @@ crash-reports/
 cd /home/yueplus/mc1.20.1
 git add *
 git commit -m "Backup $(date)"
-git push GitHub master
+git push origin master
 ```

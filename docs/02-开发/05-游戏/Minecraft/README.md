@@ -9,7 +9,7 @@
 ```toml
 [Unit]
 Description=Minecraft服务器
-After=go-cqhttp.service
+After=ssh.service
 StartLimitBurst=5
 StartLimitIntervalSec=0
 
@@ -24,3 +24,16 @@ ExecStart=/home/yueplus/mc1.20.1/start.sh
 WantedBy=multi-user.target
 ```
 
+```sh
+# 重新加载系统服务
+sudo systemctl daemon-reload
+
+# 设置开机启动
+sudo systemctl start minecraft-server.service
+
+# 启动服务
+sudo systemctl start minecraft-server.service
+
+# 查看服务状态
+sudo systemctl status minecraft-server.service
+```
