@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>02-222050587+刘悦阳</title>
+    <style>
+    </style>
+</head>
+<body>
+<h1>项目二 手机号抽奖</h1>
+<p><sub>222050587 刘悦阳</sub></p>
+<main>
+    抽取手机号码：
+    <button onclick="one()">单抽</button>
+    <button onclick="ten()">十连</button>
+    <hr/>
+    <div id="result"></div>
+</main>
+<footer>
+    <script>
+        function genResultElement() {
+            // 移动
+            const CMCC = ["134", "135", "136", "137", "138", "139", "147", "148", "150", "151", "152", "157", "158", "159", "165", "1703", "1705", "1706", "178", "182", "183", "184", "187", "188", "198"]
+            // 联通
+            const UNICOM = ["130", "131", "132", "145", "146", "155", "156", "166", "167", "1704", "1707", "1708", "1709", "175", "176", "185", "186"]
+            // 电信
+            const TELECOM = ["133", "1349", "149", "153", "1700", "1701", "1702", "1740", "173", "177", "180", "181", "189", "191", "199"]
+            // 所有号段（不包括物联网号段）
+            const PREFIX = CMCC.concat(UNICOM, TELECOM)
+            // 随机取一个号段
+            const RANDOM_PREFIX = PREFIX[Math.floor(Math.random() * PREFIX.length)]
+            // 生成手机号码
+            const PHONE = RANDOM_PREFIX + Math.random().toString().split(".")[1].substring(0, 11 - RANDOM_PREFIX.length)
+
+            return `<pre style="font-size: xxx-large"><a target="_blank" href="tel:${PHONE}">${PHONE}</a></pre>`
+        }
+
+        function one() {
+            return document.getElementById("result").innerHTML = genResultElement()
+        }
+
+        function ten() {
+            let dom = ""
+
+            for (let i = 0; i < 10; i++) {
+                dom += genResultElement()
+            }
+
+            return document.getElementById("result").innerHTML = dom
+        }
+    </script>
+</footer>
+</body>
+</html>
