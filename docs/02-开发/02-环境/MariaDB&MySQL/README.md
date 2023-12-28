@@ -17,8 +17,18 @@ RDBMS（Relational Database Management System：关系数据库管理系统）
   | [菜鸟教程](https://www.runoob.com/mysql/mysql-tutorial.html)
 :::
 
+## 安装
+
 > 前往 [NetNote](https://net.note.yue.zone/coding/MariaDB/)
 > | [CentOS](https://net.note.yue.zone/serve/CentOS/MariaDB/)
+
+### Docker
+
+[mysql - Official Image | Docker Hub](https://hub.docker.com/_/mysql)
+
+```sh
+docker run -it -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:latest
+```
 
 ## CLI 自动补全
 
