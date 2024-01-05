@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>期末作业 刘悦阳 222050587</title>
+    <style>
+        .py-8 { padding: 0 8px; }
+    </style>
+    <script type="module">
+        class ShopCart extends HTMLElement {
+            constructor() {
+                super();
+                console.log("aaaaa")
+            }
+        }
+
+        customElements.define("ShopCart", ShopCart)
+    </script>
+</head>
+<body>
+<main style="max-width: 800px; margin: 0 auto; border: 1px solid lightblue; padding: 8px;">
+    <h3 style="margin: 0">我的购物车</h3>
+    <hr/>
+    <table style="width: 100%">
+        <thead>
+        <tr style="text-align: center">
+            <td>全选</td>
+            <td>商品</td>
+            <td>单价</td>
+            <td>数量</td>
+            <td>小计</td>
+            <td>操作</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr style="border-bottom: red solid 3px">
+            <td class="py-8"><label><input type="checkbox"/></label></td>
+            <td class="py-8"><a href="#">JavaScript实战</a></td>
+            <td class="py-8">45.80</td>
+            <td class="py-8"><label><input type="number" style="width: 38px" value="1"/></label></td>
+            <td class="py-8"><span style="color: red; font-weight: bold;">45.80</span></td>
+            <td class="py-8"><button type="button">删除</button></td>
+        </tr>
+        </tbody>
+    </table>
+    <table></table>
+    <div style="text-align: end">
+        <button type="button">添加商品</button>
+        已选择 <span>X</span> 件商品，总计 <span style="color: red;">0.00</span>
+        <button type="button">提交订单</button>
+    </div>
+</main>
+</body>
+</html>
