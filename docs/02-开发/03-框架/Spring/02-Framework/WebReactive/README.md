@@ -12,3 +12,8 @@ title: Web Reactive
 [官方文档](https://docs.spring.io/spring-framework/reference/web-reactive.html)
 | [中文文档](https://springdoc.cn/spring/web-reactive.html)
 :::
+
+## 相关链接
+
+- [反应式宣言](https://www.reactivemanifesto.org/zh-CN)
+- [Netty](https://netty.io/)
