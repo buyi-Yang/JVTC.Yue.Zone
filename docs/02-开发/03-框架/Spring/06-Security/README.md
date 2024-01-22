@@ -27,10 +27,40 @@ Spring Security 是一个框架，提供认证（authentication）、授权（au
       password: yueplus
 ```
 
+## 默认安全过滤器链（DefaultSecurityFilterChain）
+
+详细参考：[官方文档](https://docs.spring.io/spring-security/servlet/architecture.html#servlet-security-filters)
+| [中文文档](https://springdoc.cn/spring-security/servlet/architecture.html#servlet-security-filters)
+
+```text
+org.springframework.security.web.session.DisableEncodeUrlFilter
+org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter
+org.springframework.security.web.context.SecurityContextHolderFilter
+org.springframework.security.web.header.HeaderWriterFilter
+org.springframework.web.filter.CorsFilter
+org.springframework.security.web.csrf.CsrfFilter
+org.springframework.security.web.authentication.logout.LogoutFilter
+org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter
+org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilte
+org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter
+org.springframework.security.web.authentication.www.BasicAuthenticationFilter
+org.springframework.security.web.savedrequest.RequestCacheAwareFilter
+org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter
+org.springframework.security.web.authentication.AnonymousAuthenticationFilter
+org.springframework.security.web.access.ExceptionTranslationFilter
+org.springframework.security.web.access.intercept.AuthorizationFilter
+```
+
 ## 配置类
 
 - [`WebSecurityConfigurerAdapter` 在 Spring Security 5.7.0-M2 中已弃用！](https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter)
 - [Servlet 应用 Kotlin 配置 :: Spring Security Reference](https://springdoc.cn/spring-security/servlet/configuration/kotlin.html)
+
+使用 Kotlin 时注意在类中导入 invoke 函数，有时IDE不会自动导入该函数，从而导致编译问题。
+
+```kotlin
+import org.springframework.security.config.annotation.web.invoke
+```
 
 ### 配置允许访问特定路径
 
@@ -43,7 +73,6 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
-// highlight-next-line
 import org.springframework.security.config.annotation.web.invoke
 import org.springframework.security.web.SecurityFilterChain
 
@@ -102,7 +131,6 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
-// highlight-next-line
 import org.springframework.security.config.annotation.web.invoke
 import org.springframework.security.web.SecurityFilterChain
 
