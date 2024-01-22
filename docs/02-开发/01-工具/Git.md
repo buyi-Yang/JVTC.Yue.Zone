@@ -40,7 +40,15 @@ git config --global https.proxy 'socks5://127.0.0.1:1080'
 # 重置代理
 git config --global --unset http.proxy
 git config --global --unset https.proxy
+```
 
+## 配置 SSH 访问 GitHub 走 443 端口
+
+```text title="~/.ssh/config"
+Host github.com
+Hostname ssh.github.com
+Port 443
+User git
 ```
 
 ## 基本操作
