@@ -12,6 +12,13 @@ export function DevelopLanguageIndex() {
     ])
 }
 
+/** 模板 */
+export function DevelopTemplateIndex() {
+    return Index([
+        {icon: "thymeleaf.png", title: "Thymeleaf", text: "现代的服务器端 Java 模板引擎", href: "/docs/开发/语言/Java/Thymeleaf/"},
+    ])
+}
+
 /** 工具 */
 export function DevelopToolIndex() {
     return Index([
