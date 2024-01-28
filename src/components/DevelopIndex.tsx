@@ -110,6 +110,7 @@ export function DevelopFrameworkIndex() {
             text: "只要一套代码库，即可构建、测试和发布适用于移动、Web、桌面和嵌入式平台的精美应用",
             href: "/docs/开发/框架/Flutter/",
         },
+        {icon: "vue.svg", title: "Vue", text: "渐进式 JavaScript 框架", href: "/docs/开发/框架/Vue/"},
         {icon: "lit.svg#flame", title: "Lit", text: "用于构建快速、轻量级的 Web 组件。", href: "/docs/开发/框架/Lit/"},
         {icon: "flask.png", title: "Flask", text: "轻量级 WSGI Web 应用程序框架", href: "/docs/开发/框架/Flask/"},
         {
