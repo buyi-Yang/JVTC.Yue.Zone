@@ -4,8 +4,9 @@ import Index from "@site/src/components/Index";
 /** 语言 */
 export function DevelopLanguageIndex() {
     return Index([
-        {icon: "dart.svg", title: "Dart", text: "为全平台构建快速应用的客户端优化", href: "/docs/开发/语言/Dart/"},
+        {icon: "kotlin.svg", title: "Kotlin", text: "简洁、跨平台、有趣", href: "/docs/开发/语言/Kotlin/"},
         {icon: "java.svg", title: "Java", text: "跨平台、面向对象、泛型编程", href: "/docs/开发/语言/Java/"},
+        {icon: "dart.svg", title: "Dart", text: "为全平台构建快速应用的客户端优化", href: "/docs/开发/语言/Dart/"},
         {icon: "python.svg", title: "Python", text: "解释型、高级通用编程语言", href: "/docs/开发/语言/Python/"},
         {icon: "rust.svg", title: "Rust", text: "通用、编译型、安全、并发、实用", href: "/docs/开发/语言/Rust/"},
         {icon: "ruby.svg", title: "Ruby", text: "开源的动态编程语言，注重简洁和效率", href: "/docs/开发/语言/Ruby/"},
