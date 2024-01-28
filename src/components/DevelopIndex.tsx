@@ -99,18 +99,24 @@ export function DevelopFrameworkIndex() {
     return Index([
         {icon: "spring.svg", title: "Spring", text: "互联网软件开发全家桶", href: "/docs/开发/框架/Spring/Boot/"},
         {
+            icon: "hilla.png", 
+            title: "Hilla", 
+            text: "无需再处理 REST 端点或破译 GraphQL 查询。Hilla 无缝衔接 Spring Boot 与 React ，加速应用开发。",
+            href: "/docs/开发/框架/Spring/Hilla/"
+        },
+        {
             icon: "flutter.svg",
             title: "Flutter",
             text: "只要一套代码库，即可构建、测试和发布适用于移动、Web、桌面和嵌入式平台的精美应用",
             href: "/docs/开发/框架/Flutter/",
         },
+        {icon: "flask.png", title: "Flask", text: "轻量级 WSGI Web 应用程序框架", href: "/docs/开发/框架/Flask/"},
         {
             icon: "rocket.svg",
             title: "Rocket",
             text: "使用 Rust 编写快、安全不牺牲灵活性、可用性或类型安全性的 Web 应用程序",
             href: "/docs/开发/框架/Rocket/",
         },
-        {icon: "flask.png", title: "Flask", text: "轻量级 WSGI Web 应用程序框架", href: "/docs/开发/框架/Flask/"},
     ])
 }
 
