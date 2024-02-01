@@ -17,6 +17,10 @@ Hilla 是一个用于 Java 的全栈 Web 框架。
 - [Node.js](https://nodejs.org/) 18.0 或更高版本。
 - [JDK](https://adoptium.net/zh-CN/) 17 或更高版本。
 
+### 使用官方项目生成器
+
+前往 https://start.vaadin.com/ 创建项目。
+
 ### 使用 Spring initializr 创建项目
 
 前往 https://start.spring.io/ 或使用 IDEA 创建 Spring 项目。
@@ -28,7 +32,7 @@ Hilla 是一个用于 Java 的全栈 Web 框架。
 - Dependencies（项目依赖）：
   + [Spring Boot DevTools](https://springdoc.cn/spring-boot/using.html#using.devtools)
   + Spring Configuration Processor
-  + Hilla
+  + **Hilla**
   + ...以及其他你需要的依赖项；
 
 > 选用 Hilla 时通常无需依赖 Spring Web；
