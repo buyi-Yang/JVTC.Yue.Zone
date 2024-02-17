@@ -17,11 +17,13 @@ Hilla 是一个用于 Java 的全栈 Web 框架。
 - [Node.js](https://nodejs.org/) 18.0 或更高版本。
 - [JDK](https://adoptium.net/zh-CN/) 17 或更高版本。
 
-### 使用官方项目生成器
+### 创建项目
+
+#### 使用官方项目生成器
 
 前往 https://start.vaadin.com/ 创建项目。
 
-### 使用 Spring initializr 创建项目
+#### 使用 Spring initializr
 
 前往 https://start.spring.io/ 或使用 IDEA 创建 Spring 项目。
 创建项目时注意：
@@ -38,7 +40,7 @@ Hilla 是一个用于 Java 的全栈 Web 框架。
 > 选用 Hilla 时通常无需依赖 Spring Web；
 > 也无需依赖 Spring Reactive Web（[Vaadin Flow](https://vaadin.com/docs/latest/guide/quick-start) 了解一下？
 
-### 使用 Hilla CLI 创建项目
+#### 使用 Hilla CLI
 
 > 使用 Hilla CLI 创建的项目默认使用 [Maven] 构建，如果想使用 [Gradle] 构建，请直接使用 Spring initializr 创建项目
 
@@ -60,7 +62,7 @@ npx @hilla/cli init --lit my-hilla-app
 npx @hilla/cli init --lit --auth hilla-with-auth
 ```
 
-#### Hilla CLI 帮助
+##### Hilla CLI 帮助
 
 ```text {1}
 $ npx @hilla/cli init -h
@@ -79,6 +81,85 @@ $ npx @hilla/cli init -h
   --preset <preset>  使用碰巧知道存在的给定预设
   --server <server>  仅用于内部测试
   -h, --help         显示命令帮助
+```
+
+### 项目结构
+
+<table style={{ width: "100%", textAlign: "left" }}>
+    <tr><th>目录</th><th>说明</th></tr>
+    <tr>
+        <td><code>frontend/</code></td>
+        <td>客户端源代码目录</td>
+    </tr>
+    <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<code>index.html</code>
+        </td><td>HTML 模板</td>
+    </tr>
+    <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<code>index.ts</code></td>
+        <td>前端入口点，包含使用 <a href="https://hilla.dev/docs/react/guides/routing">Hilla Router</a> 的客户端路由设置</td>
+    </tr>
+    <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<code>main-layout.ts</code></td>
+        <td>主布局 Web 组件，包含导航菜单，使用 <a href="https://vaadin.com/docs/latest/ds/components/app-layout">应用布局</a></td>
+    </tr>
+    <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<code>views/</code></td>
+        <td>UI 视图和 Web 组件（TypeScript）</td>
+    </tr>
+    <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<code>themes/</code></td>
+        <td>自定义 CSS 样式</td>
+    </tr>
+    <tr>
+        <td><code>src/main/java/&lt;groupId&gt;/</code></td>
+        <td>服务器端源代码目录，包含服务端 Java 视图</td>
+    </tr>
+    <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;<code>Application.java</code></td>
+        <td>服务端入口</td>
+    </tr>
+</table>
+
+## 安全
+
+### 使用 Spring Security 进行身份验证
+
+> 参考：[Authentication with Spring Security | Security | Guides | React | Hilla Docs](https://hilla.dev/docs/react/guides/security/spring-login)
+
+```kotlin title="SecurityConfig.kt"
+import com.vaadin.flow.spring.security.VaadinWebSecurity
+import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
+// highlight-next-line
+import org.springframework.security.config.annotation.web.invoke
+import org.springframework.security.config.annotation.web.builders.HttpSecurity
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
+import org.springframework.security.core.userdetails.User
+import org.springframework.security.provisioning.InMemoryUserDetailsManager
+import org.springframework.security.provisioning.UserDetailsManager
+
+@EnableWebSecurity
+@Configuration
+class SecurityConfig : VaadinWebSecurity() {
+    override fun configure(http: HttpSecurity) {
+        // 允许 Hilla 内部请求的默认安全策略
+        super.configure(http)
+
+        http {
+            formLogin { }
+        }
+    }
+
+    @Bean
+    fun userDetailsManager(): UserDetailsManager {
+        // 基于内存的身份校验；请勿在生产环境使用
+        return InMemoryUserDetailsManager(
+            User.withUsername("user").password("{noop}user").roles("USER").build(),
+            User.withUsername("admin").password("{noop}admin").roles("ADMIN", "USER").build(),
+        )
+    }
+}
 ```
 
 [Gradle]: /docs/开发/工具/Gradle/
