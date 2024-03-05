@@ -121,6 +121,31 @@ $ npx @hilla/cli init -h
     </tr>
 </table>
 
+## 端点
+
+> 参考：[Endpoints | Guides | React | Hilla Docs](https://hilla.dev/docs/react/guides/endpoints)
+
+```kotlin
+package zone.yue.demo
+
+import com.vaadin.flow.server.auth.AnonymousAllowed
+import dev.hilla.Endpoint
+
+@Endpoint
+@AnonymousAllowed
+class HelloEndpoint {
+    fun sayHello(name: String) = if (name !== "") "Hello $name" else ""
+}
+```
+
+## 注解
+
+### `@Nonnull`
+
+用于将字段、方法、参数或类型参数标记为不可为 `null` 的注解。
+它被 Typescript 生成器用作类型可空性信息的来源。
+此注解的存在只是为了方便起见，因为传统的 `jakarta.annotation.Nonnull` 注解不适用于类型参数。
+
 ## 安全
 
 ### 使用 Spring Security 进行身份验证
