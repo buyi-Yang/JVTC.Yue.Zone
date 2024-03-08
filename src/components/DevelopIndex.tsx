@@ -124,6 +124,13 @@ export function DevelopFrameworkIndex() {
     ])
 }
 
+/** 软件 */
+export function DevelopSoftwareIndex() {
+    return Index([
+        {icon: "Android.svg", title: "Android", text: "原生安卓", href: "/docs/开发/软件/Android/"},
+    ])
+}
+
 /** 软件 - 区块链 */
 export function DevelopSoftwareBlockChainsIndex() {
     return Index([
