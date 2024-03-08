@@ -25,7 +25,53 @@ Git 易于学习，占用空间很小，性能快如闪电。
 TortoiseGit 提供了显示文件状态的叠加图标、强大的 Git 上下文菜单以及更多！
 [官方网站](https://tortoisegit.org/)
 
-## GitBash 配置代理
+## 配置
+
+### 初次使用配置
+
+#### 配置用户名、邮箱
+
+桌面右键点击 [Git Bash Here]，输入以下指令：
+
+```bash
+# "username" 为 GitHub 账号，用户名
+git config --global user.name "username"
+
+# xxxxxxxxxx@mail.com 为 GitHub 账号，注册时的用的邮箱
+git config --global user.email xxxxxxxxxx@mail.com
+```
+
+#### 生成自己的 SSH Key
+
+Git Bash 终端中，输入 ssh-keygen
+
+```text
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Yue_p/.ssh/id_rsa): # 直接回车
+Enter passphrase (empty for no passphrase):    # 直接回车
+Enter same passphrase again:                   # 直接回车
+Your identification has been saved in yes
+Your public key has been saved in yes.pub
+The key fingerprint is:
+SHA256:xuvPaGeJuufX6k4oiufALDHD7PCfZxkfXQxjCBElkCA Yue_p@DESKTOP-SQLFD1T
+The key's randomart image is:
++---[RSA 3072]----+
+|E ...o==..       |
+| .  .  .. +      |
+|         . +     |
+|o      .    o    |
+|=o      S. .     |
+|oB    ...o.      |
+|..=   .+oo.o     |
+| . +.o+o=+= .    |
+|  .o=oo*+B*.     |
++----[SHA256]-----+
+```
+
+现在，`~/.ssh/` 中应该有 `id_rsa`（私钥）与 `id_rsa.pub`（公钥）两个文件。
+
+### GitBash 配置代理
 
 ```sh
 ## 注意端口号---------------------------------------
@@ -42,7 +88,7 @@ git config --global --unset http.proxy
 git config --global --unset https.proxy
 ```
 
-## 配置 SSH 访问 GitHub 走 443 端口
+### 配置 SSH 访问 GitHub 走 443 端口
 
 ```text title="~/.ssh/config"
 Host github.com
