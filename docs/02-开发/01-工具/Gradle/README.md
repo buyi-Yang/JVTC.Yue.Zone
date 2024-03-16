@@ -10,3 +10,9 @@
 :::
 
 > 前往 [NetNote](https://net.note.yue.zone/coding/Java/gradle/)
+
+## 在项目之间共享依赖项版本
+
+> 参考 [Gradle 官方文档](https://docs.gradle.org/current/userguide/platforms.html)
+
+可使用 `settings.gradle.kts` 或 `libs.versions.toml` 文件声明。
