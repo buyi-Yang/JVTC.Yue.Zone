@@ -168,12 +168,23 @@ import org.springframework.security.provisioning.UserDetailsManager
 @Configuration
 class SecurityConfig : VaadinWebSecurity() {
     override fun configure(http: HttpSecurity) {
-        // 允许 Hilla 内部请求的默认安全策略
-        super.configure(http)
-
+        // 必须先写自己的配置再调用父类的配置
         http {
+            authorizeHttpRequests {
+                // 不需要写这个，父类配置里有，写了将导致父类配置全部失效
+                // authorize(anyRequest, denyAll)
+            }
             formLogin { }
         }
+
+        // 允许 Hilla 内部请求的默认安全策略
+        super.configure(http)
+    }
+
+    override fun configure(web: WebSecurity) {
+        // 让 Spring Security 直接无视该路径，H2 console 自带认证。
+        web.ignoring().requestMatchers(AntPathRequestMatcher("\h2-console\**"))
+        super.configure(web)
     }
 
     @Bean
