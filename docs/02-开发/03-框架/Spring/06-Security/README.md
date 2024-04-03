@@ -256,3 +256,122 @@ class AccountService(val userRepository: UserRepository) : UserDetailsManager {
     }
 }
 ```
+
+### 配置会话管理
+
+参考 [英文文档](https://docs.spring.io/spring-security/reference/servlet/authentication/session-management.html)
+| [中文文档](https://springdoc.cn/spring-security/servlet/authentication/session-management.html)
+| [Spring Security 控制 Session - spring 中文网](https://springdoc.cn/spring-security-session/)
+
+```kotlin
+package zone.yue.demo
+
+import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
+import org.springframework.security.config.annotation.web.builders.HttpSecurity
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
+import org.springframework.security.config.annotation.web.invoke
+import org.springframework.security.core.session.SessionRegistryImpl
+import org.springframework.security.core.userdetails.User
+import org.springframework.security.core.userdetails.UserDetails
+import org.springframework.security.core.userdetails.UserDetailsService
+import org.springframework.security.crypto.factory.PasswordEncoderFactories
+import org.springframework.security.crypto.password.PasswordEncoder
+import org.springframework.security.provisioning.InMemoryUserDetailsManager
+import org.springframework.security.web.SecurityFilterChain
+
+@Configuration
+@EnableWebSecurity
+class SecurityConfig {
+    @Bean
+    fun sessionRegistry() = SessionRegistryImpl()
+
+    @Bean
+    fun filterChain(http: HttpSecurity): SecurityFilterChain {
+        http {
+            authorizeHttpRequests {
+                authorize(anyRequest, authenticated)
+            }
+            formLogin { }
+            sessionManagement {
+                sessionConcurrency {
+                    maximumSessions = 5
+                    sessionRegistry = sessionRegistry()
+                }
+            }
+        }
+
+        return http.build()
+    }
+
+    @Bean
+    fun userDetailsService(): UserDetailsService {
+        val encoder: PasswordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder()
+
+        val user: UserDetails = User
+            .withUsername("user")
+            .password(encoder.encode("user"))
+            .roles("USER")
+            .build()
+
+        val admin: UserDetails = User
+            .withUsername("admin")
+            .password(encoder.encode("admin"))
+            .roles("ADMIN")
+            .build()
+
+        return InMemoryUserDetailsManager(user, admin)
+    }
+}
+```
+
+```kotlin
+package zone.yue.demo
+
+import org.springframework.security.core.session.SessionRegistry
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RestController
+
+@RestController
+class SsRestController(
+    private val sessionRegistry: SessionRegistry,
+) {
+    @GetMapping("/online-users")
+    fun getOnlineUsers(): List<Any> {
+        return sessionRegistry.allPrincipals
+    }
+}
+```
+
+获取当前登入用户：
+
+```json title="GET /online-users"
+[
+    {
+        "password": null,
+        "username": "admin",
+        "authorities": [
+            {
+                "authority": "ROLE_ADMIN"
+            }
+        ],
+        "accountNonExpired": true,
+        "accountNonLocked": true,
+        "credentialsNonExpired": true,
+        "enabled": true
+    },
+    {
+        "password": null,
+        "username": "user",
+        "authorities": [
+            {
+                "authority": "ROLE_USER"
+            }
+        ],
+        "accountNonExpired": true,
+        "accountNonLocked": true,
+        "credentialsNonExpired": true,
+        "enabled": true
+    }
+]
+```
