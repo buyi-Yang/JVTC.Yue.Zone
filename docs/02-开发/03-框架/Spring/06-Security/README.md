@@ -199,7 +199,24 @@ class SecurityConfiguration {
 参考 [官方文档](https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/user-details-service.html)
 | [中文文档](https://springdoc.cn/spring-security/servlet/authentication/passwords/user-details-service.html)
 
-只要实现 `UserDetailsManager` 接口即可：
+只要实现 `UserDetailsService` 接口即可：
+
+```kotlin
+@Configuration
+@EnableWebSecurity
+class SecurityConfiguration {
+    @Bean
+    fun userDetailsService(): UserDetailsService {
+        return UserDetailsService { username ->
+            userRepository.findByName(username)?.let { user ->
+                User.withUsername(user.name).password(user.password).build()
+            } ?: throw UsernameNotFoundException("未找到用户：$username")
+        }
+    }
+}
+```
+
+或者实现功能更丰富的 `UserDetailsManager` 接口：
 
 ```kotlin
 package zone.yue.core
