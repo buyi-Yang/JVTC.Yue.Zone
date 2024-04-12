@@ -8,6 +8,11 @@ Kotlin 是一门现代但已成熟的编程语言，旨在让开发人员更幸�
 | [中文文档](https://book.kotlincn.net/text/getting-started.html)
 :::
 
+## Compose Multiplatform
+
+> 为 Android、iOS、桌面和 Web 开发令人惊叹的共享 UI。
+> 参考：[官方网站](https://www.jetbrains.com/zh-cn/lp/compose-multiplatform/)
+
 ## Ktor 服务端开发
 
 > 参考：[官方网站](https://ktor.io/)
@@ -17,6 +22,6 @@ Kotlin 是一门现代但已成熟的编程语言，旨在让开发人员更幸�
 ## 多平台开发
 
 > 参考：[开始使用 Kotlin 多平台开发 - Kotlin 文档](https://kotlinlang.org/docs/multiplatform-get-started.html)
-> | [官方网站](https://www.jetbrains.com/kotlin-multiplatform/)
+> | [官方网站](https://www.jetbrains.com/zh-cn/kotlin-multiplatform/)
 
 使用 **[Kotlin Multiplatform Wizard](https://kmp.jetbrains.com/)** 创建新项目。
