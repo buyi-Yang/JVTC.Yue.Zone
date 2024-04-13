@@ -100,16 +100,13 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      // links: [
-      //   {
-      //     title: 'Docs',
-      //     items: [
-      //       {
-      //         label: 'Tutorial',
-      //         to: '/docs/intro',
-      //       },
-      //     ],
-      //   },
+      links: [
+        {
+          title: '友情连接',
+          items: [
+            { label: 'YoungFly.Fun', href: 'https://youngfly.fun/' },
+          ],
+        },
       //   {
       //     title: 'Community',
       //     items: [
@@ -140,7 +137,7 @@ const config: Config = {
       //       },
       //     ],
       //   },
-      // ],
+      ],
       copyright: `Copyright © ${new Date().getFullYear()} YueZone, Inc. |
 <a target="_blank" href="https://beian.miit.gov.cn/">赣ICP备19008355号</a> | 此网站使用
 <a target="_blank" href="https://docusaurus.io/zh-CN/">Docusaurus</a> 构建。`,
