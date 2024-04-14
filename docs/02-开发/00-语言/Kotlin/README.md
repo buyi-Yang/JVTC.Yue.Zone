@@ -19,6 +19,11 @@ Kotlin 是一门现代但已成熟的编程语言，旨在让开发人员更幸�
 
 使用 **[Ktor Project Generator](https://start.ktor.io/)** 创建新项目。
 
+## Exposed
+
+> Exposed 是一个 Kotlin SQL数据库库，它有两种风格：轻量级ORM（使用 DAO）和类型安全 SQL（使用 DSL）。
+> 参考：[官方文档](https://jetbrains.github.io/Exposed/home.html)
+
 ## 多平台开发
 
 > 参考：[开始使用 Kotlin 多平台开发 - Kotlin 文档](https://kotlinlang.org/docs/multiplatform-get-started.html)
