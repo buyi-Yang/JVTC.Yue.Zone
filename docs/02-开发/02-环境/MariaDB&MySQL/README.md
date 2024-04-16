@@ -27,7 +27,7 @@ RDBMS（Relational Database Management System：关系数据库管理系统）
 [mysql - Official Image | Docker Hub](https://hub.docker.com/_/mysql)
 
 ```sh
-docker run -it -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:latest
+docker run --restart=always -it -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:latest
 ```
 
 ## CLI 自动补全

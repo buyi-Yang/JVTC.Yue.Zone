@@ -57,7 +57,7 @@ postgres=# \q
 [exe 安装包](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 [zip 压缩包](https://www.enterprisedb.com/download-postgresql-binaries)
 
-::: warning
+:::warning
 安装时 **不要** 选中文，否则安装失败！
 （没有 PostgreSQL 14 的 Server 显示；计算机管理->服务和应用程序->服务中 也没有 postgresql-x64-11 这个服务 ）
 
@@ -68,16 +68,25 @@ postgres=# \q
 
 参考：[postgres - Official Image | Docker Hub](https://hub.docker.com/_/postgres)
 
+#### 拉取镜像
+
 ```sh
-# 拉取镜像
 docker pull postgres
-
-# 运行镜像
-docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres
-
-# 随 Doker 自启动容器
-docker update --restart=always some-postgres
 ```
+
+#### 运行镜像
+
+```sh
+docker run --restart=always -it -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=password -d postgres
+```
+
+#### 随 Doker 自启动容器
+
+```sh
+docker update --restart=always postgres
+```
+
+#### JDBC 连接地址
 
 ```text
 jdbc:postgresql://localhost:5432/postgres
@@ -285,3 +294,28 @@ host    all       all   0.0.0.0/0  scram-sha-256
 ```
 
 ## [pgcli](https://www.pgcli.com/)
+
+```sh
+pgcli -U user -h host -d database
+```
+
+### 常见问题
+
+#### `Load your password from keyring returned`
+
+```text
+Load your password from keyring returned:
+No recommended backend was available. Install a recommended 3rd party backend package; or, install the keyrings.alt package if you want to use the non-recommended backends. See https://pypi.org/project/keyring for details.
+To remove this message do one of the following:
+- prepare keyring as described at: https://keyring.readthedocs.io/en/stable/
+- uninstall keyring: pip uninstall keyring
+- disable keyring in our configuration: add keyring = False to [main]
+```
+
+这个提示是因为你的系统没有安装推荐的 [`keyring`](https://pypi.org/project/keyring/) 后端。
+pgcli 试图从 keyring 加载你的密码，但没有找到合适的后端来存储或检索密码。
+可以尝试安装一个推荐的 keyring 后端，例如 [`keyrings.cryptfile`](https://pypi.org/project/keyrings.cryptfile/)：
+
+```sh
+pip install keyrings.cryptfile
+```
