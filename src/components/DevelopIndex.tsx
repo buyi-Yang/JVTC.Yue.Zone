@@ -71,27 +71,28 @@ export function DevelopEnvironIndex() {
             text: "为相关程序提供操作系统层的虚拟化，比虚拟机更便捷高效",
             href: "/docs/开发/环境/Docker/"
         },
-        {
-            icon: "InfluxDB.svg",
-            title: "InfluxDB",
-            text: "用于存储和分析时间序列数据的开源数据库",
-            href: "/docs/开发/环境/InfluxDB/"
-        },
+        {icon: "apache2.svg", title: "Apache2", text: "HTTP、Web 服务器", href: "/docs/开发/环境/Apache/httpd"},
+        {icon: "tomcat.svg", title: "Tomcat", text: "Servlet 容器；JSP", href: "/docs/开发/环境/Tomcat/"},
+    ])
+}
+
+/** 数据库 */
+export function DBIndex() {
+    return Index([
         {
             icon: "PostgreSQL.svg",
             title: "PostgreSQL",
             text: "世界上最先进的开源关系型数据库",
             href: "/docs/开发/环境/PostgreSQL/"
         },
-        {
-            icon: "sqlite.svg",
-            title: "SQLite",
-            text: "自给自足的、无服务器的、零配置的、事务性的 SQL 数据库引擎",
-            href: "/docs/开发/环境/SQLite/"
-        },
         {icon: "database-fill.svg", title: "MariaDB & MySQL", text: "经典关系型数据库", href: "/docs/开发/环境/MariaDB&MySQL/"},
-        {icon: "apache2.svg", title: "Apache2", text: "HTTP、Web 服务器", href: "/docs/开发/环境/Apache/httpd"},
-        {icon: "tomcat.svg", title: "Tomcat", text: "Servlet 容器；JSP", href: "/docs/开发/环境/Tomcat/"},
+        {
+            icon: "InfluxDB.svg",
+            title: "InfluxDB",
+            text: "用于存储和分析时间序列数据的开源数据库",
+            href: "/docs/开发/环境/InfluxDB/"
+        },
+        {icon: "sqlite.svg", title: "SQLite", text: "自给自足、无服务器、零配置、事务性", href: "/docs/开发/环境/SQLite/"},
     ])
 }
 
