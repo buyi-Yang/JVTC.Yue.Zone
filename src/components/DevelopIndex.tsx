@@ -162,6 +162,7 @@ export function DevelopGameIndex() {
             text: "不是网易游戏代理的我的世界",
             href: "/docs/开发/游戏/Minecraft/"
         },
+        {icon: "godot.svg", title: "Godot", text: "自由，开源的 2D&3D 游戏引擎", href: "/docs/开发/游戏/Godot/"},
         {icon: "unity.svg", title: "Unity", text: "行业领先的实时 3D 开发平台", href: "/docs/开发/游戏/Unity/"},
     ])
 }
