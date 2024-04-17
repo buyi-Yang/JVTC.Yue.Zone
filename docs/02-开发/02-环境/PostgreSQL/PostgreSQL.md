@@ -9,6 +9,7 @@ PostgreSQL：世界上最先进的开源关系型数据库
 
 ## 链接
 
+- [PostgreSQL 教程 - 编程宝库](http://www.codebaoku.com/postgresql/postgresql-index.html)
 - [PostgreSQL 教程 | 菜鸟教程](https://www.runoob.com/postgresql/postgresql-tutorial.html)
 - [PostgreSQL新手入门 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2013/12/getting_started_with_postgresql.html)
 
@@ -117,9 +118,17 @@ GRANT ALL PRIVILEGES ON DATABASE yuedb TO yueplus;
 
 也可在 shell 中创建超级用户：
 
-```sh
-postgres createuser --superuser yueplus
-```
+01. 切换用户：
+
+    ```sh
+    sudo su postgres
+    ```
+
+02. 创建超级用户：
+
+    ```sh
+    createuser --superuser yueplus
+    ```
 
 ### Ubuntu 配置 PostgreSQL
 
@@ -148,6 +157,34 @@ host    all       all   0.0.0.0/0  scram-sha-256
 > 参考：
 > - [PostgreSQL: Documentation: 14: 21.1. The pg_hba.conf File](https://www.postgresql.org/docs/14/auth-pg-hba-conf.html)
 > - [PostgreSQL的pg_hba.conf文件讲解 - 玄同太子 - 博客园](https://www.cnblogs.com/zhi-leaf/p/11442471.html)
+
+## 基本操作
+
+### 用户管理
+
+#### 查看所有用户
+
+```sql
+select * from pg_roles
+```
+
+#### 创建一个用户
+
+```sql
+CREATE USER myuser WITH PASSWORD 'mypassword';
+```
+
+#### 将用户设为超级用户（拥有所有权限）
+
+```sql
+ALTER USER myuser WITH SUPERUSER;
+```
+
+#### 修改用户密码
+
+```sql
+ALTER USER myuser WITH PASSWORD 'newpassword';
+```
 
 ## `\` 指令
 
