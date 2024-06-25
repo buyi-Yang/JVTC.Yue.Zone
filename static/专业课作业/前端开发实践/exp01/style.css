@@ -1,0 +1,71 @@
+
+body {
+    margin: 0;
+    background-color: #64bfff;
+}
+
+footer {
+    height: 130px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("./images/ground.png");
+}
+
+#grass {
+    height: 50px;
+    position: fixed;
+    right: 0;
+    bottom: 80px;
+    left: 0;
+    background-image: url("./images/grass.png");
+}
+
+.cloud {
+    width: 180px;
+    height: 120px;
+    position: fixed;
+    background-image: url("./images/cloud.png");
+}
+
+#cloud1 {
+    top: 10%;
+    left: 45%;
+}
+
+#cloud2 {
+    top: 20%;
+    left: 70%;
+}
+
+#cloud3 {
+    top: 30%;
+    left: 15%;
+}
+
+.mountain {
+    width: 800px;
+    height: 400px;
+    position: fixed;
+    bottom: 130px;
+    background-image: url("./images/mountain.png");
+}
+
+#mountain1 {
+    left: 10%;
+}
+
+#mountain2 {
+    left: 60%;
+}
+
+#player {
+    width: 200px;
+    height: 200px;
+    background-image: url("./images/robby-slides.png");
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: 100px;
+    left: 48%;
+}
