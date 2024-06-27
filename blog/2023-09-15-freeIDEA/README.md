@@ -1,20 +1,21 @@
 ---
+title: JetBrains 免费许可证
 authors: Yue_plus
 ---
 
-# JetBrains 免费教育许可证
-
 <!--truncate-->
 
-## 学信网申请教育部学籍在线验证报告
+## 面向学生的免费教育许可证
+
+### 学信网申请教育部学籍在线验证报告
 
 打开 https://www.chsi.com.cn/，登入后点击 **账号信息**，参考下图操作：
 
 ![](./img/chsi.png)
 
-## 免费许可证计划
+### 申请许可证
 
-查看 [免费许可证计划](https://www.jetbrains.com/zh-cn/community/education/#students) 的相关限制。
+> 查看 [免费教育许可证](https://www.jetbrains.com/zh-cn/community/education/#students) 的详细信息。
 
 打开 [立即申请 JetBrains 学习产品](https://www.jetbrains.com/shop/eform/students) 填写表单：
 
@@ -37,3 +38,9 @@ authors: Yue_plus
 ![申请成功](./img/done.png)
 
 可以下载 [JetBrains Toolbox](https://www.jetbrains.com/zh-cn/lp/toolbox/) 方便管理多个 IDE。
+
+## 开源开发的免费许可证
+
+> 查看 [开源许可证](https://www.jetbrains.com/zh-cn/community/opensource/) 的详细信息。
+
+[申请开源许可证](https://www.jetbrains.com/shop/eform/opensource)
