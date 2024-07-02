@@ -29,7 +29,7 @@ export default function Home(): JSX.Element {
   return (
       <Layout
           title={`首页`}
-          description="悦域九职 - JVTC.Yue.Zone">
+          description="悦域江职 - JVTC.Yue.Zone">
         <HomepageHeader />
         <main>
           <ContributorsList />

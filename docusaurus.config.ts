@@ -5,7 +5,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 const config: Config = {
-  title: '悦域九职',
+  title: '悦域江职',
   tagline: 'JTVC.Yue.Zone',
   url: 'https://JVTC.Yue.Zone/',
   baseUrl: '/',
@@ -53,7 +53,7 @@ const config: Config = {
   themeConfig: {
     tableOfContents: {minHeadingLevel: 2, maxHeadingLevel: 6},
     navbar: {
-      title: '悦域九职',
+      title: '悦域江职',
       logo: {alt: '软件2201班班徽', src: 'img/班徽.svg'},
       items: [
         // 参考文档：https://docusaurus.io/zh-CN/docs/next/api/themes/configuration#navbar-items
