@@ -109,3 +109,11 @@ TShock 是为泰拉瑞亚服务器和社区开发的一个工具箱。
 ```text
 /group addperm default tshock.npc.startinvasion
 ```
+
+#### 允许开启撒旦军队事件
+
+[撒旦军队（旧日军团）- 官方中文 Terraria Wiki](https://terraria.wiki.gg/zh/wiki/%E6%92%92%E6%97%A6%E5%86%9B%E9%98%9F)
+
+```text
+/group addperm default tshock.npc.startdd2
+```
