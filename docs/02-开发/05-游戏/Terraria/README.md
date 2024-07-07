@@ -117,3 +117,20 @@ TShock 是为泰拉瑞亚服务器和社区开发的一个工具箱。
 ```text
 /group addperm default tshock.npc.startdd2
 ```
+
+## tModLoader
+
+tModLoader（TML）是泰拉瑞亚游戏的开源、社区驱动的修改和扩展，使制作和玩模组成为可能。
+TML 通过泰拉瑞亚社区创建的新内容扩展您的泰拉瑞亚冒险！
+TML 允许玩家创建和玩泰拉瑞亚模组，其设计方式使您可以单独或与朋友一起玩，使用一个模组或多个模组：选择随心所欲地玩！
+
+但是，如果您想一起玩，则要求您的所有朋友也安装 TML；
+原版用户无法与 TML 用户一起玩。
+TML 与 TShock 并不兼容。
+
+[官方网站](https://www.tmodloader.net/)
+| [在 Steam 上获取 tModLoader](https://store.steampowered.com/app/1281930/tModLoader/)
+| [GitHub](https://github.com/tModLoader/tModLoader)
+| [WiKi](https://github.com/tModLoader/tModLoader/wiki)
+
+地图用户默认保存在 `~/.local/share/Terraria/tModLoader/` 目录下。
