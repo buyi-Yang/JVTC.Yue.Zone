@@ -141,6 +141,7 @@ export function DevelopSoftwareBlockChainsIndex() {
             text: "一门为实现智能合约而创建的面向对象的高级编程语言",
             href: "/docs/开发/软件/区块链/Solidity/"
         },
+        {icon: "Ethereum.svg", title: "以太坊", text: "创新应用程序和区块链网络的首要平台", href: "/docs/开发/软件/区块链/以太坊/"},
         {icon: "WeBank.png", title: "WeBASE", text: "微众银行区块链应用软件扩展", href: "/docs/开发/软件/区块链/WeBASE/"},
         {icon: "FISCO_BCOS.png", title: "FISCO BCOS", text: "稳定、高效、安全的区块链底层平台", href: "/docs/开发/软件/区块链/FiscoBcos/"},
     ])
