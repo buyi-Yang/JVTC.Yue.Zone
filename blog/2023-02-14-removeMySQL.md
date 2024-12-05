@@ -10,3 +10,5 @@
     ```shell
     sc delect MYSQL80
     ```
+
+<!-- truncate -->

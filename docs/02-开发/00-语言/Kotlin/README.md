@@ -40,6 +40,8 @@ Kotlin 是一门现代但已成熟的编程语言，旨在让开发人员更幸�
 > 为 Android、iOS、桌面和 Web 开发令人惊叹的共享 UI。
 > 参考：[官方网站](https://www.jetbrains.com/zh-cn/lp/compose-multiplatform/)
 
+- [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/)
+
 ### 使用 Material3
 
 修改 `composeApp\build.gradle.kts` 文件：

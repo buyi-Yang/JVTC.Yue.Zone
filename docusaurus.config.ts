@@ -139,7 +139,11 @@ const config: Config = {
       //   },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} YueZone, Inc. |
-<a target="_blank" href="https://beian.miit.gov.cn/">赣ICP备19008355号</a> | 此网站使用
+<a target="_blank" href="https://beian.miit.gov.cn/">赣ICP备19008355号</a> |
+<a target="_blank" rel="noreferrer noopener" href="https://beian.mps.gov.cn/#/query/webSearch?code=36082102000151">
+  <img src="/icons/公网安备.png" style="width: 16px; height: 16px;" />
+  赣公网安备36082102000151
+</a> | 此网站使用
 <a target="_blank" href="https://docusaurus.io/zh-CN/">Docusaurus</a> 构建。`,
     },
     prism: {
