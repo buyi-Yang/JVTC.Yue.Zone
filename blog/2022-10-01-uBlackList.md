@@ -67,4 +67,5 @@ authors: Yue_plus
 *://www.rongyidagl.com/*
 *://www.zongmeimei.com/*
 *://www.bvmfh.top/*
+*://ailegal.baidu.com/*
 ```
