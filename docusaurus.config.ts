@@ -63,6 +63,7 @@ const config: Config = {
         {type: 'doc', docId: '信息安全/INDEX', position: 'left', label: '信息安全'},
         {type: 'doc', docId: '竞赛/全国职业院校技能大赛/GZ031-应用软件系统开发赛项', position: 'left', label: '竞赛'},
         {type: 'doc', docId: '课程/专业课/INDEX', position: 'left', label: '课程'},
+        {type: 'doc', docId: '专升本/INDEX', position: 'left', label: '专升本'},
         // {type: 'doc', docId: '生存指南/前言', position: 'left', label: '《生存指南》'},
         {to: '/blog', label: '博客', position: 'left'},
         {href: 'https://net.note.yue.zone/', label: 'NetNote', position: 'right'},
